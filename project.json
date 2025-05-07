@@ -1,0 +1,43 @@
+{
+  "Speech": [
+    {
+      "name": "Voice2Text",
+      "buttons": [
+        {"type": "paper", "url": "https://xxx.com/paper1"},
+        {"type": "demo", "url": "https://xxx.com/demo1"}
+      ]
+    },
+    {
+      "name": "SpeechX",
+      "buttons": [
+        {"type": "paper", "url": "https://xxx.com/paper2"}
+      ]
+    }
+  ],
+  "Emotion": [
+    {
+      "name": "EmoNet",
+      "buttons": [
+        {"type": "paper", "url": "https://xxx.com/emo-paper"},
+        {"type": "demo", "url": "https://xxx.com/emo-demo"}
+      ]
+    }
+  ],
+  "Dialogue": [
+    {
+      "name": "DialogGPT",
+      "buttons": [
+        {"type": "paper", "url": "https://xxx.com/dialog-paper"},
+        {"type": "demo", "url": "https://xxx.com/dialog-demo"}
+      ]
+    }
+  ],
+  "DigitalHuman": [
+    {
+      "name": "VirtuaPeople",
+      "buttons": [
+        {"type": "paper", "url": "https://xxx.com/dh-paper"}
+      ]
+    }
+  ]
+}
