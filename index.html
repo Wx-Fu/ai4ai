@@ -8,10 +8,24 @@
 </head>
 <body>
   <header>
-    <h1 id="title">Lab Project Navigator</h1>
+    <div class="lab-header-left">
+      <img src="logo.png" alt="Lab Logo" class="lab-logo">
+      <h1 id="title">Lab Project Navigator</h1>
+    </div>
     <button id="langBtn">中文</button>
   </header>
-  <main>
+  
+  <section id="lab-info" class="fade-in">
+    <h2 id="lab-info-title">About Our Lab</h2>
+    <div id="lab-info-text">
+      <p>
+        Our Laboratory is dedicated to exploring the frontiers of <b>intelligent speech, emotion, dialogue & digital human technologies</b>. 
+        With a multidisciplinary research team, we aim to build innovative AI solutions for human-computer interaction.
+      </p>
+    </div>
+  </section>
+  
+  <main id="main-content" class="fade-in">
     <div class="category" id="speech">
       <h2 data-en="Speech" data-zh="语音">Speech</h2>
       <div class="projects-box" id="speech-box"></div>
@@ -32,4 +46,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
