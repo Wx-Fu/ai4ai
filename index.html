@@ -2,47 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lab Project Navigator 实验室项目导航</title>
+  <title>Lab Homepage</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="lab-header-left">
-      <img src="logo.PNG" alt="Lab Logo" class="lab-logo">
-      <h1 id="title">Lab Project Navigator</h1>
+  <header class="navi-header">
+    <div class="navi-left">
+      <img class="lab-logo" src="assets/logo.png" alt="Lab logo">
+      <span class="lab-title" id="lab-title">AI Interaction Lab</span>
     </div>
-    <button id="langBtn">中文</button>
+    <nav class="navi-center">
+      <a href="index.html" class="navi-btn active" id="homeBtn">Home</a>
+    </nav>
+    <div class="navi-right">
+      <button id="langToggle" class="navi-btn">中文</button>
+    </div>
   </header>
-  
-  <section id="lab-info" class="fade-in">
-    <h2 id="lab-info-title">About Our Lab</h2>
-    <div id="lab-info-text">
-      <p>
-        Our Laboratory is dedicated to exploring the frontiers of <b>intelligent speech, emotion, dialogue & digital human technologies</b>. 
-        With a multidisciplinary research team, we aim to build innovative AI solutions for human-computer interaction.
+
+  <main>
+    <section class="lab-intro card fade-in" id="lab-intro">
+      <h2 id="intro-title">About Our Lab</h2>
+      <p id="intro-txt">
+        Our laboratory focuses on cutting-edge research in speech, emotion, dialogue, and digital human, striving to drive innovative developments in human-machine interaction technology.
       </p>
-    </div>
-  </section>
-  
-  <main id="main-content" class="fade-in">
-    <div class="category" id="speech">
-      <h2 data-en="Speech" data-zh="语音">Speech</h2>
-      <div class="projects-box" id="speech-box"></div>
-    </div>
-    <div class="category" id="emotion">
-      <h2 data-en="Emotion" data-zh="情感">Emotion</h2>
-      <div class="projects-box" id="emotion-box"></div>
-    </div>
-    <div class="category" id="dialogue">
-      <h2 data-en="Dialogue" data-zh="对话">Dialogue</h2>
-      <div class="projects-box" id="dialogue-box"></div>
-    </div>
-    <div class="category" id="digitalhuman">
-      <h2 data-en="Digital Human" data-zh="数字人">Digital Human</h2>
-      <div class="projects-box" id="digitalhuman-box"></div>
-    </div>
+    </section>
+    
+    <section class="directions">
+      <div class="direction-card fade-in" onclick="navigateDirection('speech')">
+        <img src="assets/icon-speech.svg" class="direction-icon">
+        <div class="direction-content">
+          <h3 data-en="Speech" data-zh="语音">Speech</h3>
+          <p data-en="Researches on speech recognition, synthesis and enhancement." 
+             data-zh="专注于语音识别、合成与增强等前沿技术。">
+             Researches on speech recognition, synthesis and enhancement.
+          </p>
+        </div>
+      </div>
+      <div class="direction-card fade-in" onclick="navigateDirection('emotion')">
+        <img src="assets/icon-emotion.svg" class="direction-icon">
+        <div class="direction-content">
+          <h3 data-en="Emotion" data-zh="情感">Emotion</h3>
+          <p data-en="Emotion detection, analysis, and affective computing applications." 
+             data-zh="情感分析、情绪识别及相关应用研究。">
+            Emotion detection, analysis, and affective computing applications.
+          </p>
+        </div>
+      </div>
+      <div class="direction-card fade-in" onclick="navigateDirection('dialogue')">
+        <img src="assets/icon-dialogue.svg" class="direction-icon">
+        <div class="direction-content">
+          <h3 data-en="Dialogue" data-zh="对话">Dialogue</h3>
+          <p data-en="Dialogue systems, natural language understanding and generation." 
+             data-zh="对话系统、自然语言理解与生成等。">
+             Dialogue systems, natural language understanding and generation.
+          </p>
+        </div>
+      </div>
+      <div class="direction-card fade-in" onclick="navigateDirection('digitalhuman')">
+        <img src="assets/icon-digitalhuman.svg" class="direction-icon">
+        <div class="direction-content">
+          <h3 data-en="Digital Human" data-zh="数字人">Digital Human</h3>
+          <p data-en="Intelligent avatar, virtual human modeling and interaction." 
+             data-zh="智能虚拟人建模与交互研究。">
+             Intelligent avatar, virtual human modeling and interaction.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
