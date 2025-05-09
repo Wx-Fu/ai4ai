@@ -44,13 +44,16 @@ body {
 }
 
 .lab-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
-  background: #fff;
-  object-fit: contain;
-  /* 可根据logo微调边框/阴影 */
-  box-shadow: 0 2px 10px #ff8c1a1a, 0 1px 3px #6098ef12; /* 淡橙/淡蓝双阴影 */
+  height: 44px;        /* 建议按 header 高度微调，可以是48px~52px，确保不超bar */
+  width: auto;         /* 让宽度自适应 */
+  max-width: 150px;    /* 防止极宽logo撑破栏，可调 */
+  margin-right: 1rem;
+  border-radius: 0;    /* 不做圆/方 */
+  background: none;    /* 去除背景 */
+  box-shadow: none;    /* 一般不用阴影，想要可加淡阴影 */
+  object-fit: contain; /* 或用object-fit:scale-down; */
+  vertical-align: middle;
+  display: block;
 }
 
 /* ==== 动画 ==== */
