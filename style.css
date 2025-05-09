@@ -5,31 +5,53 @@ body {
   color: #212340;
 }
 .navi-header {
-  background: #2946ad;
-  color: #fff;
+  background: #fff;
+  color: #1048a3;
   display: flex;
   align-items: center;
   padding: 0 2rem;
   justify-content: space-between;
   min-height: 60px;
-  box-shadow: 0 3px 18px #2946ad13;
+  box-shadow: 0 3px 18px #e5e9f6;
+  border-bottom: 3px solid #217EEC; /* 蓝色下划线，可适当调整深浅 */
 }
-.navi-left {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.navi-left .lab-title {
+  color: #1048a3;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
+.navi-center .navi-btn, .navi-cur, .navi-sep {
+  color: #217EEC;
+}
+.navi-btn {
+  background: none;
+  border: none;
+  color: #217EEC;
+  font-size: 1.15em;
+  margin: 0 6px;
+  cursor: pointer;
+  padding: .2em 1.1em;
+  border-radius: 7px;
+  transition: background 0.15s, color 0.16s;
+}
+.navi-btn.active, .navi-btn:hover {
+  background: #FF8C1A15; /* 基于橙色，透明度低做点缀 */
+  color: #FF8C1A;
+}
+.navi-right .navi-btn {
+  border: 1.2px solid #FF8C1A33;
+  color: #FF8C1A;
+}
+
 .lab-logo {
-  width: 48px; height: 48px; border-radius: 10px; background: #fff;
-  box-shadow: 0 2px 10px #2150a926; object-fit: contain;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #fff;
+  object-fit: contain;
+  /* 可根据logo微调边框/阴影 */
+  box-shadow: 0 2px 10px #ff8c1a1a, 0 1px 3px #6098ef12; /* 淡橙/淡蓝双阴影 */
 }
-.lab-title { font-size: 1.4rem; font-weight: bold; }
-.navi-center { flex: 1 1 auto; display: flex;justify-content: center;align-items: center;gap:.6em;}
-.navi-btn { background: none; border: none; color: #fff; font-size: 1.15em; margin:0 6px; cursor:pointer; padding:.2em 1.1em; border-radius:7px;}
-.navi-btn.active { background:rgba(255,255,255,0.10);}
-.navi-cur {font-weight:bold; font-size:1.09em;}
-.navi-sep {color:#aac; margin:0 3px;}
-.navi-right {}
 
 /* ==== 动画 ==== */
 .fade-in {opacity:0; transform: translateY(40px); transition:all .69s cubic-bezier(.35,2,.28,1);}
