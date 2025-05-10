@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Speech · AI Lab</title>
+  <title>Speech · AI4AI</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,35 +10,37 @@
   <header class="navi-header">
     <div class="navi-left">
       <img class="lab-logo" src="assets/logo.PNG" alt="Lab logo">
-      <span class="lab-title" id="lab-title">AI Interaction Lab</span>
+      <span class="lab-title" id="lab-title">
+        Artificial Intelligence<br>for Affective Interaction Lab
+      </span>
     </div>
     <nav class="navi-center">
       <a href="index.html" class="navi-btn" id="homeBtn">Home</a>
       <span class="navi-sep">/</span>
-      <span class="navi-cur">Speech</span>
+      <span class="navi-cur" data-en="Speech" data-zh="语音">Speech</span>
     </nav>
     <div class="navi-right">
-      <button id="langToggle" class="navi-btn">中文</button>
+      <button id="lang-switch" class="navi-btn">中文</button>
     </div>
   </header>
 
   <main>
-    <section class="direction-detail">
-      <img src="assets/icon-speech.svg" class="direction-icon-lg">
+    <section class="card direction-detail fade-in">
+      <img src="assets/icon-speech.svg" class="direction-icon-lg" style="width:72px;height:72px;padding-right:1.2em;">
       <div>
         <h2 data-en="Speech" data-zh="语音">Speech</h2>
-        <p data-en="Researches on speech recognition, synthesis and enhancement." 
-           data-zh="专注于语音识别、合成与增强等前沿技术。">
-            Researches on speech recognition, synthesis and enhancement.
+        <p data-en="Researches on speech recognition, synthesis and enhancement."
+           data-zh="专注于语音识别、合成与交叉领域前沿技术。">
+          Researches on speech recognition, synthesis and enhancement.
         </p>
       </div>
     </section>
-    <section class="papers-projects fade-in">
-      <div class="dbl-card">
+    <section class="papers-projects fade-in" style="display:flex;gap:2.3em;justify-content:center;flex-wrap:wrap;">
+      <div class="dbl-card" style="min-width:370px; flex:1; max-width:650px;">
         <div class="card-list-title" data-en="Papers" data-zh="论文">Papers</div>
         <div class="scroller" id="paper-list"></div>
       </div>
-      <div class="dbl-card">
+      <div class="dbl-card" style="min-width:370px; flex:1; max-width:650px;">
         <div class="card-list-title" data-en="Projects" data-zh="项目">Projects</div>
         <div class="scroller" id="project-list"></div>
       </div>
