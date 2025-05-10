@@ -38,6 +38,21 @@ if(langBtn) langBtn.onclick=toggleLang;
 // 初始应用
 applyLang();
 
+// 首页专利栏内容刷新
+function loadPatentList() {
+  fetch("data/patents.json").then(r=>r.json()).then(listObj=>{
+    let langList = listObj[lang] || [];
+    let ul = document.getElementById("patent-list");
+    if(ul) ul.innerHTML = langList.map(item=>`<li>${item}</li>`).join("");
+    let title = document.getElementById("patent-title");
+    if(title) title.textContent = lang==="en"?"Patents":"专利";
+  });
+}
+document.addEventListener("DOMContentLoaded", ()=>{
+  if(document.getElementById("patent-list")) loadPatentList();
+});
+
+
 // ====== 首页跳转 ======
 function navigateDirection(dir){
   window.location.href = dir+".html";
