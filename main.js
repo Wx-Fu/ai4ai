@@ -9,34 +9,68 @@ function setLang(newLang) {
 function toggleLang() {
   setLang(lang === "en" ? "zh" : "en");
 }
+
+const langData = {
+  en: {
+    introTitle: 'About Our Lab',
+    introPara: `Our laboratory focuses on cutting-edge research in speech, emotion, dialogue,<br>
+    and digital human, striving to drive innovative developments in human-machine interaction technology.`,
+    directions: [
+      { title: 'Speech', desc: 'Researches on speech recognition, synthesis and enhancement.' },
+      { title: 'Emotion', desc: 'Emotion detection, analysis, and affective computing applications.' },
+      { title: 'Dialogue', desc: 'Dialogue systems, natural language understanding and generation.' },
+      { title: 'Digital Human', desc: 'Intelligent avatar, virtual human modeling and interaction.' }
+    ],
+    patentTitle: 'Patents',
+    patents: [
+      'Patent 1: ...',
+      'Patent 2: ...'
+    ],
+    langBtn: '中文'
+  },
+  zh: {
+    introTitle: '实验室简介',
+    introPara: `实验室专注于语音、情感、对话和数字人等技术研究，<br>
+    致力于推动新一代人机交互技术创新。`,
+    directions: [
+      { title: '语音', desc: '聚焦语音识别、合成与增强等研究方向。' },
+      { title: '情感', desc: '情感识别与分析，以及情感计算实际应用。' },
+      { title: '对话', desc: '对话系统、自然语言理解与生成。' },
+      { title: '数字人', desc: '智能虚拟人形象、建模与人机交互。' }
+    ],
+    patentTitle: '专利',
+    patents: [
+      '专利1：……',
+      '专利2：……'
+    ],
+    langBtn: 'English'
+  }
+};
+
+let currentLang = 'en';
+
 function applyLang() {
-  // 实验室名
-  document.getElementById("lab-title").textContent = lang === "en" ? "AI Interaction Lab" : "智能交互实验室";
-  // 首页按钮
-  let homeBtn=document.getElementById("homeBtn");
-  if(homeBtn) homeBtn.textContent=lang==="en"?"Home":"首页";
-  // 中文/English语言切换
-  let langBtn=document.getElementById("langToggle");
-  if(langBtn) langBtn.textContent=lang==="en"?"中文":"English";
-  // 实验室简介
-  let introTitle=document.getElementById("intro-title"), introTxt=document.getElementById("intro-txt");
-  if(introTitle) introTitle.textContent = lang==="en" ? "About Our Lab" : "实验室简介";
-  if(introTxt) introTxt.textContent = lang==="en"
-      ?"Our laboratory focuses on cutting-edge research in speech, emotion, dialogue, and digital human, striving to drive innovative developments in human-machine interaction technology."
-      :"实验室专注于语音、情感、对话和数字人等技术研究，致力于推动新一代人机交互技术创新。";
-  // H3/P多语
-  document.querySelectorAll("[data-en]").forEach(elem=>{
-    elem.textContent = elem.getAttribute("data-"+lang);
-  });
-  // Card栏
-  document.querySelectorAll(".card-list-title").forEach(elem=>{
-    elem.textContent = elem.getAttribute("data-"+lang);
-  });
+  const d = langData[currentLang];
+  document.getElementById('intro-title').innerHTML = d.introTitle;
+  document.getElementById('intro-para').innerHTML = d.introPara;
+  // 四大方向
+  for(let i=0;i<4;i++) {
+    document.getElementById('dir-title-'+(i+1)).textContent = d.directions[i].title;
+    document.getElementById('dir-para-'+(i+1)).textContent = d.directions[i].desc;
+  }
+  // 专利
+  document.getElementById('patent-title').textContent = d.patentTitle;
+  document.getElementById('patent-list').innerHTML = d.patents.map(s=>`<li>${s}</li>`).join('');
+  document.getElementById('lang-switch').textContent = d.langBtn;
 }
-let langBtn=document.getElementById("langToggle");
-if(langBtn) langBtn.onclick=toggleLang;
-// 初始应用
-applyLang();
+
+document.getElementById('lang-switch').onclick = function() {
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  applyLang();
+};
+
+document.addEventListener("DOMContentLoaded", applyLang);
+
 
 // 首页专利栏内容刷新
 function loadPatentList() {
