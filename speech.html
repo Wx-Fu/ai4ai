@@ -9,13 +9,13 @@
 <body>
   <header class="navi-header">
     <div class="navi-left">
-      <img class="lab-logo" src="assets/logo.PNG" alt="Lab logo">
-      <span class="lab-title" id="lab-title">
+      <img class="lab-logo" src="assets/logo.png" alt="Lab logo">
+      <span class="lab-title">
         Artificial Intelligence<br>for Affective Interaction Lab
       </span>
     </div>
     <nav class="navi-center">
-      <a href="index.html" class="navi-btn" id="homeBtn">Home</a>
+      <a href="index.html" class="navi-btn">Home</a>
       <span class="navi-sep">/</span>
       <span class="navi-cur" data-en="Speech" data-zh="语音">Speech</span>
     </nav>
@@ -26,28 +26,29 @@
 
   <main>
     <section class="card direction-detail fade-in">
-      <img src="assets/icon-speech.svg" class="direction-icon-lg" style="width:72px;height:72px;padding-right:1.2em;">
+      <img src="assets/icon-speech.svg" class="direction-icon-lg" alt="Speech Icon">
       <div>
         <h2 data-en="Speech" data-zh="语音">Speech</h2>
-        <p data-en="Researches on speech recognition, synthesis and enhancement."
+        <p data-en="Research in speech recognition, synthesis and cross-disciplinary fields."
            data-zh="专注于语音识别、合成与交叉领域前沿技术。">
-          Researches on speech recognition, synthesis and enhancement.
+          Research in speech recognition, synthesis and cross-disciplinary fields.
         </p>
       </div>
     </section>
-    <section class="papers-projects fade-in" style="display:flex;gap:2.3em;justify-content:center;flex-wrap:wrap;">
-      <div class="dbl-card" style="min-width:370px; flex:1; max-width:650px;">
+    <section class="papers-projects fade-in">
+      <div class="dbl-card">
         <div class="card-list-title" data-en="Papers" data-zh="论文">Papers</div>
         <div class="scroller" id="paper-list"></div>
       </div>
-      <div class="dbl-card" style="min-width:370px; flex:1; max-width:650px;">
+      <div class="dbl-card">
         <div class="card-list-title" data-en="Projects" data-zh="项目">Projects</div>
         <div class="scroller" id="project-list"></div>
       </div>
     </section>
   </main>
   <script>
-    const direction = "speech";
+    // 当前研究方向
+    window.direction = "speech";
   </script>
   <script src="main.js"></script>
 </body>
