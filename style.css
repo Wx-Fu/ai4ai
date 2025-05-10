@@ -84,7 +84,7 @@ body {
   gap: 0.68rem;
 }
 
-/* 语言按钮 */
+/* 语言按钮超级美化（一个橙色，高亮） */
 #lang-switch {
   border-radius: 1.7em;
   padding: 0.49em 1.6em;
@@ -222,100 +222,6 @@ main {
   cursor: pointer;
 }
 
-.direction-detail {
-  display: flex;
-  align-items: center;
-  gap: 2.2rem;
-  padding: 2.1rem 2.2rem !important;
-  max-width: 640px;
-  margin: 32px auto 16px auto;
-  box-shadow: 0 8px 32px 0 #ebedf4;
-  border-radius: 2.1rem;
-  background: #fff;
-}
-.direction-detail .direction-icon-lg {
-  width: 82px;
-  height: 82px;
-}
-.direction-detail h2 {
-  font-size: 1.62rem;
-  font-weight: 700;
-  margin: 0 0 8px 0;
-}
-.direction-detail p {
-  color: #444e63;
-  font-size: 1.07rem;
-  margin: 0;
-}
-
-.papers-projects {
-  display: flex;
-  gap: 2.3rem;
-  justify-content: center;
-  margin: 0 auto 36px auto;
-  max-width: 1220px;
-}
-.dbl-card {
-  flex: 1 1 0;
-  background: #fff;
-  border-radius: 22px;
-  box-shadow: 0 6px 24px #e9edfa;
-  padding: 1.15em 1.3em 1.4em 1.3em;
-  min-width: 320px;
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-}
-
-/* 论文项目卡片头 */
-.card-list-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #424a5b;
-  margin-bottom: 0.9em;
-}
-
-/* 卡片内部滚动区 */
-.scroller {
-  max-height: 420px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.project-card, .paper-card  {
-  background: #f7f8fb;
-  border-radius: 13px;
-  box-shadow: 0 2px 8px 0 #eceff7;
-  padding: 0.95em 1.11em;
-  display: flex;
-  flex-direction: column;
-  gap: 0.33em;
-  font-size: 1.03rem;
-  transition: box-shadow .16s;
-}
-.project-card:hover, .paper-card:hover  {
-  box-shadow: 0 5px 18px #c6d6f5;
-}
-
-/* 链接按钮区 */
-.resource-links a {
-  display: inline-block;
-  background: #4e91f3;
-  color: #fff;
-  padding: 0.13em 0.85em;
-  border-radius: 7px;
-  margin-right: 0.5em;
-  margin-top: 0.2em;
-  font-size: 0.98em;
-  text-decoration: none;
-  transition: background .18s;
-}
-.resource-links a:hover {
-  background: #1a55be;
-}
-
-
 #patent-list {
   padding-left: 0;
   color: #5a6688;
@@ -370,32 +276,6 @@ main {
 @media (max-width:425px){
   .card, .directions-card-wrapper {padding:0.62em 0.03em;}
   .intro-title {font-size:1.15rem;}
-}
-
-@media (max-width:900px){
-  .papers-projects {
-    flex-direction: column;
-    gap: 1.3rem;
-    max-width: 98vw;
-  }
-  .dbl-card {
-    min-width: 0;
-    max-width: 98vw;
-  }
-}
-
-
-@media (max-width:660px) {
-  .direction-detail { 
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.0rem;
-    padding: 1rem 0.7rem !important;
-  }
-  .direction-detail .direction-icon-lg {
-    width: 64px;
-    height: 64px;
-  }
 }
 
 ::-webkit-scrollbar{width:0.7em;background:transparent;}
