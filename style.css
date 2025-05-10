@@ -1,41 +1,37 @@
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f6f8fb;
+  background: #f8fafc;
   margin: 0;
-  color: #222340;
+  color: #23253c;
 }
 
-/* ========== 顶部栏 ========== */
+/* ===== 顶部栏 ===== */
 .navi-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f6f8fa;
-  min-height: 62px;
-  padding: 0 2.4vw;
-  box-shadow: 0 2px 12px 0 #bbd3f20a;
-  border-bottom: 1.5px solid #e3e9f6;
+  background: #f4f7fa;
+  min-height: 64px;
+  padding: 0 2vw;
+  box-shadow: 0 2px 10px 0 #ccd9f444;
+  border-bottom: 1.5px solid #e6eaf3;
   position: sticky; top: 0; z-index: 31;
 }
 .navi-left {
   display: flex; align-items: center; min-width: 220px;
 }
 .lab-logo {
-  height: 44px; width: auto; max-width: 138px;
+  height: 44px; width: auto; max-width: 144px;
   margin-right: 1.05rem;
   object-fit: contain;
-  display: inline-block;
 }
 .lab-title {
-  font-size: 1.38rem;
+  font-size: 1.35rem;
   font-weight: bold;
   color: #25336b;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
-.navi-center {
-  flex: 1 1 auto;
-  display: flex; justify-content: center; align-items: center;
-}
+.navi-center { flex: 1 1 auto; display: flex; justify-content: center; }
 .navi-center .navi-btn {
   text-decoration: none;
   font-weight: 500;
@@ -43,7 +39,7 @@ body {
   color: #ff8c1a;
   background: none;
   border: none;
-  font-size: 1.09em;
+  font-size: 1.08em;
   padding: 0 .9em;
   cursor: pointer;
 }
@@ -69,110 +65,120 @@ body {
   border-color: #ff901a70;
 }
 
-/* ========== 主要内容背景统一宽度 ========== */
+/* ===== 主体整体宽度 ===== */
 main {
-  max-width: 900px;
+  max-width: 1020px;
   margin: 0 auto;
-  padding: 0 8px 48px 8px;
-  /* 为大屏左右居中，底部留空间 */
+  padding: 0 8px 56px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* ========== 卡片基础样式 ========== */
-.card {
+/* ===== 卡片基样式(About/Patent/Directions大区通用) ===== */
+.card, .directions-card-wrapper {
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 6px 30px 0 #b9cefa22;
-  margin-bottom: 2.2em;
+  box-shadow: 0 6px 30px 0 #b9cefa14;
+  margin-bottom: 2.5em;
   padding: 2.1em 2.3em;
   width: 100%;
   box-sizing: border-box;
   transition: box-shadow .22s, transform .18s;
 }
 .card:last-child {margin-bottom: 0;}
-.card:hover {
-  box-shadow: 0 10px 48px 0 #b6cbed44;
-  transform: translateY(-2px) scale(1.01);
+.card:hover, .directions-card-wrapper:hover {
+  box-shadow: 0 10px 48px 0 #b6cbed30;
+  transform: translateY(-2px) scale(1.009);
 }
 
-/* ========== About Lab ========== */
-.lab-intro {
+/* About卡片 */
+.lab-intro { 
   text-align: center;
-  margin-top: 2.7em;
-  margin-bottom: 2.25em;
-  max-width: 680px;
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+  max-width: 760px;
 }
 #intro-title {
-  font-size: 2.05rem;
+  font-size: 2.1rem;
   color: #2254b5;
   font-weight: 700;
   margin-bottom: 0.7em;
-  letter-spacing: .02em;
 }
 #intro-txt {
-  color: #234;
-  font-size: 1.05em;
-  line-height: 1.7;
+  color: #253;
+  font-size: 1.19em;
+  line-height: 1.68;
 }
 
-/* ========== 四方向（横排卡片，自动居中，卡片等宽一致） ========== */
+/* ===== 四方向 ===== */
+.directions-card-wrapper {
+  max-width: 760px;
+  padding: 2.1em 2em 2.3em 2em;
+  margin-bottom: 2.2em;
+}
+.directions-title {
+  font-weight: bold;
+  color: #2951a7;
+  font-size: 1.22em;
+  margin-bottom: 1.1em;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
 .directions {
-  max-width: 880px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5em;
-  margin-bottom: 2.25em;
-  margin-top: .7em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.1em;
+  margin: 0; /* 去除多余margin */
 }
 .direction-card {
-  background: linear-gradient(100deg,#f9fafd 65%, #eceefd 100%);
+  background: linear-gradient(110deg,#fafbf5 85%, #eceefd 100%);
   border-radius: 1rem;
-  box-shadow: 0 3.6px 10px #4c7ad011;
-  padding: 1.13rem 1.1rem;
+  box-shadow: 0 1.8px 6px #6594ee13;
+  padding: 1.2rem 1rem .7rem 1rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   cursor: pointer;
   border: 2.2px solid transparent;
-  min-width: 0;
-  width: 22.5%;
-  min-height: 140px;
-  max-width: 212px;
-  transition: box-shadow .19s, transform .15s, border-color .13s;
+  min-width: 0; /* 防止溢出 */
+  min-height: 137px;
+  height: 100%;
+  transition: box-shadow .21s, transform .13s, border-color .11s, background .14s;
 }
 .direction-card:hover {
-  box-shadow: 0 7px 44px #256bbf26;
-  border-color: #337dff45;
-  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 7px 44px #256bbf18;
+  border-color: #4597ff37;
+  background: #f7fafc;
+  transform: translateY(-3px) scale(1.017);
 }
 .direction-icon {
-  width: 42px; height: 42px; margin-right: 1.04rem; margin-top: .18em;
+  width: 42px; height: 42px; margin-right: 0.92rem; margin-top: .16em;
 }
 .direction-content h3 {
-  margin: 0 0 .48em 0;
+  margin: 0 0 .44em 0;
   color: #2551a2;
-  font-size: 1.08em;
+  font-size: 1.05em;
   font-weight: 700;
 }
 .direction-content p {
   margin: 0;
-  color: #6070a3;
-  font-size: .97em;
+  color: #6172a3;
+  font-size: .96em;
   line-height: 1.6;
-  min-height: 2.6em;
+  min-height: 2.2em;
 }
 
-/* ========== 专利区 ========== */
+/* ===== 专利卡片 ===== */
 .lab-patents {
-  max-width: 680px;
+  max-width: 760px;
   text-align: left;
   padding: 2.13em 2.3em 2.3em 2.3em;
 }
 #patent-title {
-  font-size: 1.28em;
+  font-size: 1.29em;
   font-weight: bold;
   color: #2254b5;
   margin-bottom: .76em;
@@ -181,25 +187,23 @@ main {
   padding-left: 1.2em;
   color: #5a6688;
   line-height: 1.68;
-  font-size: 1.05em;
+  font-size: 1.09em;
 }
 
-/* ========== 动画&辅助 ========== */
+/* ===== 动画 ===== */
 .fade-in {opacity:0; transform: translateY(40px); transition:all .69s cubic-bezier(.35,2,.28,1);}
 .fade-in.visible { opacity: 1 !important; transform: none; }
 
-/* 响应式，移动端自动纵排 */
-@media (max-width: 1100px) {
-  main {max-width:98vw;}
-  .directions {max-width:98vw;}
+/* ===== 响应式 ===== */
+@media (max-width: 1050px) {
+  .directions-card-wrapper, .lab-intro, .lab-patents {max-width: 98vw;}
+  main {max-width: 100vw;}
 }
 @media (max-width: 900px) {
-  .directions {flex-wrap:wrap; gap:1em;}
-  .direction-card {width: 48%; max-width: 99vw;}
-  .lab-intro, .lab-patents {padding: 1.3em .7em;}
+  .directions {grid-template-columns: repeat(2, 1fr);}
 }
 @media (max-width: 600px) {
-  .directions {flex-direction:column; gap: 1em;}
-  .direction-card{width: 100%; max-width:98vw;}
-  .lab-intro, .lab-patents {padding: 1em .6em;}
+  .directions {grid-template-columns: 1fr;}
+  .directions-card-wrapper, .lab-intro, .lab-patents {padding: 1.1em .5em;}
 }
+
