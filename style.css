@@ -412,11 +412,6 @@ main {
 ::-webkit-scrollbar-thumb{background:#e7e7e7;border-radius:14px;}
 
 
-main {
-  max-width: 900px;
-  margin: 44px auto 32px auto;
-}
-
 .speech-direction-detail {
   display: flex;
   align-items: center;
