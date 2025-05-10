@@ -29,8 +29,22 @@
     "papers_title": "论文",
     "projects_title": "项目",
     "papers": [
-    ],
-    "projects": [
-    ]
+    {
+      "conference": "ICASSP",
+      "abbr": "ICASSP",
+      "title": "新型语音模型",
+      "authors": "张三, 李四",
+      "abstract": "本文研究了...",
+      "paper_link": "https://arxiv.org/abs/xxx",
+      "github_link": "https://github.com/xxx"
+    }
+  ],
+  "projects": [
+    {
+      "title": "语音演示项目",
+      "desc": "示例演示项目",
+      "demo_link": "https://demo.com"
+    }
+  ]
   }
 }
