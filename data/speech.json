@@ -1,47 +1,61 @@
 {
   "en": {
-    "directionTitle": "Speech",
-    "directionDesc": "Our research focuses on cutting-edge ...",
+    "direction_title": "Speech",
+    "direction_desc": "Our research focuses on ...",
+    "papers_title": "Papers",
+    "projects_title": "Projects",
     "papers": [
       {
-        "title": "English Paper Title",
-        "authors": "Author A, Author B",
-        "links": [
-          { "label": "Paper", "url": "https://example.com/enpaper" }
-        ],
-        "desc": "Paper description in English."
+        "conference": "Interspeech",
+        "abbr": "Short",
+        "title": "A Novel Speech Model",
+        "authors": "A. Li, B. Chen...",
+        "abstract": "This paper proposes a ...",
+        "paper_link": "https://xx.pdf",
+        "github_link": "https://github.com/xxx"
+      },
+      {
+        "conference": "ICASSP",
+        "title": "Low-resource ASR",
+        "authors": "Y. Zhang, X. Wang...",
+        "abstract": "We develop a new ..."
       }
     ],
     "projects": [
       {
-        "title": "English Project Title",
-        "links": [
-          { "label": "Demo", "url": "https://example.com/demoe" }
-        ],
-        "desc": "Project description in English."
+        "title": "OpenSource ASR Platform",
+        "desc": "A production-grade speech platform ...",
+        "demo_link": "https://demo.x.com"
       }
     ]
   },
   "zh": {
-    "directionTitle": "语音",
-    "directionDesc": "我们的研究聚焦于最前沿...",
+    "direction_title": "语音",
+    "direction_desc": "我们研究语音的...",
+    "papers_title": "论文",
+    "projects_title": "项目",
     "papers": [
       {
-        "title": "中文论文题目",
-        "authors": "作者甲，作者乙",
-        "links": [
-          { "label": "论文", "url": "https://example.com/zhpaper" }
-        ],
-        "desc": "中文论文简介。"
+        "conference": "Interspeech",
+        "abbr": "缩写",
+        "title": "一种新的语音建模方法",
+        "authors": "李A，陈B...",
+        "abstract": "本文提出了...",
+        "paper_link": "https://xx.pdf",
+        "github_link": "https://github.com/xxx"
+      },
+      {
+        "conference": "ICASSP",
+        "title": "低资源语音识别",
+        "authors": "张Y，王X...",
+        "abstract": "我们提出了一种..."
       }
     ],
     "projects": [
       {
-        "title": "中文项目名称",
-        "links": [
-          { "label": "演示", "url": "https://example.com/demoz" }
-        ],
-        "desc": "中文项目简介。"
+        "title": "开源语音平台",
+        "desc": "用于生产的语音平台...",
+        "demo_link": "https://demo.x.com"
       }
     ]
   }
