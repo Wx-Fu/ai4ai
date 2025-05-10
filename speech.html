@@ -2,51 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Speech · AI Lab</title>
+  <title>Speech · AI4AI Lab</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <!-- 如需微调卡片布局，可增加 <link rel="stylesheet" href="speech.css"> -->
+  <!-- 额外SVG样式，可放style.css -->
 </head>
 <body>
   <header class="navi-header">
     <div class="navi-left">
-      <img src="assets/logo.png" class="lab-logo" alt="Lab logo"/>
-      <div class="lab-title">
-        <span>Artificial Intelligence for<br>Affective Interaction Lab</span>
-      </div>
+      <img src="assets/logo.svg" alt="Lab Logo" class="lab-logo" />
+      <div class="lab-title"><span>Artificial Intelligence for<br>Affective Interaction Lab</span></div>
     </div>
-    <div class="navi-center">
-      <a href="index.html" class="navi-btn">HOME</a>
-      <a href="speech.html" class="navi-btn active">SPEECH</a>
-      <a href="emotion.html" class="navi-btn">EMOTION</a>
-      <a href="dialogue.html" class="navi-btn">DIALOGUE</a>
-      <a href="digitalhuman.html" class="navi-btn">DIGITAL HUMAN</a>
-      <a href="patent.html" class="navi-btn">PATENTS</a>
+    <div class="navi-center"> 
+      <a href="index.html" class="navi-btn">Home</a> 
+      <a href="speech.html" class="navi-btn active">Speech</a>
+      <a href="emotion.html" class="navi-btn">Emotion</a>
+      <a href="dialogue.html" class="navi-btn">Dialogue</a>
+      <a href="digital-human.html" class="navi-btn">Digital Human</a>
     </div>
-    <div class="navi-right">
-      <button id="lang-switch">中文</button>
-    </div>
+    <button id="lang-switch" class="navi-btn"></button>
   </header>
-
+  
   <main>
-    <section class="direction-detail speech-direction-detail">
-      <img src="assets/icon-speech.svg" class="direction-icon-lg" alt="Speech icon"/>
-      <div>
+    <!-- 方向介绍卡片 -->
+    <section class="speech-direction-detail direction-detail">
+      <img src="assets/icon-speech.svg" class="direction-icon-lg" alt="Speech"/>
+      <div class="direction-guidance-block">
         <h2 id="direction-title">Speech</h2>
         <p id="direction-desc">Our research focuses on ...</p>
       </div>
     </section>
-    <section class="papers-projects speech-papers-projects">
-      <div class="dbl-card">
-        <div class="card-list-title" id="papers-title">Papers</div>
-        <div class="card-list scroller" id="paper-list"></div>
-      </div>
-      <div class="dbl-card">
-        <div class="card-list-title" id="projects-title">Projects</div>
-        <div class="card-list scroller" id="project-list"></div>
-      </div>
+    
+    <!-- Papers -->
+    <section class="dbl-card">
+      <div class="card-list-title" id="papers-title">Papers</div>
+      <div class="card-list scroller" id="paper-list"></div>
+    </section>
+
+    <!-- Projects可选 -->
+    <section class="dbl-card">
+      <div class="card-list-title" id="projects-title">Projects</div>
+      <div class="card-list scroller" id="project-list"></div>
     </section>
   </main>
+  
   <script src="speech.js"></script>
 </body>
 </html>
