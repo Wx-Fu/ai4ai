@@ -247,7 +247,10 @@ main {
     gap: 0.85em;
   }
   .lab-logo {height:32px;}
-  .lab-title {font-size:1.12rem;}
+  .lab-title {
+    font-size: 1.05rem;
+    max-width: 120px;
+  }
   .navi-center {
     gap: 0.7rem;
     flex-wrap: wrap;
