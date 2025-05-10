@@ -3,24 +3,24 @@ let lang = localStorage.getItem("lang") || "en";
 const langData = {
   en: {
     introTitle: 'About Our Lab',
-    introPara: `Our laboratory focuses on cutting-edge research in speech, emotion, dialogue,<br>and digital human, striving to drive innovative developments in human-machine interaction technology.`,
+    introPara: `Our laboratory focuses on cutting-edge and interdisciplinary research in speech, emotion, dialogue,<br>and digital humans, and strives to promote the innovative development of human-computer interaction technology.`,
     directions: [
-      { title: 'Speech', desc: 'Researches on speech recognition, synthesis and enhancement.' },
+      { title: 'Speech', desc: 'Research in speech recognition, synthesis and cross-disciplinary fields.' },
       { title: 'Emotion', desc: 'Emotion detection, analysis, and affective computing applications.' },
-      { title: 'Dialogue', desc: 'Dialogue systems, natural language understanding and generation.' },
-      { title: 'Digital Human', desc: 'Intelligent avatar, virtual human modeling and interaction.' }
+      { title: 'Dialogue', desc: 'Dialogue system, natural language understanding and generation, empathetic response.' },
+      { title: 'Digital Human', desc: 'Virtual human modeling and motion generation, human-computer interaction.' }
     ],
     patentTitle: 'Patents',
     langBtn: '中文'
   },
   zh: {
     introTitle: '实验室简介',
-    introPara: `实验室专注于语音、情感、对话和数字人等技术研究，<br>致力于推动新一代人机交互技术创新。`,
+    introPara: `我们的实验室专注于语音、情感、对话、数字人类等领域的前沿和跨学科研究，<br>致力于推动人机交互技术的创新发展。`,
     directions: [
-      { title: '语音', desc: '聚焦语音识别、合成与增强等研究方向。' },
+      { title: '语音', desc: '聚焦于语音识别、合成和交叉领域的研究。' },
       { title: '情感', desc: '情感识别与分析，以及情感计算实际应用。' },
-      { title: '对话', desc: '对话系统、自然语言理解与生成。' },
-      { title: '数字人', desc: '智能虚拟人形象、建模与人机交互。' }
+      { title: '对话', desc: '对话系统、自然语言理解与生成，共情回复。' },
+      { title: '数字人', desc: '虚拟人体建模与运动生成，人机交互。' }
     ],
     patentTitle: '专利',
     langBtn: 'English'
