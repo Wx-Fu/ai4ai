@@ -20,21 +20,6 @@ fetch("data/speech.json")
     renderData();
   });
 
-// speech.js
-function renderData() {
-  if (!speechData) return;
-  const d = speechData[lang] || speechData.en; // 增加fallback
-
-  // 处理空数据状态
-  const paperListHtml = d.papers?.length ? 
-    d.papers.map(p => paperTemplate(p)).join('') :
-    '<div class="empty-state">No papers found</div>';
-
-  const proListHtml = d.projects?.length ? 
-    d.projects.map(p => projectTemplate(p)).join('') :
-    '<div class="empty-state">No projects found</div>';
-}
-
 // 提取模板函数
 function paperTemplate(p) {
   return `<div class="paper-card">
@@ -49,4 +34,40 @@ function paperTemplate(p) {
     <div class="paper-conference">${p.conference}</div>
     <div class="paper-abstract">${p.abstract}</div>
   </div>`;
+}
+
+// 添加项目模板函数
+function projectTemplate(p) {
+  return `<div class="project-card">
+    <div class="project-title">${p.title}</div>
+    <div class="project-desc">${p.desc}</div>
+    ${p.demo_link ? `<a href="${p.demo_link}" target="_blank" class="project-demo-link">Demo</a>` : ''}
+  </div>`;
+}
+
+// speech.js
+function renderData() {
+  if (!speechData) return;
+  const d = speechData[lang] || speechData.en; // 增加fallback
+
+  // 设置方向介绍
+  document.getElementById('direction-title').textContent = d.direction_title || 'Speech';
+  document.getElementById('direction-desc').textContent = d.direction_desc || 'Our research focuses on...';
+  
+  // 设置标题
+  document.getElementById('papers-title').textContent = d.papers_title || 'Papers';
+  document.getElementById('projects-title').textContent = d.projects_title || 'Projects';
+
+  // 处理空数据状态
+  const paperListHtml = d.papers?.length ? 
+    d.papers.map(p => paperTemplate(p)).join('') :
+    '<div class="empty-state">No papers found</div>';
+
+  const proListHtml = d.projects?.length ? 
+    d.projects.map(p => projectTemplate(p)).join('') :
+    '<div class="empty-state">No projects found</div>';
+    
+  // 将内容插入DOM
+  document.getElementById('paper-list').innerHTML = paperListHtml;
+  document.getElementById('project-list').innerHTML = proListHtml;
 }
