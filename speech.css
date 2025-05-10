@@ -1,4 +1,34 @@
 /* speech.css */
+html,body {margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;background:#f3f7fb;color:#223;}
+main {max-width:1100px;margin:46px auto 0 auto;padding:0 8px;}
+body {margin:0;}
+
+/* 顶栏修饰 */
+.navi-header {
+  display: flex; align-items: center; justify-content:space-between;
+  background: #fff; box-shadow: 0 1px 6px #ccd7e422; padding: 0 34px; height: 62px;
+  border-bottom: 1.5px solid #e4e8f4; position:sticky; top:0; z-index: 10;
+}
+.navi-left {display:flex;align-items:center;gap:12px;}
+.lab-logo {width: 45px; height:45px;}
+.lab-title { font-size:1.13rem; font-weight: 600; line-height:1.17; color:#1852a1; }
+.navi-center { display: flex; gap: 2.5vw; }
+.navi-btn {
+  background: none; border:none;
+  font-size: 1.09em; font-weight: 600; color:#343b59;
+  padding: 3.3px 17px; border-radius:8px; cursor:pointer;
+  margin-left:7px;text-decoration:none;transition:background .18s;
+}
+.navi-btn.active, .navi-btn:active, .navi-btn:hover {
+  background: #e5eefd;
+  color: #1563d3;
+}
+
+/* 响应式 */
+@media (max-width:890px) {
+  .navi-header{flex-wrap:wrap; padding:0 2vw;}
+  .navi-center{gap:10px;}
+}
 
 .speech-direction-detail.direction-detail {
   max-width: 760px;
