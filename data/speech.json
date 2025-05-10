@@ -14,7 +14,6 @@
         "paper_link": "https://arxiv.org/abs/xxx",
         "github_link": "https://github.com/xxx"
       }
-      // ...更多
     ],
     "projects": [
       {
@@ -22,7 +21,6 @@
         "desc": "A demo project",
         "demo_link": "https://demo.com"
       }
-      // ...更多
     ]
   },
   "zh": {
