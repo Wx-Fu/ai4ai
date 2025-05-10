@@ -57,74 +57,40 @@ main {
 
 /* Paper-card样式 */
 .paper-card {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background: #f7fafe;
-  border-radius: 13px;
-  margin-bottom: 18px;
-  padding: 16px 18px 14px 18px;
-  box-shadow: 0 1px 3px #7099c822;
-}
-.paper-title {
-  font-size: 1.16em;
-  font-weight: 700;
-  margin-bottom: 4px;
-  color: #183f82;
-}
-.paper-links {
-  margin-bottom: 2px;
-}
-.paper-links a {
-  display: inline-block;
-  margin-right: 9px;
-  vertical-align: middle;
-  opacity: 0.92;
-}
-.paper-links img {
-  vertical-align: middle;
-  width: 20px; height: 20px;
-}
-.paper-authors, .paper-abstract {
-  font-size: 0.96em;
-  color: #6c7d95;
-  margin-bottom: 3px;
-}
-.paper-authors {
-  font-size: 0.93em;
-  color: #8c8d9d;
-}
-.paper-abstract {
-  font-size: 0.93em;
-  color: #b0b4bb;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-/* Project card样式 */
-.project-card {
-  margin-bottom: 13px;
-  background: #f7faf9;
-  border-radius: 10px;
-  padding: 13px 18px 10px 16px;
-  box-shadow: 0 1px 3px #aabbcc12;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.project-title {
+.paper-title {
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #255196;
-  font-size: 1.01em;
+  margin-bottom: 8px;
 }
-.project-desc {
-  font-size: 0.97em;
-  color: #8997a1;
+
+.paper-links {
+  margin-bottom: 12px;
 }
-.project-links a {
-  font-size: 0.95em;
-  color: #2070ee;
-  text-decoration: underline;
-  margin-top: 1px;
-  display: inline-block;
+
+.paper-links a {
+  display: inline-flex;
+  margin-right: 12px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 @media (max-width:700px) {
