@@ -23,6 +23,7 @@ body {
   min-width: 0;
 }
 
+
 .navi-left {
   display: flex;
   align-items: center;
@@ -35,10 +36,16 @@ body {
 }
 
 .lab-title {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: #2254b5;
-  letter-spacing: .02em;
+  font-size: 1.3rem;    /* 字体适当缩小 */
+  font-weight: 700;
+  line-height: 1.21;    /* 行高小一点不会太散 */
+  color: #155A9B;
+  margin-right: auto;
+  white-space: normal;  /* 支持换行 */
+  word-break: break-all;
+  /* 有必要可再加max-width限制 */
+  max-width: 260px;
+  min-width: 200px;
 }
 
 .navi-center {
