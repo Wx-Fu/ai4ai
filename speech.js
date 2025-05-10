@@ -48,21 +48,25 @@ function getConferenceClass(conference) {
   return 'conf-other';
 }
 
+
 // 完整的论文模板函数
-function paperTemplate(p) {
-  const confClass = getConferenceClass(p.conference);
+function paperTemplate(paper) {
+  const confClass = getConfClass(paper.conf);
+  
   return `
     <div class="paper-card">
       <div class="paper-header">
-        <span class="paper-conf ${confClass}">${p.abbr || p.conference}</span>
-        <h3 class="paper-title">${p.title}</h3>
+        <span class="paper-conf ${confClass}">${paper.conf}</span>
       </div>
-      <p class="paper-authors">${p.authors}</p>
-      <p class="paper-abstract">${p.abstract}</p>
-      <div class="paper-links">
-        ${p.paper_link ? `<a href="${p.paper_link}" target="_blank" class="btn paper-btn">Paper</a>` : ''}
-        ${p.github_link ? `<a href="${p.github_link}" target="_blank" class="btn github-btn">GitHub</a>` : ''}
+      <div class="paper-title-container">
+        <h3 class="paper-title">${paper.title}</h3>
+        <div class="paper-links">
+          ${paper.pdf ? `<a href="${paper.pdf}" target="_blank" class="paper-link"><img src="assets/arXiv.svg" alt="PDF" class="link-icon"></a>` : ''}
+          ${paper.code ? `<a href="${paper.code}" target="_blank" class="paper-link"><img src="assets/github.svg" alt="Code" class="link-icon"></a>` : ''}
+        </div>
       </div>
+      <p class="paper-authors">${paper.authors}</p>
+      <p class="paper-abstract">${paper.abstract}</p>
     </div>
   `;
 }
