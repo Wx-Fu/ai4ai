@@ -4,24 +4,77 @@ main {max-width:1100px;margin:46px auto 0 auto;padding:0 8px;}
 body {margin:0;}
 
 /* 顶栏修饰 */
+/* 导航栏 */
 .navi-header {
-  display: flex; align-items: center; justify-content:space-between;
-  background: #fff; box-shadow: 0 1px 6px #ccd7e422; padding: 0 34px; height: 62px;
-  border-bottom: 1.5px solid #e4e8f4; position:sticky; top:0; z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.2rem 1rem 2.2rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  margin-bottom: 2.5rem;
+  min-width: 0;
 }
-.navi-left {display:flex;align-items:center;gap:12px;}
-.lab-logo {width: 45px; height:45px;}
-.lab-title { font-size:1.13rem; font-weight: 600; line-height:1.17; color:#1852a1; }
-.navi-center { display: flex; gap: 2.5vw; }
+
+
+.navi-left {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.lab-logo {
+  height: 44px;
+  margin: 0 0.65rem 0 0;
+}
+
+.lab-title {
+  font-size: 0.95rem;    /* 字体适当缩小 */
+  font-weight: 700;
+  line-height: 1.21;    /* 行高小一点不会太散 */
+  color: #155A9B;
+  margin-right: auto;
+  white-space: normal;  /* 支持换行 */
+  word-break: break-all;
+  /* 有必要可再加max-width限制 */
+  max-width: 240px;
+  min-width: 150px;
+}
+
+.navi-center {
+  display: flex;
+  gap: 2.1rem;
+}
+
 .navi-btn {
-  background: none; border:none;
-  font-size: 1.09em; font-weight: 600; color:#343b59;
-  padding: 3.3px 17px; border-radius:8px; cursor:pointer;
-  margin-left:7px;text-decoration:none;transition:background .18s;
+  padding: 0.48rem 1.16rem;
+  text-decoration: none;
+  color: #2254b5;
+  background: transparent;
+  border: none;
+  font-size: 1.07em;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color .18s, background .12s, transform .15s;
+  outline: none;
+  position: relative;
 }
-.navi-btn.active, .navi-btn:active, .navi-btn:hover {
-  background: #e5eefd;
-  color: #1563d3;
+
+.navi-btn.active, .navi-btn:focus-visible {
+  font-weight: bold;
+  color: #ff7700;
+}
+
+.navi-btn:hover {
+  color: #ff7700;
+  background: #ffeaa5a8;
+  transform: translateY(-2.5px) scale(1.045);
+}
+
+.navi-right {
+  display: flex;
+  gap: 0.68rem;
 }
 
 /* 响应式 */
