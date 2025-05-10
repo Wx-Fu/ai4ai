@@ -1,32 +1,20 @@
 {
   "papers": [
     {
-      "abbr": "V2T",
-      "title": "Voice2Text: A New Open-Source End-to-End ASR",
+      "abbr": "AST",
       "conf": "INTERSPEECH",
-      "paper": "https://xxx.com/v2t.pdf",
-      "demo": "https://xxx.com/v2t-demo",
-      "authors": "A. Smith, B. Lee, C. Wang"
-    },
-    {
-      "abbr": "SE-Trans",
-      "title": "Speech Enhancement Transformer for Robust ASR",
-      "conf": "ICASSP",
-      "paper": "https://xxx.com/setrans.pdf",
-      "authors": "Y. Ma, T. Xu, K. Chen"
+      "title": {"en": "Acoustic Speech Transformer", "zh": "声学语音变换器"},
+      "authors": "L. Wang, Z. Wu, et al.",
+      "paper": "xxx.pdf",
+      "demo": "xxx"
     }
   ],
   "projects": [
     {
-      "name": "OpenASR",
-      "desc": "An open-source speech recognition toolkit.",
-      "demo": "https://xxx.com/openasr-demo",
-      "github": "https://github.com/xxxxx/openasr"
-    },
-    {
-      "name": "NoiseClean",
-      "desc": "Speech denoising system for real-time application.",
-      "demo": "https://xxx.com/noiseclean"
+      "name": {"en": "Smart Speaker", "zh": "智能音箱"},
+      "desc": {"en": "Commercial-grade smart AI voice device.", "zh": "商用级智能语音设备。"},
+      "demo": "xxx",
+      "github": "xxx"
     }
   ]
 }
