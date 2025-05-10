@@ -59,7 +59,7 @@ main {
 
 #paper-list, #project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 1.5rem;
 }
 
@@ -68,12 +68,41 @@ main {
   border-radius: 8px;
   padding: 1.25rem;
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .paper-card:hover, .project-card:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transform: translateY(-2px);
 }
+
+.paper-conference {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+/* 会议/期刊底色 */
+.conf-neurips { background-color: #8A2BE2; }
+.conf-icml { background-color: #1E90FF; }
+.conf-iclr { background-color: #FF6347; }
+.conf-acl { background-color: #228B22; }
+.conf-cvpr { background-color: #FF8C00; }
+.conf-iccv { background-color: #4682B4; }
+.conf-eccv { background-color: #CD5C5C; }
+.conf-emnlp { background-color: #6A5ACD; }
+.conf-naacl { background-color: #2E8B57; }
+.conf-aaai { background-color: #8B4513; }
+.conf-ijcai { background-color: #4169E1; }
+.conf-interspeech { background-color: #9932CC; }
+.conf-ieee { background-color: #008080; }
+.conf-arxiv { background-color: #696969; }
+.conf-other { background-color: #708090; }
 
 .paper-header {
   display: flex;
@@ -86,23 +115,38 @@ main {
   font-weight: bold;
   color: #2254b5;
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
 }
 
 .paper-links {
   display: flex;
-  gap: 0.5rem;
-}
-
-.paper-authors, .paper-conference {
-  color: #5a6688;
+  gap: 0.75rem;
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
 }
 
-.paper-abstract, .project-desc {
-  color: #333;
-  font-size: 0.95rem;
+.paper-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #2254b5;
+  font-size: 0.85rem;
+}
+
+.paper-links a img {
+  margin-right: 4px;
+}
+
+.paper-authors {
+  color: #777;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.paper-abstract {
+  color: #666;
+  font-size: 0.9rem;
   line-height: 1.5;
   margin-top: 0.75rem;
 }
