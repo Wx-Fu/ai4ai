@@ -49,7 +49,7 @@ function paperTemplate(p) {
     <span class="paper-conference ${confClass}">${p.conference}</span>
     <div class="paper-title">${p.title}</div>
     <div class="paper-links">
-      ${p.paper_link ? `<a href="${p.paper_link}" target="_blank"><img src="assets/arxiv.svg" width="18"> arXiv</a>` : ''}
+      ${p.paper_link ? `<a href="${p.paper_link}" target="_blank"><img src="assets/arXiv.svg" width="18"> arXiv</a>` : ''}
       ${p.github_link ? `<a href="${p.github_link}" target="_blank"><img src="assets/github.svg" width="18"> GitHub</a>` : ''}
     </div>
     <div class="paper-authors">${p.authors}</div>
