@@ -14,7 +14,7 @@ main {
   border-radius: 22px;
   padding: 2.5em 3.2em;
   margin: 0 auto 2.8rem auto;
-  max-width: 1560px;   /* 与style.css中的card一致 */
+  max-width: 1360px;   /* 与style.css中的card一致 */
   width: 100%;
   box-shadow: 0 6px 32px #b9cefa16;
   box-sizing: border-box;
@@ -43,7 +43,7 @@ main {
   border-radius: 22px;
   padding: 2.5em 3.2em;
   margin: 0 auto 2.8rem auto;
-  max-width: 1560px;   /* 与style.css中的card一致 */
+  max-width: 1360px;   /* 与style.css中的card一致 */
   width: 100%;
   box-shadow: 0 6px 32px #b9cefa16;
   box-sizing: border-box;
@@ -65,7 +65,7 @@ main {
   transition: all 0.3s ease;
   width: 100%; /* 确保卡片占满容器宽度 */
   min-width: 600px; /* 设置最小宽度 */
-  max-width: 1280px; /* 设置最大宽度 */
+  max-width: 1360px; /* 设置最大宽度 */
   margin: 0 auto; /* 居中显示 */
 }
 
