@@ -65,7 +65,7 @@ function paperTemplate(paper) {
       <div class="paper-title-container">
         <h3 class="paper-title">${paper.title || ''}</h3>
         <div class="paper-links">
-          ${paper.paper_link ? `<a href="${paper.paper_link}" target="_blank" class="paper-link"><img src="assets/arXiv.svg" alt="PDF" class="link-icon"></a>` : ''}
+          ${paper.paper_link ? `<a href="${paper.paper_link}" target="_blank" class="paper-link"><img src="assets/arXiv.svg" alt="PDF" class="link-icon arxiv-icon"></a>` : ''}
           ${paper.github_link ? `<a href="${paper.github_link}" target="_blank" class="paper-link"><img src="assets/github.svg" alt="Code" class="link-icon"></a>` : ''}
         </div>
       </div>
