@@ -1,13 +1,11 @@
-body {
-  background: #f5f8fb;
-  font-family: 'Segoe UI', 'Arial', sans-serif;
-  color: #222;
-}
-
 main {
-  max-width: 900px;
-  margin: 32px auto 0 auto;
-  padding: 0 18px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 11vw 54px 11vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
 }
 
 /* speech.css */
@@ -16,8 +14,8 @@ main {
   border-radius: 22px;
   padding: 2.5em 3.2em;
   margin: 0 auto 2.8rem auto;
-  max-width: 1600px;
-  width: 100%; /* 确保占满容器宽度 */
+  max-width: 1360px;   /* 与style.css中的card一致 */
+  width: 100%;
   box-shadow: 0 6px 32px #b9cefa16;
   box-sizing: border-box;
   transition: box-shadow .18s, transform .14s;
@@ -45,8 +43,8 @@ main {
   border-radius: 22px;
   padding: 2.5em 3.2em;
   margin: 0 auto 2.8rem auto;
-  max-width: 1600px;
-  width: 100%; /* 确保占满容器宽度 */
+  max-width: 1360px;   /* 与style.css中的card一致 */
+  width: 100%;
   box-shadow: 0 6px 32px #b9cefa16;
   box-sizing: border-box;
   transition: box-shadow .18s, transform .14s;
