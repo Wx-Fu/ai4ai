@@ -1,14 +1,7 @@
 // ====== 语言支持 ======
-let lang = "en"; // 页面全局语言
+// ====== 语言支持 ======
+let lang = "en";
 if (localStorage.getItem("lang")) lang = localStorage.getItem("lang");
-function setLang(newLang) {
-  lang = newLang;
-  localStorage.setItem("lang", lang);
-  applyLang();
-}
-function toggleLang() {
-  setLang(lang === "en" ? "zh" : "en");
-}
 
 const langData = {
   en: {
@@ -47,29 +40,34 @@ const langData = {
   }
 };
 
-let currentLang = 'en';
+function setLang(newLang) {
+  lang = newLang;
+  localStorage.setItem("lang", lang);
+  applyLang();
+}
+
+function toggleLang() {
+  setLang(lang === "en" ? "zh" : "en");
+}
 
 function applyLang() {
-  const d = langData[currentLang];
+  const d = langData[lang];
   document.getElementById('intro-title').innerHTML = d.introTitle;
   document.getElementById('intro-para').innerHTML = d.introPara;
-  // 四大方向
   for(let i=0;i<4;i++) {
     document.getElementById('dir-title-'+(i+1)).textContent = d.directions[i].title;
     document.getElementById('dir-para-'+(i+1)).textContent = d.directions[i].desc;
   }
-  // 专利
   document.getElementById('patent-title').textContent = d.patentTitle;
   document.getElementById('patent-list').innerHTML = d.patents.map(s=>`<li>${s}</li>`).join('');
   document.getElementById('lang-switch').textContent = d.langBtn;
 }
 
-document.getElementById('lang-switch').onclick = function() {
-  currentLang = currentLang === 'en' ? 'zh' : 'en';
+// 绑定事件并初始化
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById('lang-switch').onclick = toggleLang;
   applyLang();
-};
-
-document.addEventListener("DOMContentLoaded", applyLang);
+});
 
 
 // 首页专利栏内容刷新
