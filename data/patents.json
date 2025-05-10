@@ -1,10 +1,29 @@
 {
   "en": [
-    "A Robust Speech Emotion Recognition Method, Patent No. CNxxxxxx.",
-    "Large Language Model Open Dialogue System, Patent No. CNyyyyyy."
+    "Speech synthesis methods, devices and storage media for speech dialogue scenarios, Patent No. ZL202211563513.4.",
+    "Multimodal anxiety detection methods and devices based on emotional information assistance, Patent No. ZL202211096131.5.",
+    "Voice-driven speaker human motion video synthesis enhancement methods, systems and storage media, Patent No. ZL202210670740.0.",
+    "An automatic detection method and device for speech depression based on delay neural network, Patent No. ZL202210663429.3.",
+    "Training methods, devices and synthesis methods of speech synthesis models based on common sense reasoning, Patent No. ZL202311071256.7.",
+    "Face animation synthesis methods, systems and storage media, Patent No. ZL202310769585.2.",
+    "A method and system for converting speech timbre, Patent No. 202310607980.0.",
+    "A speech emotion recognition method based on frame-level emotion state alignment, Patent No. ZL202311430903.9.",
+    "Training methods, devices and synthesis methods of speech synthesis models based on contrastive learning, Patent No. ZL202311358990.1.",
+    "Multimodal emotion recognition model training methods, multimodal emotion recognition methods and equipment, Patent No. 202410523477.1.",
+    "A method and system for generating audio from text, Patent No. ZL202311844353.5."
   ],
   "zh": [
-    "一种鲁棒的语音情感识别方法，专利号：CNxxxxxx。",
-    "基于大模型的开放式对话系统，专利号：CNyyyyyy。"
+    "面向语音对话场景的语音合成方法、装置及存储介质，专利号：ZL202211563513.4。",
+    "基于情感信息辅助的多模态焦虑检测方法及装置，专利号：ZL202211096131.5。",
+    "语音驱动说话人头动视频合成增强方法、系统和存储介质，专利号：ZL202210670740.0。",
+    "一种基于时延神经网络的语音抑郁症自动检测方法和装置，专利号：ZL202210663429.3。",
+    "基于常识推理的语音合成模型训练方法、装置及合成方法，专利号：ZL202311071256.7。",
+    "人脸动画合成方法、系统和存储介质，专利号：ZL202310769585.2。",
+    "一种语音音色转换方法和系统，专利号：202310607980.0。",
+    "一种基于帧级别情感状态对齐的语音情感识别方法，专利号：ZL202311430903.9。",
+    "基于对比学习的语音合成模型训练方法、装置及合成方法，专利号：ZL202311358990.1。",
+    "多模态情感识别模型训练方法、多模态情感识别方法及设备，专利号：202410523477.1。",
+    "基于检索增强生成的语音合成方法及装置，专利号：ZL202410673948.7。",
+    "一种文本生成音频方法及系统，专利号：ZL202311844353.5 。"
   ]
 }
