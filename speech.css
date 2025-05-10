@@ -74,103 +74,126 @@ main {
   transform: translateY(-2px);
 }
 
-.paper-conference {
+/* 会议标签样式 */
+.paper-conf {
   display: inline-block;
-  padding: 3px 8px;
+  padding: 4px 8px;
   border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
   color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
-/* 会议/期刊底色 */
-.conf-neurips { background-color: #8A2BE2; }
-.conf-icml { background-color: #1E90FF; }
-.conf-iclr { background-color: #FF6347; }
-.conf-taslp { background-color: #6C7798; }
-.conf-icassp { background-color: #9592AD; }
-.conf-acl { background-color: #228B22; }
-.conf-cvpr { background-color: #FF8C00; }
-.conf-iccv { background-color: #4682B4; }
-.conf-eccv { background-color: #CD5C5C; }
-.conf-emnlp { background-color: #6A5ACD; }
-.conf-naacl { background-color: #2E8B57; }
-.conf-aaai { background-color: #8B4513; }
-.conf-ijcai { background-color: #4169E1; }
-.conf-interspeech { background-color: #9932CC; }
-.conf-ieee { background-color: #008080; }
-.conf-arxiv { background-color: #696969; }
-.conf-other { background-color: #708090; }
+/* 各会议的颜色样式 */
+.conf-neurips { background-color: #4b67a1; }
+.conf-taslp { background-color: #2980b9; }
+.conf-icml { background-color: #8e44ad; }
+.conf-iclr { background-color: #9b59b6; }
+.conf-acl { background-color: #3498db; }
+.conf-cvpr { background-color: #1abc9c; }
+.conf-iccv { background-color: #16a085; }
+.conf-eccv { background-color: #27ae60; }
+.conf-emnlp { background-color: #2ecc71; }
+.conf-naacl { background-color: #f1c40f; }
+.conf-aaai { background-color: #e67e22; }
+.conf-ijcai { background-color: #d35400; }
+.conf-interspeech { background-color: #e74c3c; }
+.conf-icassp { background-color: #c0392b; }
+.conf-ieee { background-color: #7f8c8d; }
+.conf-arxiv { background-color: #95a5a6; }
+.conf-other { background-color: #34495e; }
 
-.paper-header {
+/* 论文卡片样式 */
+.paper-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+/* 论文标题行样式 */
+.paper-title-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.75rem;
+  margin-bottom: 8px;
 }
 
-.paper-title, .project-title {
-  font-weight: bold;
-  color: #2254b5;
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
+/* 论文标题样式 */
+.paper-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  flex: 1;
+  padding-right: 16px;
 }
 
+/* 论文链接样式 */
 .paper-links {
   display: flex;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
-.paper-links a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #2254b5;
-  font-size: 0.85rem;
+/* 链接图标样式 */
+.link-icon {
+  width: 24px;
+  height: 24px;
 }
 
-.paper-links a img {
-  margin-right: 4px;
-}
-
+/* 作者样式 */
 .paper-authors {
-  color: #777;
-  margin-bottom: 0.75rem;
-  font-size: 0.9rem;
-  font-style: italic;
-}
-
-.paper-abstract {
+  font-size: 14px;
   color: #666;
-  font-size: 0.9rem;
+  margin: 8px 0;
+}
+
+/* 摘要样式 */
+.paper-abstract {
+  font-size: 14px;
   line-height: 1.5;
-  margin-top: 0.75rem;
+  color: #333;
+  margin: 8px 0 0 0;
 }
 
-.project-demo-link {
+/* 项目卡片样式 */
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.project-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.demo-btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #2254b5;
+  background-color: #3498db;
   color: white;
-  text-decoration: none;
+  padding: 6px 12px;
   border-radius: 4px;
-  font-size: 0.9rem;
-  transition: background 0.3s;
+  text-decoration: none;
+  margin-top: 12px;
+  font-size: 14px;
 }
 
-.project-demo-link:hover {
-  background: #1a4090;
-}
-
-.empty-state {
-  color: #888;
-  text-align: center;
-  padding: 2rem;
-  grid-column: 1 / -1;
+.demo-btn:hover {
+  background-color: #2980b9;
 }
 
 /* 响应式调整 */
