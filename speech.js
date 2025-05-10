@@ -12,7 +12,7 @@ document.getElementById("lang-switch").onclick = function() {
 
 let speechData = null;
 
-fetch("data/speech.json")
+fetch("./data/speech.json")
   .then(r=>r.json())
   .then(data=>{
     speechData = data;
