@@ -211,6 +211,16 @@ main {
   color: #2254b5;
   margin-bottom: .85em;
 }
+.direction-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.direction-link:hover .direction-card {
+  box-shadow: 0 4px 16px rgba(80,130,255,0.22);
+  transform: translateY(-4px) scale(1.035);
+  cursor: pointer;
+}
 
 #patent-list {
   padding-left: 0;
