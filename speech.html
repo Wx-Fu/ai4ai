@@ -5,15 +5,14 @@
   <title>Speech · AI Lab</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <!-- 如需微调卡片布局，可增加 <link rel="stylesheet" href="speech.css"> -->
 </head>
 <body>
-  <!-- 导航栏完全和index一致，关键class全对齐 -->
   <header class="navi-header">
     <div class="navi-left">
-      <img src="assets/logo.png" class="lab-logo" alt="Lab logo" />
+      <img src="assets/logo.png" class="lab-logo" alt="Lab logo"/>
       <div class="lab-title">
-        <span class="lab-title-line1">Artificial Intelligence for</span><br>
-        <span class="lab-title-line2">Affective Interaction Lab</span>
+        <span>Artificial Intelligence for<br>Affective Interaction Lab</span>
       </div>
     </div>
     <div class="navi-center">
@@ -30,21 +29,21 @@
   </header>
 
   <main>
-    <section class="direction-detail">
+    <section class="direction-detail speech-direction-detail">
       <img src="assets/icon-speech.svg" class="direction-icon-lg" alt="Speech icon"/>
       <div>
-        <h2 id="direction-title"></h2>
-        <p id="direction-desc"></p>
+        <h2 id="direction-title">Speech</h2>
+        <p id="direction-desc">Our research focuses on ...</p>
       </div>
     </section>
-    <section class="papers-projects">
+    <section class="papers-projects speech-papers-projects">
       <div class="dbl-card">
-        <div class="card-list-title" id="papers-title"></div>
-        <div class="scroller" id="paper-list"></div>
+        <div class="card-list-title" id="papers-title">Papers</div>
+        <div class="card-list scroller" id="paper-list"></div>
       </div>
       <div class="dbl-card">
-        <div class="card-list-title" id="projects-title"></div>
-        <div class="scroller" id="project-list"></div>
+        <div class="card-list-title" id="projects-title">Projects</div>
+        <div class="card-list scroller" id="project-list"></div>
       </div>
     </section>
   </main>
