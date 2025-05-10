@@ -1,16 +1,75 @@
+/* 添加重置样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #f6f8fb;
-  margin: 0;
   color: #222340;
+  line-height: 1.6;
 }
+
+/* 新增导航栏样式 */
+.navi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.navi-left {
+  display: flex;
+  align-items: center;
+}
+
+.lab-logo {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.lab-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2254b5;
+}
+
+.navi-center {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navi-btn {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #2254b5;
+  transition: all 0.2s;
+}
+
+.navi-btn:hover {
+  color: #1a3d82;
+  transform: translateY(-2px);
+}
+
+/* 保持原有卡片样式 */
 main {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0 16px 48px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0 16px 48px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px #b9cefa16;
+  margin-bottom: 2.6em;
+  padding: 2.2em 2.7em;
+  transition: all 0.2s;
 }
 .lab-intro, .directions-card-wrapper, .lab-patents {
   width: 100%;
@@ -18,7 +77,7 @@ main {
   min-width: 0;
   box-sizing: border-box;
 }
-.card, .directions-card-wrapper {
+.directions-card-wrapper {
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 6px 32px 0 #b9cefa16;
@@ -45,6 +104,7 @@ main {
   margin: 0;
   word-break: break-word;
 }
+
 .directions {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -100,13 +160,11 @@ main {
 #patent-list { padding-left: 1.3em; color: #5a6688; line-height: 1.68; font-size: 1.13em; }
 
 @media (max-width: 800px) {
-  main, .lab-intro, .directions-card-wrapper, .lab-patents {
-    max-width: 99vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
+  .navi-center {
+    display: none; /* 移动端隐藏导航栏 */
   }
-  .directions { grid-template-columns: 1fr; }
-}
-@media (max-width: 600px) {
-  .card, .directions-card-wrapper { padding: 1.05em 0.28em; }
+  .directions {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
 }
