@@ -84,7 +84,7 @@ body {
   gap: 0.68rem;
 }
 
-/* 语言按钮超级美化（一个橙色，高亮） */
+/* 语言按钮 */
 #lang-switch {
   border-radius: 1.7em;
   padding: 0.49em 1.6em;
@@ -297,12 +297,7 @@ main {
 .project-card:hover, .paper-card:hover  {
   box-shadow: 0 5px 18px #c6d6f5;
 }
-/* 论文/项目题目 */
-.paper-title, .project-title  {
-  font-weight: 550;
-  font-size: 1.07em;
-  margin-bottom: 0.2em;
-}
+
 /* 链接按钮区 */
 .resource-links a {
   display: inline-block;
@@ -319,12 +314,7 @@ main {
 .resource-links a:hover {
   background: #1a55be;
 }
-/* 作者小字 */
-.card-authors, .card-desc {
-  font-size: 0.98em;
-  color: #76819d;
-  margin-top: 1px
-}
+
 
 #patent-list {
   padding-left: 0;
@@ -410,213 +400,3 @@ main {
 
 ::-webkit-scrollbar{width:0.7em;background:transparent;}
 ::-webkit-scrollbar-thumb{background:#e7e7e7;border-radius:14px;}
-
-
-.speech-direction-detail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border-radius: 28px;
-  box-shadow: 0 2px 24px #dbeafe28;
-  max-width: 520px;
-  margin: 44px auto 52px auto;
-  gap: 32px;
-}
-
-.direction-icon-lg {
-  width: 72px;
-  height: 72px;
-}
-
-.speech-papers-projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 36px;
-}
-
-.dbl-card {
-  background: #fff;
-  border-radius: 26px;
-  box-shadow: 0 2px 24px #dbeafe21;
-  width: 100%;
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 26px 32px 20px 32px;
-  /* 也可使用min-width调整卡片下限 */
-}
-
-.card-list-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-}
-
-.card-list.scroller {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.paper-card, .project-card {
-  background: #f4f7fa;
-  border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 0;
-  box-shadow: 0 1px 6px #c9e4f622;
-}
-
-@media (max-width: 800px) {
-  .speech-direction-detail, .dbl-card {
-    max-width: 95vw;
-    padding: 20px 3vw;
-  }
-  main { max-width: 99vw; }
-}
-
-/* 方向/卡片区域加强宽度与对齐 */
-.speech-direction-detail.direction-detail {
-  max-width: 760px;
-  margin: 40px auto 40px auto;
-  padding: 32px 34px;
-  box-sizing: border-box;
-}
-
-.card-list-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
-/* 论文卡片结构 */
-.paper-card {
-  background: #f8faff;
-  border-radius: 13px;
-  box-shadow: 0 2px 18px #bfd6e228;
-  padding: 19px 21px 13px 17px;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  min-width: 0;
-}
-
-/* 顶部标签区 */
-.paper-tags {
-  display: flex;
-  align-items: center;
-  gap: 0.7em;
-  margin-bottom: 3px;
-}
-
-/* 会议色块标签 */
-.paper-tag {
-  font-size: .8em;
-  font-weight: 700;
-  padding: 0.08em 0.86em;
-  border-radius: 13px;
-  display: inline-block;
-  margin-right: 0.12em;
-  background: #e0eaff;
-  color: #22436a;
-}
-.tag-Interspeech { background: #dbedfe; color:#005ac4; }
-.tag-ICASSP { background:#e9f6e1; color:#399d0e; }
-.tag-AAAI { background:#fff8d8; color:#d19210; }
-.tag-TMSLP { background:#faeaef; color:#a51840; }
-/* 你可继续添加会议样式 (tag-XXX) */
-
-.paper-short-abbr {
-  font-size: .7em;
-  color: #888b9b;
-  margin-left: 0.5em;
-}
-
-/* 论文标题最大 */
-.paper-title {
-  font-size: 1.18em;
-  font-weight: bold;
-  color: #23294e;
-  margin: 0 0 .13em 0;
-  line-height: 1.33;
-  word-break: break-word;
-}
-
-/* 链接按钮区 */
-.paper-links {
-  display: flex; gap: 1.0em;
-  margin-bottom: 4px;
-}
-.paper-link-btn {
-  display: inline-flex; align-items: center; gap: .27em;
-  font-size: .99em;
-  font-weight: 600;
-  border: none;
-  outline: none;
-  padding: 5px 13px;
-  border-radius: 8px;
-  background: #e4eafe;
-  color: #1852a1;
-  margin-right: .75em;
-  cursor: pointer;
-  line-height: 1.1;
-  text-decoration: none;
-  transition: background 0.18s;
-}
-.paper-link-btn:active, .paper-link-btn:hover {
-  background: #cfe6ff;
-}
-
-.paper-link-btn.github {
-  background:#ecf3fa; color:#24292e;
-}
-.paper-link-btn.github:active, .paper-link-btn.github:hover {
-  background: #e1ecfa;
-}
-.paper-link-btn svg {
-  width: 20px; height: 20px; display: inline-block; vertical-align: bottom;
-  margin-right: 2px;
-}
-
-/* 作者、摘要灰色小号 */
-.paper-authors, .paper-abstract {
-  font-size: 0.93em;
-  color: #888b9b;
-  line-height: 1.45;
-  margin-bottom: 0;
-}
-
-.paper-authors { margin-top: 2px; }
-.paper-abstract { margin-top: 0; }
-
-/* 项目卡片同步 */
-.project-card {
-  background: #f2f7f3;
-  border-radius: 14px;
-  box-shadow: 0 1px 8px #abd6bf22;
-  padding: 16px 19px 12px 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-.project-title { font-size: 1.11em; font-weight: 700; color: #2d324a; }
-.project-desc { font-size:.96em; color:#7b818a; }
-.project-links { margin-top: 3px }
-.project-link {
-  display: inline-flex; align-items: center; gap: .27em;
-  font-size: .95em;
-  border-radius: 7px; background:#e7f7ff; color:#227cae;
-  text-decoration: none; padding: 2.5px 13px;
-  transition: background .18s;
-}
-.project-link:hover { background:#cdeafe; }
-
-@media (max-width: 920px) {
-  .speech-direction-detail.direction-detail,
-  .dbl-card { max-width: 98vw; }
-}
-@media (max-width:580px) {
-  .speech-direction-detail.direction-detail {padding:11px 2vw;}
-  .dbl-card { padding:11px 2vw 8px 2vw;}
-}
-
