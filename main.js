@@ -146,6 +146,29 @@ function conferenceClass(c) {
   return map[c] || "conf-default";
 }
 
+function renderCards(list, target, type) {
+  /*
+  list: array of paper/project objects from .json
+  target: dom node
+  type: "paper" or "project"
+  */
+  let final = '';
+  list.forEach(item => {
+    final += `<div class="${type}-card">
+      <div class="${type}-title">${item.title}</div>
+      <div class="card-authors">${item.authors || ''}</div>
+      <div class="resource-links">
+        ${item.links?.map(l =>
+          `<a href="${l.url}" target="_blank">${l.label}</a>`
+        ).join(' ') || ''}
+      </div>
+      <div class="card-desc">${item.desc || ''}</div>
+    </div>`;
+  });
+  target.innerHTML = final;
+}
+
+
 // ====== 卡片动效 =============
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.fade-in').forEach(e => {
