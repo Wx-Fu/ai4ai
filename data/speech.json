@@ -64,6 +64,42 @@
       "abstract": "本文研究了...",
       "paper_link": "https://arxiv.org/abs/xxx",
       "github_link": "https://github.com/xxx"
+    },
+    {
+      "conference": "ICASSP",
+      "abbr": "ICASSP",
+      "title": "新型语音模型",
+      "authors": "张三, 李四",
+      "abstract": "本文研究了...",
+      "paper_link": "https://arxiv.org/abs/xxx",
+      "github_link": "https://github.com/xxx"
+    },
+    {
+      "conference": "ICASSP",
+      "abbr": "ICASSP",
+      "title": "新型语音模型",
+      "authors": "张三, 李四",
+      "abstract": "本文研究了...",
+      "paper_link": "https://arxiv.org/abs/xxx",
+      "github_link": "https://github.com/xxx"
+    },
+    {
+      "conference": "ICASSP",
+      "abbr": "ICASSP",
+      "title": "新型语音模型",
+      "authors": "张三, 李四",
+      "abstract": "本文研究了...",
+      "paper_link": "https://arxiv.org/abs/xxx",
+      "github_link": "https://github.com/xxx"
+    },
+    {
+      "conference": "ICASSP",
+      "abbr": "ICASSP",
+      "title": "新型语音模型",
+      "authors": "张三, 李四",
+      "abstract": "本文研究了...",
+      "paper_link": "https://arxiv.org/abs/xxx",
+      "github_link": "https://github.com/xxx"
     }
   ],
   "projects": [
