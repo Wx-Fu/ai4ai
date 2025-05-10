@@ -197,8 +197,6 @@ main {
   background-color: #2980b9;
 }
 
-
-
 /* 响应式调整 */
 @media (max-width: 1300px) {
   .dbl-card {
