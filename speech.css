@@ -1,0 +1,168 @@
+/* speech.css */
+
+.speech-direction-detail.direction-detail {
+  max-width: 760px;
+  margin: 40px auto 40px auto;
+  padding: 32px 34px;
+  background: #f9fafc;
+  border-radius: 20px;
+  box-shadow: 0 2px 18px #bfd6e228;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+.direction-icon-lg {
+  width: 70px; height: 70px; flex-shrink: 0;
+}
+.direction-guidance-block {
+  flex:1;
+}
+.speech-direction-detail .direction-guidance-block h2 {
+  font-size: 1.7em; margin-bottom: 0.3em;
+}
+.speech-direction-detail .direction-guidance-block p {
+  font-size: 1.08em; color:#384858;
+}
+
+/* papers/projects 卡片 */
+.dbl-card {
+  max-width: 900px;
+  margin: 32px auto 0 auto;
+  background: #fff;
+  padding: 28px 29px 20px 29px;
+  border-radius: 22px;
+  box-shadow: 0 1px 13px #f3f5f948;
+}
+.card-list-title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.paper-card {
+  background: #f8faff;
+  border-radius: 13px;
+  box-shadow: 0 2px 18px #bfd6e228;
+  padding: 19px 21px 13px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+.paper-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 3px;
+}
+.paper-tag {
+  font-size: .8em;
+  font-weight: 700;
+  padding: 0.08em 0.86em;
+  border-radius: 13px;
+  display: inline-block;
+  margin-right: 0.12em;
+  background: #e0eaff;
+  color: #22436a;
+}
+.tag-Interspeech { background: #dbedfe; color:#005ac4; }
+.tag-ICASSP { background:#e9f6e1; color:#399d0e; }
+.tag-AAAI { background:#fff8d8; color:#d19210; }
+.tag-TMSLP { background:#faeaef; color:#a51840; }
+/* 继续添加需要的会议tag */
+
+.paper-short-abbr {
+  font-size: .7em;
+  color: #888b9b;
+  margin-left: 0.5em;
+}
+
+.paper-title {
+  font-size: 1.18em;
+  font-weight: bold;
+  color: #23294e;
+  margin: 0 0 .13em 0;
+  line-height: 1.33;
+  word-break: break-word;
+}
+
+.paper-links {
+  display: flex; gap: 1.0em;
+  margin-bottom: 4px;
+}
+.paper-link-btn {
+  display: inline-flex; align-items: center; gap: .27em;
+  font-size: .99em;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  padding: 5px 13px;
+  border-radius: 8px;
+  background: #e4eafe;
+  color: #1852a1;
+  margin-right: .75em;
+  cursor: pointer;
+  line-height: 1.1;
+  text-decoration: none;
+  transition: background 0.18s;
+}
+.paper-link-btn:active, .paper-link-btn:hover {
+  background: #cfe6ff;
+}
+
+.paper-link-btn.github {
+  background:#ecf3fa; color:#24292e;
+}
+.paper-link-btn.github:active, .paper-link-btn.github:hover {
+  background: #e1ecfa;
+}
+.paper-link-btn svg {
+  width: 20px; height: 20px; display: inline-block; vertical-align: bottom;
+  margin-right: 2px;
+}
+
+/* 作者、摘要灰色小号 */
+.paper-authors, .paper-abstract {
+  font-size: 0.93em;
+  color: #888b9b;
+  line-height: 1.45;
+  margin-bottom: 0;
+}
+
+.paper-authors { margin-top: 2px; }
+.paper-abstract { margin-top: 0; }
+
+.project-card {
+  background: #f2f7f3;
+  border-radius: 14px;
+  box-shadow: 0 1px 8px #abd6bf22;
+  padding: 16px 19px 12px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.project-title { font-size: 1.11em; font-weight: 700; color: #2d324a; }
+.project-desc { font-size:.96em; color:#7b818a; }
+.project-links { margin-top: 3px }
+.project-link {
+  display: inline-flex; align-items: center; gap: .27em;
+  font-size: .95em;
+  border-radius: 7px; background:#e7f7ff; color:#227cae;
+  text-decoration: none; padding: 2.5px 13px;
+  transition: background .18s;
+}
+.project-link:hover { background:#cdeafe; }
+
+@media (max-width: 920px) {
+  .speech-direction-detail.direction-detail,
+  .dbl-card { max-width: 98vw; }
+}
+@media (max-width:580px) {
+  .speech-direction-detail.direction-detail {padding:11px 2vw;}
+  .dbl-card { padding:11px 2vw 8px 2vw;}
+}
