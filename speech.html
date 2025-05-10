@@ -9,16 +9,19 @@
 <body>
   <header class="navi-header">
     <div class="navi-left">
-      <img class="lab-logo" src="assets/logo.png" alt="Lab logo">
-      <span class="lab-title">
-        Artificial Intelligence<br>for Affective Interaction Lab
-      </span>
+      <img src="assets/logo.png" alt="Lab logo" class="lab-logo">
+      <div class="lab-title">
+        Artificial Intelligence for<br>Affective Interaction Lab
+      </div>
     </div>
-    <nav class="navi-center">
-      <a href="index.html" class="navi-btn">Home</a>
-      <span class="navi-sep">/</span>
-      <span class="navi-cur" data-en="Speech" data-zh="语音">Speech</span>
-    </nav>
+    <div class="navi-center">
+      <a href="index.html" class="navi-btn">HOME</a>
+      <a href="speech.html" class="navi-btn active">SPEECH</a>
+      <a href="emotion.html" class="navi-btn">EMOTION</a>
+      <a href="dialogue.html" class="navi-btn">DIALOGUE</a>
+      <a href="digitalhuman.html" class="navi-btn">DIGITAL HUMAN</a>
+      <a href="index.html#patents" class="navi-btn">PATENTS</a>
+    </div>
     <div class="navi-right">
       <button id="lang-switch" class="navi-btn">中文</button>
     </div>
@@ -47,7 +50,7 @@
     </section>
   </main>
   <script>
-    // 当前研究方向
+    // 当前研究方向（给main.js用，自动拉取data/speech.json并渲染）
     window.direction = "speech";
   </script>
   <script src="main.js"></script>
