@@ -1,9 +1,13 @@
 /* speech.css */
-html,body {margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;background:#f3f7fb;color:#223;}
-main {max-width:1100px;margin:46px auto 0 auto;padding:0 8px;}
-body {margin:0;}
+body {
+  background: #f5f8fb;
+}
+main {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 0 18px;
+}
 
-/* 顶栏修饰 */
 /* 导航栏 */
 .navi-header {
   display: flex;
@@ -83,39 +87,52 @@ body {margin:0;}
   .navi-center{gap:10px;}
 }
 
-.speech-direction-detail.direction-detail {
-  max-width: 760px;
-  margin: 40px auto 40px auto;
-  padding: 32px 34px;
-  background: #f9fafc;
-  border-radius: 20px;
-  box-shadow: 0 2px 18px #bfd6e228;
+.speech-direction-detail {
   display: flex;
-  gap: 25px;
-  align-items: flex-start;
-}
-.direction-icon-lg {
-  width: 70px; height: 70px; flex-shrink: 0;
-}
-.direction-guidance-block {
-  flex:1;
-}
-.speech-direction-detail .direction-guidance-block h2 {
-  font-size: 1.7em; margin-bottom: 0.3em;
-}
-.speech-direction-detail .direction-guidance-block p {
-  font-size: 1.08em; color:#384858;
+  align-items: center;
+  gap: 2em;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 6px 26px #5e78a614;
+  margin: 32px auto 32px auto;
+  padding: 32px 44px;
+  max-width:720px;
+  min-width:320px;
 }
 
-/* papers/projects 卡片 */
-.dbl-card {
-  max-width: 900px;
-  margin: 32px auto 0 auto;
-  background: #fff;
-  padding: 28px 29px 20px 29px;
-  border-radius: 22px;
-  box-shadow: 0 1px 13px #f3f5f948;
+.speech-direction-detail img {
+  width: 72px; height: 72px; margin-right: 0.5em;
 }
+
+.speech-direction-detail h2 {
+  font-size: 2.1em;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.speech-direction-detail p {
+  color: #222e;
+  font-size: 1.13em;
+  margin: 0;
+  font-weight: 400;
+}
+
+.dbl-card {
+  background: #fff;
+  border-radius: 26px;
+  box-shadow: 0 4px 18px #5e78a612;
+  margin: 34px auto;
+  max-width:660px;
+  min-width: 300px;
+  padding: 27px 34px 23px 34px;
+  display:block;
+}
+
+.dbl-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.4em;
+}
+
 .card-list-title {
   font-size: 1.13rem;
   font-weight: 700;
