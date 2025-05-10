@@ -410,3 +410,72 @@ main {
 
 ::-webkit-scrollbar{width:0.7em;background:transparent;}
 ::-webkit-scrollbar-thumb{background:#e7e7e7;border-radius:14px;}
+
+
+main {
+  max-width: 900px;
+  margin: 44px auto 32px auto;
+}
+
+.speech-direction-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 2px 24px #dbeafe28;
+  max-width: 520px;
+  margin: 44px auto 52px auto;
+  gap: 32px;
+}
+
+.direction-icon-lg {
+  width: 72px;
+  height: 72px;
+}
+
+.speech-papers-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.dbl-card {
+  background: #fff;
+  border-radius: 26px;
+  box-shadow: 0 2px 24px #dbeafe21;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 26px 32px 20px 32px;
+  /* 也可使用min-width调整卡片下限 */
+}
+
+.card-list-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.card-list.scroller {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.paper-card, .project-card {
+  background: #f4f7fa;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 0;
+  box-shadow: 0 1px 6px #c9e4f622;
+}
+
+@media (max-width: 800px) {
+  .speech-direction-detail, .dbl-card {
+    max-width: 95vw;
+    padding: 20px 3vw;
+  }
+  main { max-width: 99vw; }
+}
