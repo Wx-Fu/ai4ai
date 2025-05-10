@@ -1,18 +1,45 @@
 {
   "en": {
     "direction_title": "Speech",
-    "direction_desc": "Our research focuses on speech processing...",
+    "direction_desc": "Our research focuses on the research of speech recognition, speech synthesis and interdisciplinary fields related to speech,<br>we continuously expand the downstream application of speech and improve its controllability.",
     "papers_title": "Papers",
     "projects_title": "Projects",
     "papers": [
       {
         "conference": "ICASSP",
         "abbr": "ICASSP",
-        "title": "A Novel Speech Model",
-        "authors": "Alice, Bob",
-        "abstract": "This paper explores...",
-        "paper_link": "https://arxiv.org/abs/xxx",
-        "github_link": "https://github.com/xxx"
+        "title": "DetailTTS: Learning Residual Detail Information for Zero-shot Text-to-speech",
+        "authors": "Cong Wang, Yichen Han, Yizhong Geng, Yingming Gao, Fengping Wang, Bingsong Bai, Qifei Li, Jinlong Xue, Yayue Deng, Zhengqi Wen, Ya Li",
+        "abstract": "Traditional text-to-speech (TTS) systems often face challenges in aligning text and speech, leading to the omission of critical linguistic and acoustic details. This misalignment creates an information gap, which existing methods attempt to address by incorporating additional inputs, but these often introduce data inconsistencies and increase complexity. To address these issues, we propose DetailTTS, a zero-shot TTS system based on a conditional variational autoencoder. It incorporates two key components: the Prior Detail Module and the Duration Detail Module, which capture residual detail information missed during alignment. These modules effectively enhance the model’s ability to retain fine-grained details, significantly improving speech quality while simplifying the model by obviating the need for additional inputs. Experiments on the WenetSpeech4TTS dataset show that DetailTTS outperforms traditional TTS systems in both naturalness and speaker similarity, even in zero-shot scenarios. Our source code and demo page are available at https://detailtts.github.io/.",
+        "paper_link": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10890840",
+        "github_link": "https://github.com/adelacvg/ttts"
+      },
+      {
+        "conference": "TASLP",
+        "abbr": "TASLP",
+        "title": " Articulatory Copy Synthesis Based on the Speech Synthesizer VocalTractLab and Convolutional Recurrent Neural Networks",
+        "authors": "Yingming Gao，Peter Birkholz, Ya Li",
+        "abstract": "Articulatory copy synthesis (ACS) refers to the synthetic reproduction of natural utterances. The existing methods of ACS have the limitations of poor generalizability for unknown speakers, high computing costs, the lack of systematic evaluation, etc. Here we propose an ACS method based on the articulatory speech synthesizer VocalTractLab (VTL) and convolutional recurrent neural networks. We first created paired articulatory-acoustic samples using VTL, and then trained neural-network-based ACS models with acoustic features and articulatory trajectories as inputs and outputs, respectively. The basic approach for training relied on fully synthetic training data (and was later supplemented with natural speech and corresponding synthetic articulatory data). In addition, to represent as much of the articulatory and acoustic space as possible, the training samples were augmented by varying the phonation type, speaking effort, and the vocal tract length of the synthetic utterances. Furthermore, two regularization methods were proposed: one based on the smoothness loss of articulatory trajectories and another based on the acoustic loss between original and estimated acoustic features. For given new utterances of arbitrary length, the trained ACS models could estimate articulatory trajectories that were then fed into VTL to synthesize new speech. Experiments showed that our proposed ACS method achieved an average correlation coefficient of 0.983 between the reference and estimated VTL articulatory parameters for speaker-dependent German utterances. When applied to speaker-independent German, English, and Mandarin Chinese utterances, the copy-synthesized speech achieved recognition rates of 73.88%, 52.92%, and 52.41%, respectively, using the automatic speech recognizer Google Speech-to-Text.",
+        "paper_link": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10458336",
+        "github_link": ""
+      },
+      {
+        "conference": "TASLP",
+        "abbr": "TASLP",
+        "title": " Auffusion: Leveraging the Power of Diffusion and Large Language Models for Text-to-Audio Generation",
+        "authors": "Jinlong Xue, Yayue Deng, Yingming Gao, Ya Li",
+        "abstract": "Recent advancements in diffusion models and large language models (LLMs) have significantly propelled the field of generation tasks. Text-to-Audio (TTA), a burgeoning generation application designed to generate audio from natural language prompts, is attracting increasing attention. However, existing TTA studies often struggle with generation quality and text-audio alignment, especially for complex textual inputs. Drawing inspiration from state-of-the-art Text-to-Image (T2I) diffusion models, we introduce Auffusion, a TTA system adapting T2I model frameworks to TTA task, by effectively leveraging their inherent generative strengths and precise cross-modal alignment. Our objective and subjective evaluations demonstrate that Auffusion surpasses previous TTA approaches using limited data and computational resources. Furthermore, the text encoder serves as a critical bridge between text and audio, since it acts as an instruction for the diffusion model to generate coherent content. Previous studies in T2I recognize the significant impact of encoder choice on cross-modal alignment, like fine-grained details and object bindings, while similar evaluation is lacking in prior TTA works. Through comprehensive ablation studies and innovative cross-attention map visualizations, we provide insightful assessments, being the first to reveal the internal mechanisms in the TTA field and intuitively explain how different text encoders influence the diffusion process. Our findings reveal Auffusion's superior capability in generating audios that accurately match textual descriptions, which is further demonstrated in several related tasks, such as audio style transfer, inpainting, and other manipulations.",
+        "paper_link": "https://arxiv.org/pdf/2401.01044.pdf",
+        "github_link": "https://github.com/happylittlecat2333/Auffusion"
+      },
+      {
+        "conference": "ICASSP",
+        "abbr": "ICASSP",
+        "title": " CONCSS: Contrastive-based Context Comprehension for Dialogue-appropriate Prosody in Conversational Speech Synthesis",
+        "authors": "Yayue Deng, Jinlong Xue, Yukang Jia, Qifei Li, Yichen Han, Fengping Wang, Yingming Gao, Dengfeng Ke, Ya Li",
+        "abstract": "Conversational speech synthesis (CSS) incorporates historical dialogue as supplementary information with the aim of generating speech that has dialogue-appropriate prosody. While previous methods have already delved into enhancing context comprehension, context representation still lacks effective representation capabilities and context-sensitive discriminability. In this paper, we introduce a contrastive learning-based CSS framework, CONCSS. Within this framework, we define an innovative pretext task specific to CSS that enables the model to perform self-supervised learning on unlabeled conversational datasets to boost the model’s context understanding. Additionally, we introduce a sampling strategy for negative sample augmentation to enhance context vectors’ discriminability. This is the first attempt to integrate contrastive learning into CSS. We conduct ablation studies on different contrastive learning strategies and comprehensive experiments in comparison with prior CSS systems. Results demonstrate that the synthesized speech from our proposed method exhibits more contextually appropriate and sensitive prosody..",
+        "paper_link": "https://arxiv.org/pdf/2312.10358",
+        "github_link": "https://github.com/Mia11939/DEMO-ICASSP2024"
       }
     ],
     "projects": [
