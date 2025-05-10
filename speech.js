@@ -4,6 +4,7 @@ function setLangSwitchBtn(lang) {
 }
 setLangSwitchBtn(lang);
 
+
 document.getElementById("lang-switch").onclick = function() {
   lang = lang === "en" ? "zh" : "en";
   localStorage.setItem("lang", lang);
