@@ -140,8 +140,9 @@ main {
 
 /* 链接图标样式 */
 .link-icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
 }
 
 /* 作者样式 */
@@ -195,6 +196,8 @@ main {
 .demo-btn:hover {
   background-color: #2980b9;
 }
+
+
 
 /* 响应式调整 */
 @media (max-width: 1300px) {
