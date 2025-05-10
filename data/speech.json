@@ -7,56 +7,28 @@
     "papers": [
       {
         "conference": "Interspeech",
-        "abbr": "Short",
-        "title": "A Novel Speech Model",
-        "authors": "A. Li, B. Chen...",
-        "abstract": "This paper proposes a ...",
-        "paper_link": "https://xx.pdf",
-        "github_link": "https://github.com/xxx"
+        "abbr": "Short Paper",
+        "title": "A Novel Robust Speech Model",
+        "authors": "A. Li, B. Chen, C. Zhou",
+        "abstract": "This paper proposes ...",
+        "paper_link": "https://arxiv.org/abs/xx",
+        "github_link": "https://github.com/abc/xyz"
       },
       {
         "conference": "ICASSP",
         "title": "Low-resource ASR",
-        "authors": "Y. Zhang, X. Wang...",
-        "abstract": "We develop a new ..."
+        "authors": "Y. Zhang, X. Wang",
+        "abstract": "We develop a ...",
+        "paper_link": "https://arxiv.org/abs/yy"
       }
     ],
     "projects": [
       {
-        "title": "OpenSource ASR Platform",
-        "desc": "A production-grade speech platform ...",
-        "demo_link": "https://demo.x.com"
+        "title": "ASR Demo",
+        "desc": "Speech recognition live demo.",
+        "demo_link": "https://example.com/demo"
       }
     ]
   },
-  "zh": {
-    "direction_title": "语音",
-    "direction_desc": "我们研究语音的...",
-    "papers_title": "论文",
-    "projects_title": "项目",
-    "papers": [
-      {
-        "conference": "Interspeech",
-        "abbr": "缩写",
-        "title": "一种新的语音建模方法",
-        "authors": "李A，陈B...",
-        "abstract": "本文提出了...",
-        "paper_link": "https://xx.pdf",
-        "github_link": "https://github.com/xxx"
-      },
-      {
-        "conference": "ICASSP",
-        "title": "低资源语音识别",
-        "authors": "张Y，王X...",
-        "abstract": "我们提出了一种..."
-      }
-    ],
-    "projects": [
-      {
-        "title": "开源语音平台",
-        "desc": "用于生产的语音平台...",
-        "demo_link": "https://demo.x.com"
-      }
-    ]
-  }
+  ...
 }
