@@ -26,6 +26,9 @@ fetch("./data/speech.json")
   });
 
 function getConferenceClass(conference) {
+  // 添加空值检查
+  if (!conference) return 'conf-other';
+  
   // 从会议名称中提取缩写
   const confName = conference.toLowerCase();
   
@@ -56,17 +59,17 @@ function paperTemplate(paper) {
   return `
     <div class="paper-card">
       <div class="paper-header">
-        <span class="paper-conf ${confClass}">${paper.conf}</span>
+        <span class="paper-conf ${confClass}">${paper.conf || 'Unknown'}</span>
       </div>
       <div class="paper-title-container">
-        <h3 class="paper-title">${paper.title}</h3>
+        <h3 class="paper-title">${paper.title || ''}</h3>
         <div class="paper-links">
           ${paper.pdf ? `<a href="${paper.pdf}" target="_blank" class="paper-link"><img src="assets/arXiv.svg" alt="PDF" class="link-icon"></a>` : ''}
           ${paper.code ? `<a href="${paper.code}" target="_blank" class="paper-link"><img src="assets/github.svg" alt="Code" class="link-icon"></a>` : ''}
         </div>
       </div>
-      <p class="paper-authors">${paper.authors}</p>
-      <p class="paper-abstract">${paper.abstract}</p>
+      <p class="paper-authors">${paper.authors || ''}</p>
+      <p class="paper-abstract">${paper.abstract || ''}</p>
     </div>
   `;
 }
