@@ -10,93 +10,139 @@ main {
   padding: 0 18px;
 }
 
-.speech-direction-detail.direction-detail {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 1px 5px 0 #0001;
+/* speech.css */
+.speech-direction-detail {
   display: flex;
   align-items: center;
-  gap: 36px;
-  padding: 24px 36px;
-  margin: 20px auto 32px auto;
-  max-width: 800px;
-  min-height: 110px;
+  gap: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .speech-direction-detail img {
-  width: 60px;
-  height: 60px;
-  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
 }
+
 .speech-direction-detail h2 {
-  font-size: 1.6em;
-  margin: 0 0 10px 0;
-  color: #2256be;
-  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #2254b5;
 }
+
 .speech-direction-detail p {
-  font-size: 1em;
   margin: 0;
+  color: #5a6688;
+  line-height: 1.6;
 }
 
 .dbl-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 1px 6px 0 #0002;
-  padding: 24px 28px 18px 28px;
-  margin: 24px auto;
-  max-width: 880px;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .dbl-card h3 {
-  font-size: 1.18em;
-  font-weight: 700;
-  color: #2051a6;
-  margin-bottom: 18px;
+  color: #2254b5;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 0.75rem;
 }
 
-/* Paper-card样式 */
-.paper-card {
-  background: #fff;
+#paper-list, #project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.paper-card, .project-card {
+  border: 1px solid #eaeaea;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
 }
 
-.paper-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+.paper-card:hover, .project-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.paper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.paper-title, .project-title {
+  font-weight: bold;
+  color: #2254b5;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .paper-links {
-  margin-bottom: 12px;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.paper-links a {
-  display: inline-flex;
-  margin-right: 12px;
+.paper-authors, .paper-conference {
+  color: #5a6688;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
-.project-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin-bottom: 20px;
+.paper-abstract, .project-desc {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 0.75rem;
 }
 
-.project-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+.project-demo-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #2254b5;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
 }
 
-@media (max-width:700px) {
-  .speech-direction-detail.direction-detail,
+.project-demo-link:hover {
+  background: #1a4090;
+}
+
+.empty-state {
+  color: #888;
+  text-align: center;
+  padding: 2rem;
+  grid-column: 1 / -1;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .speech-direction-detail {
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
+  }
+  
   .dbl-card {
-    max-width: 98vw;
-    padding: 10vw 0.5vw 10vw 0.5vw;
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
+  }
+  
+  #paper-list, #project-list {
+    grid-template-columns: 1fr;
   }
 }
