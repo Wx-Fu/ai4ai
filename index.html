@@ -2,80 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lab Homepage</title>
+  <title>AI Interaction Lab</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="navi-header">
     <div class="navi-left">
-      <img class="lab-logo" src="assets/logo.PNG" alt="Lab logo">
-      <span class="lab-title" id="lab-title">AI Interaction Lab</span>
+      <img src="assets/logo.png" alt="Lab Logo" class="lab-logo">
+      <span class="lab-title">AI Interaction Lab</span>
     </div>
-    <nav class="navi-center">
-      <a href="index.html" class="navi-btn active" id="homeBtn">Home</a>
-    </nav>
+    <div class="navi-center">
+      <a class="navi-btn active" href="#">Home</a>
+    </div>
     <div class="navi-right">
-    <button id="langToggle" class="navi-btn">中文</button>
-  </div>
-</header>
+      <button class="navi-btn">中文</button>
+    </div>
+  </header>
   <main>
-    <section class="lab-intro card fade-in" id="lab-intro">
-      <h2 id="intro-title">About Our Lab</h2>
-      <p id="intro-txt">
-        Our laboratory focuses on cutting-edge research in speech, emotion, dialogue, and digital human, striving to drive innovative developments in human-machine interaction technology.
+    <section class="card lab-intro">
+      <h2 class="intro-title">About Our Lab</h2>
+      <p>
+        Our laboratory focuses on cutting-edge research in speech, emotion, dialogue,<br>
+        and digital human, striving to drive innovative developments in human-machine interaction technology.
       </p>
     </section>
-    
-    <section class="directions-card-wrapper fade-in">
-    <div class="directions">
-      <div class="direction-card fade-in" onclick="navigateDirection('speech')">
-        <img src="assets/icon-speech.svg" class="direction-icon">
-        <div class="direction-content">
-          <h3 data-en="Speech" data-zh="语音">Speech</h3>
-          <p data-en="Researches on speech recognition, synthesis and enhancement." 
-             data-zh="专注于语音识别、合成与增强等前沿技术。">
-             Researches on speech recognition, synthesis and enhancement.
-          </p>
+
+    <section class="directions-card-wrapper">
+      <div class="directions">
+        <div class="direction-card">
+          <img src="assets/icon-speech.svg" alt="Speech" class="direction-icon">
+          <div class="direction-content">
+            <h3>Speech</h3>
+            <p>Researches on speech recognition, synthesis and enhancement.</p>
+          </div>
+        </div>
+        <div class="direction-card">
+          <img src="assets/icon-emotion.svg" alt="Emotion" class="direction-icon">
+          <div class="direction-content">
+            <h3>Emotion</h3>
+            <p>Emotion detection, analysis, and affective computing applications.</p>
+          </div>
+        </div>
+        <div class="direction-card">
+          <img src="assets/icon-dialogue.svg" alt="Dialogue" class="direction-icon">
+          <div class="direction-content">
+            <h3>Dialogue</h3>
+            <p>Dialogue systems, natural language understanding and generation.</p>
+          </div>
+        </div>
+        <div class="direction-card">
+          <img src="assets/icon-digitalhuman.svg" alt="Digital Human" class="direction-icon">
+          <div class="direction-content">
+            <h3>Digital Human</h3>
+            <p>Intelligent avatar, virtual human modeling and interaction.</p>
+          </div>
         </div>
       </div>
-      <div class="direction-card fade-in" onclick="navigateDirection('emotion')">
-        <img src="assets/icon-emotion.svg" class="direction-icon">
-        <div class="direction-content">
-          <h3 data-en="Emotion" data-zh="情感">Emotion</h3>
-          <p data-en="Emotion detection, analysis, and affective computing applications." 
-             data-zh="情感分析、情绪识别及相关应用研究。">
-            Emotion detection, analysis, and affective computing applications.
-          </p>
-        </div>
-      </div>
-      <div class="direction-card fade-in" onclick="navigateDirection('dialogue')">
-        <img src="assets/icon-dialogue.svg" class="direction-icon">
-        <div class="direction-content">
-          <h3 data-en="Dialogue" data-zh="对话">Dialogue</h3>
-          <p data-en="Dialogue systems, natural language understanding and generation." 
-             data-zh="对话系统、自然语言理解与生成等。">
-             Dialogue systems, natural language understanding and generation.
-          </p>
-        </div>
-      </div>
-      <div class="direction-card fade-in" onclick="navigateDirection('digitalhuman')">
-        <img src="assets/icon-digitalhuman.svg" class="direction-icon">
-        <div class="direction-content">
-          <h3 data-en="Digital Human" data-zh="数字人">Digital Human</h3>
-          <p data-en="Intelligent avatar, virtual human modeling and interaction." 
-             data-zh="智能虚拟人建模与交互研究。">
-             Intelligent avatar, virtual human modeling and interaction.
-          </p>
-        </div>
-      </div>
-    </div>
     </section>
-    <section class="lab-patents card fade-in" id="patent-section">
-      <h2 id="patent-title">Patents</h2>
-      <ul id="patent-list"></ul>
+
+    <section class="card lab-patents">
+      <h2 class="patent-title">Patents</h2>
+      <ul id="patent-list">
+        <li>Patent 1: ...</li>
+        <li>Patent 2: ...</li>
+      </ul>
     </section>
   </main>
-  <script src="main.js"></script>
 </body>
 </html>
