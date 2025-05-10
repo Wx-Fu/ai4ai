@@ -5,55 +5,72 @@ body {
   color: #212340;
 }
 .navi-header {
-  background: #fff;
-  color: #1048a3;
   display: flex;
   align-items: center;
-  padding: 0 2rem;
   justify-content: space-between;
+  padding: 0 2rem;
   min-height: 60px;
-  box-shadow: 0 3px 18px #e5e9f6;
-  border-bottom: 3px solid #217EEC; /* 蓝色下划线，可适当调整深浅 */
+  position: relative;  /* 新增，辅助定位 */
 }
-.navi-left .lab-title {
-  color: #1048a3;
+.navi-left {
+  display: flex;
+  align-items: center;
+  min-width: 220px;   /* 防止logo组太窄 */
+}
+.lab-logo {
+  height: 44px;
+  width: auto;          /* 保持比例 */
+  max-width: 150px;
+  margin-right: 1rem;
+  vertical-align: middle;
+  object-fit: contain;
+  display: inline-block; /* 保持inline排布 */
+}
+.lab-title {
   font-size: 1.4rem;
   font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
 }
-.navi-center .navi-btn, .navi-cur, .navi-sep {
-  color: #217EEC;
+
+.navi-center {
+  position: absolute; left: 50%; top: 0; height: 100%;
+  transform: translateX(-50%);
+  display: flex; align-items: center; justify-content: center;
 }
-.navi-btn {
-  background: none;
-  border: none;
-  color: #217EEC;
-  font-size: 1.15em;
-  margin: 0 6px;
-  cursor: pointer;
-  padding: .2em 1.1em;
-  border-radius: 7px;
-  transition: background 0.15s, color 0.16s;
+.navi-center .navi-btn {
+  text-decoration: none; /* 去下划线 */
+  font-weight: 500;
+  margin: 0 10px;
 }
-.navi-btn.active, .navi-btn:hover {
-  background: #FF8C1A15; /* 基于橙色，透明度低做点缀 */
+.navi-btn.active, .navi-btn:focus {
+  background: #FF8C1A15;
   color: #FF8C1A;
+  border-bottom: none;    /* 明确去除底部下划线效果 */
 }
 .navi-right .navi-btn {
   border: 1.2px solid #FF8C1A33;
   color: #FF8C1A;
 }
 
-.lab-logo {
-  height: 44px;        /* 建议按 header 高度微调，可以是48px~52px，确保不超bar */
-  width: auto;         /* 让宽度自适应 */
-  max-width: 150px;    /* 防止极宽logo撑破栏，可调 */
-  margin-right: 1rem;
-  border-radius: 0;    /* 不做圆/方 */
-  background: none;    /* 去除背景 */
-  box-shadow: none;    /* 一般不用阴影，想要可加淡阴影 */
-  object-fit: contain; /* 或用object-fit:scale-down; */
-  vertical-align: middle;
-  display: block;
+.lab-patents {
+  margin: 2.5rem auto 2rem auto;
+  max-width: 820px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px 0 #2946ad10;
+  padding: 2.2rem 2rem;
+  text-align: left;
+}
+#patent-title {
+  margin-bottom: .8em;
+  color: #2951a7;
+}
+#patent-list {
+  padding-left: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  font-size: 1.04em;
 }
 
 /* ==== 动画 ==== */
