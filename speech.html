@@ -2,57 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Speech · AI4AI</title>
+  <title>Speech · AI Lab</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navi-header">
-    <div class="navi-left">
-      <img src="assets/logo.png" alt="Lab logo" class="lab-logo">
+  <!-- 顶栏 请复用你index的那套 -->
+  <header class="top-bar">
+    <div class="navbar">
+      <img src="assets/logo.png" class="lab-logo" alt="Lab logo" />
       <div class="lab-title">
-        Artificial Intelligence for<br>Affective Interaction Lab
+        <span class="lab-title-line1">Artificial Intelligence for</span>
+        <span class="lab-title-line2">Affective Interaction Lab</span>
       </div>
-    </div>
-    <div class="navi-center">
-      <a href="index.html" class="navi-btn">HOME</a>
-      <a href="speech.html" class="navi-btn active">SPEECH</a>
-      <a href="emotion.html" class="navi-btn">EMOTION</a>
-      <a href="dialogue.html" class="navi-btn">DIALOGUE</a>
-      <a href="digitalhuman.html" class="navi-btn">DIGITAL HUMAN</a>
-      <a href="index.html#patents" class="navi-btn">PATENTS</a>
-    </div>
-    <div class="navi-right">
-      <button id="lang-switch" class="navi-btn">中文</button>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="speech.html" class="current">SPEECH</a>
+        <a href="emotion.html">EMOTION</a>
+        <a href="dialogue.html">DIALOGUE</a>
+        <a href="digitalhuman.html">DIGITAL HUMAN</a>
+        <a href="patent.html">PATENTS</a>
+      </nav>
+      <button id="lang-switch">中文</button>
     </div>
   </header>
 
   <main>
-    <section class="card direction-detail fade-in">
-      <img src="assets/icon-speech.svg" class="direction-icon-lg" alt="Speech Icon">
+    <section class="direction-detail">
+      <img src="assets/icon-speech.svg" class="direction-icon-lg" alt="Speech icon"/>
       <div>
-        <h2 data-en="Speech" data-zh="语音">Speech</h2>
-        <p data-en="Research in speech recognition, synthesis and cross-disciplinary fields."
-           data-zh="专注于语音识别、合成与交叉领域前沿技术。">
-          Research in speech recognition, synthesis and cross-disciplinary fields.
-        </p>
+        <h2 id="direction-title"></h2>
+        <p id="direction-desc"></p>
       </div>
     </section>
-    <section class="papers-projects fade-in">
+    <section class="papers-projects">
       <div class="dbl-card">
-        <div class="card-list-title" data-en="Papers" data-zh="论文">Papers</div>
+        <div class="card-list-title" id="papers-title"></div>
         <div class="scroller" id="paper-list"></div>
       </div>
       <div class="dbl-card">
-        <div class="card-list-title" data-en="Projects" data-zh="项目">Projects</div>
+        <div class="card-list-title" id="projects-title"></div>
         <div class="scroller" id="project-list"></div>
       </div>
     </section>
   </main>
-  <script>
-    // 当前研究方向（给main.js用，自动拉取data/speech.json并渲染）
-    window.direction = "speech";
-  </script>
-  <script src="main.js"></script>
+  <script src="speech.js"></script>
 </body>
 </html>
