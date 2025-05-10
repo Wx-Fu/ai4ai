@@ -17,6 +17,11 @@ fetch("data/speech.json")
   .then(data=>{
     speechData = data;
     renderData();
+  })
+  .catch(error => {
+    console.error("Error loading speech.json:", error);
+    document.getElementById("paper-list").innerHTML = '<p class="error-message">Error loading data. Please check console for details.</p>';
+    document.getElementById("project-list").innerHTML = '<p class="error-message">Error loading data. Please check console for details.</p>';
   });
 
 function getConferenceClass(conference) {
@@ -41,54 +46,57 @@ function getConferenceClass(conference) {
   return 'conf-other';
 }
 
-// 提取模板函数
+// 完整的论文模板函数
 function paperTemplate(p) {
   const confClass = getConferenceClass(p.conference);
-  
-  return `<div class="paper-card">
-    <span class="paper-conference ${confClass}">${p.conference}</span>
-    <div class="paper-title">${p.title}</div>
-    <div class="paper-links">
-      ${p.paper_link ? `<a href="${p.paper_link}" target="_blank"><img src="assets/arXiv.svg" width="18"> arXiv</a>` : ''}
-      ${p.github_link ? `<a href="${p.github_link}" target="_blank"><img src="assets/github.svg" width="18"> GitHub</a>` : ''}
+  return `
+    <div class="paper-card">
+      <div class="paper-header">
+        <span class="paper-conf ${confClass}">${p.abbr || p.conference}</span>
+        <h3 class="paper-title">${p.title}</h3>
+      </div>
+      <p class="paper-authors">${p.authors}</p>
+      <p class="paper-abstract">${p.abstract}</p>
+      <div class="paper-links">
+        ${p.paper_link ? `<a href="${p.paper_link}" target="_blank" class="btn paper-btn">Paper</a>` : ''}
+        ${p.github_link ? `<a href="${p.github_link}" target="_blank" class="btn github-btn">GitHub</a>` : ''}
+      </div>
     </div>
-    <div class="paper-authors">${p.authors}</div>
-    <div class="paper-abstract">${p.abstract}</div>
-  </div>`;
+  `;
 }
 
-// 添加项目模板函数
+// 项目模板函数
 function projectTemplate(p) {
-  return `<div class="project-card">
-    <div class="project-title">${p.title}</div>
-    <div class="project-desc">${p.desc}</div>
-    ${p.demo_link ? `<a href="${p.demo_link}" target="_blank" class="project-demo-link">Demo</a>` : ''}
-  </div>`;
+  return `
+    <div class="project-card">
+      <h3 class="project-title">${p.title}</h3>
+      <p class="project-desc">${p.desc}</p>
+      ${p.demo_link ? `<a href="${p.demo_link}" target="_blank" class="btn demo-btn">Demo</a>` : ''}
+    </div>
+  `;
 }
 
-// speech.js
+// 渲染函数 - 这是之前缺失的
 function renderData() {
   if (!speechData) return;
-  const d = speechData[lang] || speechData.en; // 增加fallback
-
-  // 设置方向介绍
-  document.getElementById('direction-title').textContent = d.direction_title || 'Speech';
-  document.getElementById('direction-desc').textContent = d.direction_desc || 'Our research focuses on...';
   
-  // 设置标题
-  document.getElementById('papers-title').textContent = d.papers_title || 'Papers';
-  document.getElementById('projects-title').textContent = d.projects_title || 'Projects';
-
-  // 处理空数据状态
-  const paperListHtml = d.papers?.length ? 
-    d.papers.map(p => paperTemplate(p)).join('') :
-    '<div class="empty-state">No papers found</div>';
-
-  const proListHtml = d.projects?.length ? 
-    d.projects.map(p => projectTemplate(p)).join('') :
-    '<div class="empty-state">No projects found</div>';
-    
-  // 将内容插入DOM
-  document.getElementById('paper-list').innerHTML = paperListHtml;
-  document.getElementById('project-list').innerHTML = proListHtml;
+  const data = speechData[lang];
+  
+  // 更新方向标题和描述
+  document.getElementById("direction-title").textContent = data.direction_title;
+  document.getElementById("direction_desc").textContent = data.direction_desc;
+  
+  // 更新论文标题
+  document.getElementById("papers-title").textContent = data.papers_title;
+  
+  // 更新项目标题
+  document.getElementById("projects-title").textContent = data.projects_title;
+  
+  // 渲染论文列表
+  const paperListHtml = data.papers.map(paperTemplate).join('');
+  document.getElementById("paper-list").innerHTML = paperListHtml;
+  
+  // 渲染项目列表
+  const projectListHtml = data.projects.map(projectTemplate).join('');
+  document.getElementById("project-list").innerHTML = projectListHtml;
 }
