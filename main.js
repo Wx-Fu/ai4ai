@@ -90,17 +90,17 @@ function paperCard(p){
   card.className="ppt-card anim-card";
   card.innerHTML=`
     <div class="ppt-row">
-      <span class="ppt-abbr">${p.abbr}</span>
-      <span class="ppt-conf ${conferenceClass(p.conf)}">${p.conf}</span>
+      <span class="ppt-abbr">${p.abbr || ""}</span>
+      <span class="ppt-conf ${conferenceClass(p.conf)}">${p.conf||""}</span>
     </div>
     <div class="ppt-title">
-      ${p.title}
+      ${(typeof p.title==="string"? p.title : p.title[lang] || "")}
     </div>
     <div class="ppt-links">
       ${p.paper?`<a href="${p.paper}" class="ppt-link ppt-link-paper" target="_blank">Paper</a>`:""}
       ${p.demo?`<a href="${p.demo}" class="ppt-link ppt-link-demo" target="_blank">Demo</a>`:""}
     </div>
-    <div class="ppt-authors">${p.authors}</div>
+    <div class="ppt-authors">${p.authors||""}</div>
   `;
   return card;
 }
@@ -109,16 +109,17 @@ function projectCard(p){
   card.className="ppt-card anim-card";
   card.innerHTML=`
     <div class="ppt-row">
-      <span class="ppt-project-title">${p.name}</span>
+      <span class="ppt-project-title">${typeof p.name==="string"?p.name:p.name[lang]}</span>
     </div>
     <div class="ppt-links">
       ${p.demo?`<a href="${p.demo}" class="ppt-link ppt-link-demo" target="_blank">Demo</a>`:""}
       ${p.github?`<a href="${p.github}" class="ppt-link ppt-link-github" target="_blank">GitHub</a>`:""}
     </div>
-    <div class="ppt-desc">${p.desc}</div>
+    <div class="ppt-desc">${typeof p.desc==="string"?p.desc:p.desc[lang]}</div>
   `;
   return card;
 }
+
 function conferenceClass(c){
   // 让不同会议显示不同色彩
   if(!c) return "conf-default";
