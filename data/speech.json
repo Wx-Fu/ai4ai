@@ -1,34 +1,40 @@
 {
   "en": {
     "direction_title": "Speech",
-    "direction_desc": "Our research focuses on ...",
+    "direction_desc": "Our research focuses on speech processing...",
     "papers_title": "Papers",
     "projects_title": "Projects",
     "papers": [
       {
-        "conference": "Interspeech",
-        "abbr": "Short Paper",
-        "title": "A Novel Robust Speech Model",
-        "authors": "A. Li, B. Chen, C. Zhou",
-        "abstract": "This paper proposes ...",
-        "paper_link": "https://arxiv.org/abs/xx",
-        "github_link": "https://github.com/abc/xyz"
-      },
-      {
         "conference": "ICASSP",
-        "title": "Low-resource ASR",
-        "authors": "Y. Zhang, X. Wang",
-        "abstract": "We develop a ...",
-        "paper_link": "https://arxiv.org/abs/yy"
+        "abbr": "ICASSP",
+        "title": "A Novel Speech Model",
+        "authors": "Alice, Bob",
+        "abstract": "This paper explores...",
+        "paper_link": "https://arxiv.org/abs/xxx",
+        "github_link": "https://github.com/xxx"
       }
+      // ...更多
     ],
     "projects": [
       {
-        "title": "ASR Demo",
-        "desc": "Speech recognition live demo.",
-        "demo_link": "https://example.com/demo"
+        "title": "Speech Demo",
+        "desc": "A demo project",
+        "demo_link": "https://demo.com"
       }
+      // ...更多
     ]
   },
-  ...
+  "zh": {
+    "direction_title": "语音",
+    "direction_desc": "我们专注于语音处理...",
+    "papers_title": "论文",
+    "projects_title": "项目",
+    "papers": [
+      // 与en结构一致，只是内容中文
+    ],
+    "projects": [
+      // ...
+    ]
+  }
 }
