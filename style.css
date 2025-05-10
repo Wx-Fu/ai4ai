@@ -4,50 +4,20 @@ body {
   margin: 0;
   color: #222340;
 }
-
-.navi-header {
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px 48px 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  background: #f6f8fa;
-  min-height: 62px;
-  padding: 0 2vw;
-  box-shadow: 0 2px 12px 0 #bbd3f20a;
-  border-bottom: 1.5px solid #e3e9f6;
-  position: sticky; top: 0; z-index: 31;
 }
-.navi-left { display: flex; align-items: center; min-width: 220px; }
-.lab-logo { height: 44px; width: auto; max-width: 138px; margin-right: 1.05rem; object-fit: contain; }
-.lab-title { font-size: 1.38rem; font-weight: bold; color: #25336b; letter-spacing: 0.5px; }
-.navi-center { flex: 1 1 auto; display: flex; justify-content: center; align-items: center; }
-.navi-center .navi-btn {
-  text-decoration: none;
-  font-weight: 500;
-  margin: 0 10px;
-  color: #ff8c1a;
-  background: none;
-  border: none;
-  font-size: 1.09em;
-  padding: 0 .9em; cursor: pointer;
-}
-.navi-btn.active { color: #2250c2; background: #eaf3fa; border-radius: 8px; border-bottom: none; }
-.navi-right .navi-btn {
-  border: 1.2px solid #FF8C1A33; color: #FF8C1A;
-  background: #fff; border-radius: 8px; font-size: 1.05em;
-  padding: .45em 1.2em; margin-left: 10px;
-  transition: background .14s, color .13s, border .13s;
-}
-.navi-right .navi-btn:hover { background: #fff6ee; color: #e96f12; border-color: #ff901a70; }
-
-/* 统一主体宽度 */
-main { max-width: 1050px; margin: 0 auto; padding: 0 16px 48px 16px; display: flex; flex-direction: column; align-items: center; }
-
-/* 三块包裹宽度 */
 .lab-intro, .directions-card-wrapper, .lab-patents {
-  width: 100%; max-width: 980px; min-width: 0;
+  width: 100%;
+  max-width: 900px;
+  min-width: 0;
+  box-sizing: border-box;
 }
-
-/* 通用卡片样式 */
 .card, .directions-card-wrapper {
   background: #fff;
   border-radius: 18px;
@@ -59,8 +29,6 @@ main { max-width: 1050px; margin: 0 auto; padding: 0 16px 48px 16px; display: fl
 }
 .card:last-child {margin-bottom: 0;}
 .card:hover, .directions-card-wrapper:hover { box-shadow: 0 10px 52px 0 #b6cbed28; transform: translateY(-2px) scale(1.007); }
-
-/* About Lab 美化 */
 .intro-title {
   font-size: 2.3rem;
   color: #2254b5;
@@ -77,16 +45,12 @@ main { max-width: 1050px; margin: 0 auto; padding: 0 16px 48px 16px; display: fl
   margin: 0;
   word-break: break-word;
 }
-
-/* 方向卡片区 三列(更宽) 响应式走到2/1列 */
 .directions {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 两列 */
-  gap: 2.8em 2.5em;             /* 行高、列宽间距 */
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5em 2.5em;
   width: 100%;
 }
-
-/* 每个方向卡片加最小最大宽，padding加大 */
 .direction-card {
   background: linear-gradient(115deg,#fafbf5 75%, #eceefd 100%);
   border-radius: 1.25rem;
@@ -97,11 +61,10 @@ main { max-width: 1050px; margin: 0 auto; padding: 0 16px 48px 16px; display: fl
   align-items: flex-start;
   min-width: 0;
   min-height: 164px;
+  max-width: 100%;
   transition: box-shadow .19s, transform .13s, border-color .13s;
   cursor: pointer;
-  max-width: 100%;
 }
-
 .direction-card:hover {
   box-shadow: 0 7px 44px #256bbf18;
   border-color: #4fa0ff66;
@@ -133,18 +96,17 @@ main { max-width: 1050px; margin: 0 auto; padding: 0 16px 48px 16px; display: fl
   font-weight: 400;
   word-break: break-word;
 }
-
-/* --- 专利区 --- */
 .patent-title { font-size: 1.38em; font-weight: bold; color: #2254b5; margin-bottom: .85em; }
 #patent-list { padding-left: 1.3em; color: #5a6688; line-height: 1.68; font-size: 1.13em; }
 
-/* 响应式：900px内三块全宽，方向卡片2列 */
-@media (max-width: 850px) {
-  .lab-intro, .directions-card-wrapper, .lab-patents { max-width: 99vw; }
+@media (max-width: 800px) {
+  main, .lab-intro, .directions-card-wrapper, .lab-patents {
+    max-width: 99vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
   .directions { grid-template-columns: 1fr; }
 }
-
 @media (max-width: 600px) {
-  main { padding: 0 2vw 32px 2vw; }
   .card, .directions-card-wrapper { padding: 1.05em 0.28em; }
 }
