@@ -54,18 +54,19 @@ function getConferenceClass(conference) {
 
 // 完整的论文模板函数
 function paperTemplate(paper) {
-  const confClass = getConferenceClass(paper.conf);
+  // 使用conference而不是conf
+  const confClass = getConferenceClass(paper.conference);
   
   return `
     <div class="paper-card">
       <div class="paper-header">
-        <span class="paper-conf ${confClass}">${paper.conf || 'Unknown'}</span>
+        <span class="paper-conf ${confClass}">${paper.conference || 'Unknown'}</span>
       </div>
       <div class="paper-title-container">
         <h3 class="paper-title">${paper.title || ''}</h3>
         <div class="paper-links">
-          ${paper.pdf ? `<a href="${paper.pdf}" target="_blank" class="paper-link"><img src="assets/arXiv.svg" alt="PDF" class="link-icon"></a>` : ''}
-          ${paper.code ? `<a href="${paper.code}" target="_blank" class="paper-link"><img src="assets/github.svg" alt="Code" class="link-icon"></a>` : ''}
+          ${paper.paper_link ? `<a href="${paper.paper_link}" target="_blank" class="paper-link"><img src="assets/arXiv.svg" alt="PDF" class="link-icon"></a>` : ''}
+          ${paper.github_link ? `<a href="${paper.github_link}" target="_blank" class="paper-link"><img src="assets/github.svg" alt="Code" class="link-icon"></a>` : ''}
         </div>
       </div>
       <p class="paper-authors">${paper.authors || ''}</p>
