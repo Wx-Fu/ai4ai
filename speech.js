@@ -4,7 +4,6 @@ function setLangSwitchBtn(lang) {
 }
 setLangSwitchBtn(lang);
 
-
 document.getElementById("lang-switch").onclick = function() {
   lang = lang === "en" ? "zh" : "en";
   localStorage.setItem("lang", lang);
@@ -41,11 +40,11 @@ function renderData() {
     // links with icon
     let links = "";
     if(p.paper_link) links += `<a target="_blank" rel="noopener" class="paper-link-btn" href="${p.paper_link}">
-      <svg viewBox="0 0 24 24"><image xlink:href="assets/arxiv.svg" width="24" height="24"/></svg>
+      <img src="assets/arxiv.svg" width="18" height="18" alt="arXiv Icon" style="margin-right:3px;vertical-align:-3px;">
       Paper
     </a>`;
     if(p.github_link) links += `<a target="_blank" rel="noopener" class="paper-link-btn github" href="${p.github_link}">
-      <svg viewBox="0 0 24 24"><image xlink:href="assets/github.svg" width="24" height="24"/></svg>
+      <img src="assets/github.svg" width="18" height="18" alt="GitHub Icon" style="margin-right:3px;vertical-align:-3px;">
       Github
     </a>`;
 
@@ -77,23 +76,3 @@ function renderData() {
   });
   document.getElementById('project-list').innerHTML = proListHtml;
 }
-
-// papersData 是你的数据：[{title, conf, authors, abstract, links: [{type, url}], ...}]
-function renderPaperList(papers) {
-  const container = document.getElementById('papers-list');
-  container.innerHTML = papers.map(p => `
-    <div class="paper-item">
-      ${p.conf ? `<span class="paper-meta">${p.conf}</span>` : ""}
-      <span class="paper-title">${p.title}</span>
-      <span class="paper-authors">${p.authors}</span>
-      <span class="paper-abstract">${p.abstract||''}</span>
-      ${p.links ? `<span class="paper-links">
-        ${p.links.map(l=>`<a href="${l.url}" target="_blank">
-            <img src="${l.type}.svg" alt="${l.type}"> 
-            ${l.type.charAt(0).toUpperCase()+l.type.slice(1)}
-          </a>`).join('')}
-      </span>` : ""}
-    </div>
-  `).join('');
-}
-
