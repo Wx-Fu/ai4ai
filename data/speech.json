@@ -29,10 +29,8 @@
     "papers_title": "论文",
     "projects_title": "项目",
     "papers": [
-      // 与en结构一致，只是内容中文
     ],
     "projects": [
-      // ...
     ]
   }
 }
