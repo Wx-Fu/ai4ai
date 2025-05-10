@@ -1,20 +1,48 @@
 {
-  "papers": [
-    {
-      "abbr": "AST",
-      "conf": "INTERSPEECH",
-      "title": {"en": "Acoustic Speech Transformer", "zh": "声学语音变换器"},
-      "authors": "L. Wang, Z. Wu, et al.",
-      "paper": "xxx.pdf",
-      "demo": "xxx"
-    }
-  ],
-  "projects": [
-    {
-      "name": {"en": "Smart Speaker", "zh": "智能音箱"},
-      "desc": {"en": "Commercial-grade smart AI voice device.", "zh": "商用级智能语音设备。"},
-      "demo": "xxx",
-      "github": "xxx"
-    }
-  ]
+  "en": {
+    "directionTitle": "Speech",
+    "directionDesc": "Our research focuses on cutting-edge ...",
+    "papers": [
+      {
+        "title": "English Paper Title",
+        "authors": "Author A, Author B",
+        "links": [
+          { "label": "Paper", "url": "https://example.com/enpaper" }
+        ],
+        "desc": "Paper description in English."
+      }
+    ],
+    "projects": [
+      {
+        "title": "English Project Title",
+        "links": [
+          { "label": "Demo", "url": "https://example.com/demoe" }
+        ],
+        "desc": "Project description in English."
+      }
+    ]
+  },
+  "zh": {
+    "directionTitle": "语音",
+    "directionDesc": "我们的研究聚焦于最前沿...",
+    "papers": [
+      {
+        "title": "中文论文题目",
+        "authors": "作者甲，作者乙",
+        "links": [
+          { "label": "论文", "url": "https://example.com/zhpaper" }
+        ],
+        "desc": "中文论文简介。"
+      }
+    ],
+    "projects": [
+      {
+        "title": "中文项目名称",
+        "links": [
+          { "label": "演示", "url": "https://example.com/demoz" }
+        ],
+        "desc": "中文项目简介。"
+      }
+    ]
+  }
 }
