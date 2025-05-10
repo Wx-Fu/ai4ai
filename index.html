@@ -1,49 +1,83 @@
-<main>
-  <section class="card lab-intro">
-    <h2 class="intro-title">About Our Lab</h2>
-    <p>Our laboratory focuses on cutting-edge research in speech, emotion, dialogue,<br>
-      and digital human, striving to drive innovative developments in human-machine interaction technology.
-    </p>
-  </section>
-
-  <section class="directions-card-wrapper">
-    <div class="directions">
-      <div class="direction-card">
-        <img src="assets/icon-speech.svg" alt="Speech" class="direction-icon">
-        <div class="direction-content">
-          <h3>Speech</h3>
-          <p>Researches on speech recognition, synthesis and enhancement.</p>
-        </div>
-      </div>
-      <div class="direction-card">
-        <img src="assets/icon-emotion.svg" alt="Emotion" class="direction-icon">
-        <div class="direction-content">
-          <h3>Emotion</h3>
-          <p>Emotion detection, analysis, and affective computing applications.</p>
-        </div>
-      </div>
-      <div class="direction-card">
-        <img src="assets/icon-dialogue.svg" alt="Dialogue" class="direction-icon">
-        <div class="direction-content">
-          <h3>Dialogue</h3>
-          <p>Dialogue systems, natural language understanding and generation.</p>
-        </div>
-      </div>
-      <div class="direction-card">
-        <img src="assets/icon-digitalhuman.svg" alt="Digital Human" class="direction-icon">
-        <div class="direction-content">
-          <h3>Digital Human</h3>
-          <p>Intelligent avatar, virtual human modeling and interaction.</p>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Interaction Lab</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- 正确引用你的样式 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 示例头部，可自行放logo栏 -->
+  <header class="navi-header">
+    <div class="navi-left">
+      <img src="assets/logo.PNG" alt="Lab Logo" class="lab-logo">
+      <span class="lab-title">AI Interaction Lab</span>
     </div>
-  </section>
+    <div class="navi-center">
+      <!-- 首页、四大方向和专利，后可拓展链接 -->
+      <a href="index.html" class="navi-btn active">HOME</a>
+      <a href="speech.html" class="navi-btn">SPEECH</a>
+      <a href="emotion.html" class="navi-btn">EMOTION</a>
+      <a href="dialogue.html" class="navi-btn">DIALOGUE</a>
+      <a href="digitalhuman.html" class="navi-btn">DIGITAL HUMAN</a>
+      <a href="#patents" class="navi-btn">PATENTS</a>
+    </div>
+    <!-- 右侧留给语言切换，如需js可后续扩展 -->
+    <div class="navi-right">
+      <button class="navi-btn">EN</button>
+      <button class="navi-btn">中文</button>
+    </div>
+  </header>
 
-  <section class="card lab-patents">
-    <h2 class="patent-title">Patents</h2>
-    <ul id="patent-list">
-      <li>Patent 1: ...</li>
-      <li>Patent 2: ...</li>
-    </ul>
-  </section>
-</main>
+  <main>
+    <section class="card lab-intro">
+      <h2 class="intro-title">About Our Lab</h2>
+      <p>Our laboratory focuses on cutting-edge research in speech, emotion, dialogue,<br>
+        and digital human, striving to drive innovative developments in human-machine interaction technology.
+      </p>
+    </section>
+
+    <section class="directions-card-wrapper">
+      <div class="directions">
+        <div class="direction-card">
+          <img src="assets/icon-speech.svg" alt="Speech" class="direction-icon">
+          <div class="direction-content">
+            <h3>Speech</h3>
+            <p>Researches on speech recognition, synthesis and enhancement.</p>
+          </div>
+        </div>
+        <div class="direction-card">
+          <img src="assets/icon-emotion.svg" alt="Emotion" class="direction-icon">
+          <div class="direction-content">
+            <h3>Emotion</h3>
+            <p>Emotion detection, analysis, and affective computing applications.</p>
+          </div>
+        </div>
+        <div class="direction-card">
+          <img src="assets/icon-dialogue.svg" alt="Dialogue" class="direction-icon">
+          <div class="direction-content">
+            <h3>Dialogue</h3>
+            <p>Dialogue systems, natural language understanding and generation.</p>
+          </div>
+        </div>
+        <div class="direction-card">
+          <img src="assets/icon-digitalhuman.svg" alt="Digital Human" class="direction-icon">
+          <div class="direction-content">
+            <h3>Digital Human</h3>
+            <p>Intelligent avatar, virtual human modeling and interaction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card lab-patents" id="patents">
+      <h2 class="patent-title">Patents</h2>
+      <ul id="patent-list">
+        <li>Patent 1: ...</li>
+        <li>Patent 2: ...</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
