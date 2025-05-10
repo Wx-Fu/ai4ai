@@ -39,6 +39,7 @@ function fetchPatents(callback) {
 
 function renderPatentList() {
   const ul = document.getElementById("patent-list");
+  if (!ul) return;
   ul.innerHTML = (patentsData[lang] || []).map(txt => `<li>${txt}</li>`).join("");
 }
 
