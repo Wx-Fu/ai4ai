@@ -52,7 +52,7 @@ function getConferenceClass(conference) {
 
 // 完整的论文模板函数
 function paperTemplate(paper) {
-  const confClass = getConfClass(paper.conf);
+  const confClass = getConferenceClass(paper.conf);
   
   return `
     <div class="paper-card">
