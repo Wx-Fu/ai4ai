@@ -7,22 +7,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 顶栏 请复用你index的那套 -->
-  <header class="top-bar">
-    <div class="navbar">
+  <!-- 导航栏完全和index一致，关键class全对齐 -->
+  <header class="navi-header">
+    <div class="navi-left">
       <img src="assets/logo.png" class="lab-logo" alt="Lab logo" />
       <div class="lab-title">
-        <span class="lab-title-line1">Artificial Intelligence for</span>
+        <span class="lab-title-line1">Artificial Intelligence for</span><br>
         <span class="lab-title-line2">Affective Interaction Lab</span>
       </div>
-      <nav class="nav-links">
-        <a href="index.html">HOME</a>
-        <a href="speech.html" class="current">SPEECH</a>
-        <a href="emotion.html">EMOTION</a>
-        <a href="dialogue.html">DIALOGUE</a>
-        <a href="digitalhuman.html">DIGITAL HUMAN</a>
-        <a href="patent.html">PATENTS</a>
-      </nav>
+    </div>
+    <div class="navi-center">
+      <a href="index.html" class="navi-btn">HOME</a>
+      <a href="speech.html" class="navi-btn active">SPEECH</a>
+      <a href="emotion.html" class="navi-btn">EMOTION</a>
+      <a href="dialogue.html" class="navi-btn">DIALOGUE</a>
+      <a href="digitalhuman.html" class="navi-btn">DIGITAL HUMAN</a>
+      <a href="patent.html" class="navi-btn">PATENTS</a>
+    </div>
+    <div class="navi-right">
       <button id="lang-switch">中文</button>
     </div>
   </header>
