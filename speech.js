@@ -49,7 +49,6 @@ function getConferenceClass(conference) {
   return 'conf-other';
 }
 
-
 // 完整的论文模板函数
 function paperTemplate(paper) {
   const confClass = getConferenceClass(paper.conf);
