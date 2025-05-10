@@ -1,229 +1,136 @@
 body {
   background: #f5f8fb;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  color: #222;
 }
+
 main {
   max-width: 900px;
-  margin: 40px auto 0 auto;
+  margin: 32px auto 0 auto;
   padding: 0 18px;
 }
 
-/* 顶部导航栏 */
-.navi-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2.2rem;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
-  margin-bottom: 2.5rem;
-  min-width: 0;
-}
-
-.navi-left {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-}
-
-.lab-logo {
-  height: 44px;
-  margin-right: 0.65rem;
-}
-
-.lab-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1.21;
-  color: #155A9B;
-  white-space: normal;
-  word-break: break-all;
-  max-width: 240px;
-  min-width: 150px;
-}
-
-.navi-center {
-  display: flex;
-  gap: 2.1rem;
-}
-
-.navi-btn {
-  padding: 0.48rem 1.16rem;
-  color: #2254b5;
-  background: transparent;
-  border: none;
-  font-size: 1.07em;
-  font-weight: 500;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: color .18s, background .12s, transform .15s;
-  outline: none;
-  position: relative;
-  text-decoration: none;
-}
-
-.navi-btn.active, .navi-btn:focus-visible {
-  font-weight: bold;
-  color: #ff7700;
-}
-
-.navi-btn:hover {
-  color: #ff7700;
-  background: #ffeaa5a8;
-  transform: translateY(-2.5px) scale(1.045);
-}
-
-.navi-right {
-  display: flex;
-  gap: 0.68rem;
-}
-
-/* 响应式导航 */
-@media (max-width:890px) {
-  .navi-header{flex-wrap:wrap; padding:0 2vw;}
-  .navi-center{gap:10px;}
-}
-
-/* 方向卡片 */
-.speech-direction-detail {
-  display: flex;
-  align-items: center;
-  gap: 2em;
+.speech-direction-detail.direction-detail {
   background: #fff;
-  border-radius: 32px;
-  box-shadow: 0 6px 26px #5e78a614;
-  margin: 32px auto;
-  padding: 32px 44px;
-  max-width:720px;
-  min-width:320px;
+  border-radius: 20px;
+  box-shadow: 0 1px 5px 0 #0001;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding: 24px 36px;
+  margin: 20px auto 32px auto;
+  max-width: 800px;
+  min-height: 110px;
 }
+
 .speech-direction-detail img {
-  width: 72px; height: 72px; margin-right: 0.5em;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
 }
 .speech-direction-detail h2 {
-  font-size: 2.1em;
+  font-size: 1.6em;
+  margin: 0 0 10px 0;
+  color: #2256be;
   font-weight: 700;
-  margin: 0 0 6px 0;
 }
 .speech-direction-detail p {
-  color: #222e;
-  font-size: 1.13em;
+  font-size: 1em;
   margin: 0;
-  font-weight: 400;
 }
 
-/* 通用内容卡片 */
 .dbl-card {
   background: #fff;
-  border-radius: 26px;
-  box-shadow: 0 4px 18px #5e78a612;
-  margin: 34px auto;
-  max-width:660px;
-  min-width: 300px;
-  padding: 27px 34px 23px 34px;
-  display:block;
+  border-radius: 16px;
+  box-shadow: 0 1px 6px 0 #0002;
+  padding: 24px 28px 18px 28px;
+  margin: 24px auto;
+  max-width: 880px;
 }
+
 .dbl-card h3 {
-  margin: 0 0 12px 0;
-  font-size: 1.4em;
-}
-
-/* 内容组列表（Papers/Projects） */
-.card-list {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-/* 论文卡片 */
-.paper-card {
-  background: #f8faff;
-  border-radius: 13px;
-  box-shadow: 0 2px 18px #bfd6e228;
-  padding: 19px 21px 13px 17px;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  min-width: 0;
-}
-.paper-tags {
-  display: flex;
-  align-items: center;
-  gap: 0.7em;
-}
-.paper-tag {
-  font-size: .8em;
-  font-weight: 700;
-  padding: 0.08em 0.86em;
-  border-radius: 13px;
-  background: #e0eaff;
-  color: #22436a;
-}
-.tag-Interspeech { background: #dbedfe; color:#005ac4; }
-.tag-ICASSP { background:#e9f6e1; color:#399d0e; }
-.tag-AAAI { background:#fff8d8; color:#d19210; }
-.tag-TMSLP { background:#faeaef; color:#a51840; }
-/* 可继续扩展会议tag样式 */
-
-.paper-title {
   font-size: 1.18em;
-  font-weight: 600;
-  color: #183d7c;
+  font-weight: 700;
+  color: #2051a6;
+  margin-bottom: 18px;
 }
 
-.paper-authors,
-.paper-abstract {
-  font-size: 0.93em;
-  color: #888b9b;
-  margin: 3px 0 0 0;
+/* Paper-card样式 */
+.paper-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #f7fafe;
+  border-radius: 13px;
+  margin-bottom: 18px;
+  padding: 16px 18px 14px 18px;
+  box-shadow: 0 1px 3px #7099c822;
 }
-
+.paper-title {
+  font-size: 1.16em;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #183f82;
+}
 .paper-links {
-  display:inline-flex;
-  gap: 9px;
-  margin: 4px 0 0 8px;
-  vertical-align: middle;
+  margin-bottom: 2px;
 }
 .paper-links a {
-  display:inline-flex;
-  align-items:center;
-  text-decoration:none;
-  color:#1976d2;
+  display: inline-block;
+  margin-right: 9px;
+  vertical-align: middle;
+  opacity: 0.92;
 }
 .paper-links img {
-  height: 1.1em;
-  width:1.1em;
-  margin-right:2px;
-  vertical-align:-2px;
+  vertical-align: middle;
+  width: 20px; height: 20px;
+}
+.paper-authors, .paper-abstract {
+  font-size: 0.96em;
+  color: #6c7d95;
+  margin-bottom: 3px;
+}
+.paper-authors {
+  font-size: 0.93em;
+  color: #8c8d9d;
+}
+.paper-abstract {
+  font-size: 0.93em;
+  color: #b0b4bb;
 }
 
-/* 项目卡片 */
+/* Project card样式 */
 .project-card {
-  background: #f2f7f3;
-  border-radius: 14px;
-  box-shadow: 0 1px 8px #abd6bf22;
-  padding: 16px 19px 12px 15px;
+  margin-bottom: 13px;
+  background: #f7faf9;
+  border-radius: 10px;
+  padding: 13px 18px 10px 16px;
+  box-shadow: 0 1px 3px #aabbcc12;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 3px;
 }
-.project-title { font-size: 1.11em; font-weight: 700; color: #2d324a; }
-.project-desc { font-size:.96em; color:#7b818a; }
-.project-links { margin-top: 3px }
-.project-link {
-  display: inline-flex; align-items: center; gap: .27em;
-  font-size: .95em;
-  border-radius: 7px; background:#e7f7ff; color:#227cae;
-  text-decoration: none; padding: 2.5px 13px;
-  transition: background .18s;
+.project-title {
+  font-weight: 600;
+  color: #255196;
+  font-size: 1.01em;
 }
-.project-link:hover { background:#cdeafe; }
+.project-desc {
+  font-size: 0.97em;
+  color: #8997a1;
+}
+.project-links a {
+  font-size: 0.95em;
+  color: #2070ee;
+  text-decoration: underline;
+  margin-top: 1px;
+  display: inline-block;
+}
 
-/* 响应式内容卡片 */
-@media (max-width: 920px) {
-  .speech-direction-detail,
-  .dbl-card { max-width: 98vw; }
-}
-@media (max-width:580px) {
-  .speech-direction-detail {padding:11px 2vw;}
-  .dbl-card { padding:11px 2vw 8px 2vw;}
+@media (max-width:700px) {
+  .speech-direction-detail.direction-detail,
+  .dbl-card {
+    max-width: 98vw;
+    padding: 10vw 0.5vw 10vw 0.5vw;
+  }
 }
