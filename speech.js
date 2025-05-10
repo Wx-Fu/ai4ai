@@ -29,6 +29,7 @@ function getConferenceClass(conference) {
   const confName = conference.toLowerCase();
   
   if (confName.includes('neurips')) return 'conf-neurips';
+  if (confName.includes('taslp')) return 'conf-taslp';
   if (confName.includes('icml')) return 'conf-icml';
   if (confName.includes('iclr')) return 'conf-iclr';
   if (confName.includes('acl')) return 'conf-acl';
@@ -40,6 +41,7 @@ function getConferenceClass(conference) {
   if (confName.includes('aaai')) return 'conf-aaai';
   if (confName.includes('ijcai')) return 'conf-ijcai';
   if (confName.includes('interspeech')) return 'conf-interspeech';
+  if (confName.includes('icassp')) return 'conf-icassp';
   if (confName.includes('ieee')) return 'conf-ieee';
   if (confName.includes('arxiv')) return 'conf-arxiv';
   
@@ -76,27 +78,20 @@ function projectTemplate(p) {
   `;
 }
 
-// 渲染函数 - 这是之前缺失的
+// 渲染函数
 function renderData() {
   if (!speechData) return;
-  
   const data = speechData[lang];
-  
-  // 更新方向标题和描述
+
+  // 标题不动
   document.getElementById("direction-title").textContent = data.direction_title;
-  document.getElementById("direction_desc").textContent = data.direction_desc;
-  
-  // 更新论文标题
-  document.getElementById("papers-title").textContent = data.papers_title;
-  
-  // 更新项目标题
+  // 描述这里用 innerHTML，id 也要和 HTML 对上
+  document.getElementById("direction-desc").innerHTML = data.direction_desc;
+
+  document.getElementById("papers-title").textContent   = data.papers_title;
   document.getElementById("projects-title").textContent = data.projects_title;
-  
-  // 渲染论文列表
-  const paperListHtml = data.papers.map(paperTemplate).join('');
-  document.getElementById("paper-list").innerHTML = paperListHtml;
-  
-  // 渲染项目列表
-  const projectListHtml = data.projects.map(projectTemplate).join('');
-  document.getElementById("project-list").innerHTML = projectListHtml;
+
+  document.getElementById("paper-list").innerHTML   = data.papers.map(paperTemplate).join("");
+  document.getElementById("project-list").innerHTML = data.projects.map(projectTemplate).join("");
 }
+
