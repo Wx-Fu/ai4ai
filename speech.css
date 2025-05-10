@@ -140,9 +140,23 @@ main {
 
 /* 链接图标样式 */
 .link-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 8px;
+  width: 24px;  /* 增加尺寸 */
+  height: 24px;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  /* 可选：为图标添加轻微的悬停效果 */
+  transition: transform 0.2s ease;
+}
+
+.paper-link:hover .link-icon {
+  transform: scale(1.1);
+}
+
+/* 可以单独为 arXiv 图标设置样式 */
+.arxiv-icon {
+  width: 32px;  /* arXiv 图标可能需要更大一些 */
+  height: 24px;
 }
 
 /* 作者样式 */
