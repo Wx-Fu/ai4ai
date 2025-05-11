@@ -1,32 +1,86 @@
 {
-  "papers": [
+  "en": {
+    "direction_title": "Dialogue",
+    "direction_desc": "Our research focuses on emotion-related natural language understanding and generation,<br>aiming to enhance the empathy ability of large language models and achieve empathetic responses in human-computer interaction.",
+    "papers_title": "Papers",
+    "projects_title": "Projects",
+    "papers": [
+      {
+        "conference": "ISCSLP",
+        "abbr": "ISCSLP",
+        "title": "G2DiaR: Enhancing Commonsense Reasoning of LLMs with Graph-to-Dialogue & Reasoning",
+        "authors": "Huijun Lian, Keqi Chen, Zekai Sun, Yingming Gao, Ya Li",
+        "abstract": "Knowledge-rich dialogues are crucial for assessing and enhancing the reasoning capabilities of Large Language Models (LLMs). Detailed knowledge hints are incorporated in prompts to generate knowledge-rich dialogues. However, the intricate interplay among dialogue, context, and diverse knowledge facets is often overlooked. This causes LLMs to exhibit basic commonsense understanding but struggle with commonsense reasoning. To tackle these challenges, we proposed a graph-to-dialogue & reasoning generation method G2DiaR. G2DiaR can controllably convert the knowledge path in the graph into a dialogue, and can also generate reasoning that is faithful to the dialogue based on the neighbor nodes of the path nodes. We leverage G2DiaR to create G2DiaD, a challenging dataset for dialogue-based reasoning in multiple-choice question-answering (MCQA), derived from the ATOMIC commonsense graph. G2DiaD comprises 6,492 QA pairs, each offering inference-based answers supported by or conflicting with reasoning. Experimental results demonstrate that training on G2DiaD leads to an average performance improvement of 6.08% across various commonsense reasoning benchmarks, surpassing retrieval methods (0.60% improvement) and training on the CICERO dataset (−4.78% decline). G2DiaR can generate dialogue data rich in commonsense, relation and reasoning, enhancing the reasoning and generalization capabilities of LLMs.",
+        "paper_link": "https://ieeexplore.ieee.org/abstract/document/10800655",
+        "github_link": ""
+      },
+      {
+        "conference": "NCMMSC",
+        "abbr": "NCMMSC",
+        "title": " Emotional Support Dialog System Through Recursive Interactions Among Large Language",
+        "authors": "Keqi Chen, Huijun Lian, Yingming Gao, and Ya Li",
+        "abstract": "Emotional Support is one of the crucial abilities for multi-turn conversations, especially in the tasks of counseling and mental health support. Recent advancements in large language models (LLMs) have shown their significant potential in emotional support conversations. However, despite the impressive reasoning capabilities and extensive knowledge of LLMs, they fall short in using strategy and achieving overall goals in multi-turn counseling conversations. Such issues make LLMs difficult to apply directly to multi-turn emotional support conversations. To address these limitations, we propose the Supportive Psychotherapy Dialog System (STDS), which is based on widely-accepted supportive psychotherapy in mental health. Our system first employs an interactive framework that integrates both the Domain-Specific LLM and the Foundational LLM. The former is equipped with domain knowledge of emotional support strategy, while the latter boasts strong reasoning capabilities and world knowledge. By interacting, our framework synergistically leverages the strengths of both models. Furthermore, we have integrated recursive units to maintain the continuity of dialogue strategy, working toward the overall goals of the entire conversation. The experiment was conducted using the open-source dataset ESConv, and the results showed that our system’s responses have improved in terms of empathy, coherence, and helpfulness when compared to baseline models. Additionally, our approach exhibited an enhanced ability to establish rapport with clients, thereby improving the effectiveness of emotional support through supportive psychotherapy strategy.",
+        "paper_link": "https://link.springer.com/chapter/10.1007/978-981-97-0601-3_13",
+        "github_link": "https://ckqqqq.github.io/2023/11/24/Application-Links/"
+      },
+      {
+        "conference": "Appl. Sci",
+        "abbr": "Appl. Sci",
+        "title": " An Investigation of Applying Large Language Models to  Spoken Language Learning",
+        "authors": "Yingming Gao, Baorian Nuchged, Ya Li and Linkai Peng",
+        "abstract": "People have long desired intelligent conversational systems that can provide assistance in practical scenarios. The latest advancements in large language models (LLMs) are making significant strides toward turning this aspiration into a tangible reality. LLMs are believed to hold the most potential and value in education, especially in the creation of AI-driven virtual teachers that facilitate language learning. This study focuses on assessing the effectiveness of LLMs within the educational domain, specifically in the areas of spoken language learning, which encompass phonetics, phonology, and second language acquisition. To this end, we first introduced a new multiple-choice question dataset to evaluate the effectiveness of LLMs in the aforementioned scenarios, including the understanding and application of spoken language knowledge. Moreover, we investigated the influence of various prompting techniques such as zero- and few-shot methods (prepending the question with question-answer exemplars), chain-of-thought (CoT) prompting, in-domain exemplars, and external tools. We conducted a comprehensive evaluation of popular LLMs (20 distinct models) using these methods. The experimental results showed that the task of extracting conceptual knowledge posed few challenges for these LLMs, whereas the task of application questions was relatively difficult. In addition, some widely proven effective prompting methods combined with domain-specific examples resulted in significant performance improvements compared to the zero-shot baselines. Additionally, some other preliminary experiments also demonstrated the strengths and weaknesses of different LLMs. The findings of this study can shed light on the application of LLMs to spoken language learning.",
+        "paper_link": "https://www.mdpi.com/2076-3417/14/1/224",
+        "github_link": ""
+      }
+    ],
+    "projects": [
+      {
+        "title": "Dialogue Demo",
+        "desc": "A demo project",
+        "demo_link": "https://demo.com"
+      }
+    ]
+  },
+  "zh": {
+    "direction_title": "对话",
+    "direction_desc": "我们聚焦于基于情感计算的自然语言理解和生成，旨在增强大语言模型的移情能力，实现人机交互中的共情回复。",
+    "papers_title": "论文",
+    "projects_title": "项目",
+    "papers": [
     {
-      "abbr": "V2T",
-      "title": "Voice2Text: A New Open-Source End-to-End ASR",
-      "conf": "INTERSPEECH",
-      "paper": "https://xxx.com/v2t.pdf",
-      "demo": "https://xxx.com/v2t-demo",
-      "authors": "A. Smith, B. Lee, C. Wang"
-    },
-    {
-      "abbr": "SE-Trans",
-      "title": "Speech Enhancement Transformer for Robust ASR",
-      "conf": "ICASSP",
-      "paper": "https://xxx.com/setrans.pdf",
-      "authors": "Y. Ma, T. Xu, K. Chen"
-    }
+        "conference": "ISCSLP",
+        "abbr": "ISCSLP",
+        "title": "G2DiaR: 通过图-对话&推理增强大语言模型的常识推理",
+        "authors": "练慧俊, 陈可淇, 孙泽凯, 高迎明, 李雅",
+        "abstract": "知识丰富的对话对于评估和增强大型语言模型（llm）的推理能力至关重要。提示中包含详细的知识可以生成内容丰富的对话。然而，对话、语境和不同知识层面之间错综复杂的相互作用往往被忽视。这导致llm表现出基本的常识性理解，但却难以进行常识性推理。为了应对这些挑战，我们提出了一种图形到对话和推理生成方法G2DiaR。G2DiaR可以将图中的知识路径可控地转换为对话，并可以基于路径节点的邻居节点生成忠实于对话的推理。我们利用G2DiaR创建了G2DiaD数据集，用于在选择题回答（MCQA）中基于对话的推理，源自ATOMIC常识图。G2DiaD由6,492对QA组成，每对QA都提供基于推理的答案，或与推理相冲突。实验结果表明，在G2DiaD上的训练在各种常识性推理基准上的平均性能提高了6.08%，超过了检索方法（提高0.60%）和CICERO数据集上的训练（下降- 4.78%）。G2DiaR可以生成富含常识、关系和推理的对话数据，增强法学硕士的推理和泛化能力。",
+        "paper_link": "https://ieeexplore.ieee.org/abstract/document/10800655",
+        "github_link": ""
+      },
+      {
+        "conference": "NCMMSC",
+        "abbr": "NCMMSC",
+        "title": " 基于大语言模型的递归互动的共情对话系统",
+        "authors": "陈可淇, 练慧俊, 高迎明, 李雅",
+        "abstract": "情感支持是多回合会话的关键能力之一，特别是在咨询和心理健康支持任务中。大型语言模型（llm）的最新进展显示出它们在情感支持对话中的巨大潜力。然而，尽管大语言模型具有令人印象深刻的推理能力和广泛的知识，但他们在多回合咨询对话中使用策略和实现总体目标方面存在不足。这些问题使得LLMs很难直接应用于多回合的情感支持对话。为了解决这些限制，我们提出了支持性心理治疗对话系统（STDS），该系统基于心理健康领域广泛接受的支持性心理治疗。我们的系统首先采用了一个集成了特定领域LLM和基础LLM的交互式框架。前者具有情感支持策略的领域知识，后者具有较强的推理能力和世界知识。通过交互，我们的框架协同地利用了两个模型的优势。此外，我们已经集成了递归单元，以保持对话策略的连续性，朝着整个对话的总体目标努力。实验是使用开源数据集ESConv进行的，结果表明，与基线模型相比，我们的系统在移情、连贯和帮助方面的反应有所改善。此外，我们的方法显示出与客户建立融洽关系的增强能力，从而通过支持性心理治疗策略提高情感支持的有效性。",
+        "paper_link": "https://link.springer.com/chapter/10.1007/978-981-97-0601-3_13",
+        "github_link": "https://ckqqqq.github.io/2023/11/24/Application-Links/"
+      },
+      {
+        "conference": "Appl. Sci",
+        "abbr": "Appl. Sci",
+        "title": " 大型语言模型在口语学习中的应用研究",
+        "authors": "Yingming Gao, Baorian Nuchged, Ya Li and Linkai Peng",
+        "abstract": "人们一直希望智能对话系统能够在实际场景中提供帮助。大语言模型（llms）的最新进展正在朝着将这一愿望变为切实现实的方向取得重大进展。大语言模型（LLMs）被认为在教育领域具有最大的潜力和价值，特别是在创造人工智能驱动的虚拟教师方面，这有助于促进语言学习。本研究的重点是评估LLMs在教育领域的有效性，特别是在口语学习领域，包括语音学，音韵学和第二语言习得。为此，我们首先引入了一个新的选择题数据集来评估LLMs在上述场景中的有效性，包括对口语知识的理解和应用。此外，我们还研究了各种提示技术的影响，如Zero和few提示方法（在问题前加上问答示例）、思维链（CoT）提示、领域内示例和外部工具。我们使用这些方法对流行的LLMs（20种不同的模型）进行了全面的评估。实验结果表明，提取概念知识的任务对这些LLM来说挑战不大，而应用问题的任务相对困难。此外，一些被广泛证明有效的提示方法与特定领域的示例相结合，与Zero-shot基线模型相比，显著提高了性能。此外，其他一些初步实验也展示了不同llm的优缺点。这项研究的结果可以为大语言模型在口语学习中的应用提供启示。",
+        "paper_link": "https://www.mdpi.com/2076-3417/14/1/224",
+        "github_link": ""
+      }
   ],
   "projects": [
     {
-      "name": "OpenASR",
-      "desc": "An open-source speech recognition toolkit.",
-      "demo": "https://xxx.com/openasr-demo",
-      "github": "https://github.com/xxxxx/openasr"
-    },
-    {
-      "name": "NoiseClean",
-      "desc": "Speech denoising system for real-time application.",
-      "demo": "https://xxx.com/noiseclean"
+      "title": "对话演示项目",
+      "desc": "示例演示项目",
+      "demo_link": "https://demo.com"
     }
   ]
+  }
 }
