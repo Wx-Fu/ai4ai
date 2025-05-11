@@ -84,7 +84,7 @@ body {
   gap: 0.68rem;
 }
 
-/* 语言按钮超级美化（一个橙色，高亮） */
+/* 语言按钮美化 */
 #lang-switch {
   border-radius: 1.7em;
   padding: 0.49em 1.6em;
@@ -130,7 +130,7 @@ main {
 .card:hover, .directions-card-wrapper:hover { box-shadow: 0 11px 55px 0 #c4dbfd22; transform: translateY(-2px) scale(1.014); }
 
 /* about/patent卡片内容居中 */
-.lab-intro p, .intro-title, .patent-title, #patent-list {
+.lab-intro p, .intro-title, .patent-title, .award-title, #patent-list, #award-list {
   text-align: center;
 }
 
@@ -211,6 +211,13 @@ main {
   color: #2254b5;
   margin-bottom: .85em;
 }
+
+.award-title {
+  font-size: 1.38em;
+  font-weight: bold;
+  color: #2254b5;
+  margin-bottom: .85em;
+}
 .direction-link {
   text-decoration: none;
   color: inherit;
@@ -223,6 +230,17 @@ main {
 }
 
 #patent-list {
+  padding-left: 0;
+  color: #5a6688;
+  list-style-position: inside;
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 1.13em;
+  line-height: 1.68;
+}
+
+#award-list {
   padding-left: 0;
   color: #5a6688;
   list-style-position: inside;
