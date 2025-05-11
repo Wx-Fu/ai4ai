@@ -211,6 +211,39 @@ main {
   background-color: #2980b9;
 }
 
+/* 分页控制样式 */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 15px;
+}
+
+.pagination-controls button {
+  padding: 8px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#paper-pagination-info,
+#project-pagination-info {
+  font-size: 0.9em;
+  color: #666;
+}
+
 /* 响应式调整 */
 @media (max-width: 1300px) {
   .dbl-card {
