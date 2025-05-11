@@ -89,33 +89,12 @@ function applyLang() {
   // 动态奖项列表内容
   renderAwardList();
 }
-
-// 初始化
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById('lang-switch').onclick = toggleLang;
-  fetchPatents(function() {
-    fetchAwards(applyLang); // 在获取专利数据后获取奖项数据
-  });
-});
-
 // ========== 首页四方向栏跳转 ==========
 function navigateDirection(dir) {
-  // 检查是否在主页
-  if (window.location.pathname.includes('index.html') || window.location.pathname.endsWith('/')) {
-    window.location.href = `./html/${dir}.html`;
-  } else {
-    // 已在子页面，相对路径不同
-    window.location.href = `${dir}.html`;
-  }
-}
-
-// ========== 方向页数据填充 ==========
-// 仅在子页面自动起效
-if(typeof direction !== "undefined") {
-  fetch(`data/${direction}.json`).then(r => r.json()).then(data => {
-    renderPaperList(data.papers || []);
-    renderProjectList(data.projects || []);
-  })
+  // 阻止默认的 <a> 标签跳转
+  event.preventDefault();
+  // 确保路径正确
+  window.location.href = `./html/${dir}.html`;
 }
 
 // ========== 方向页卡片渲染 ==========
@@ -198,10 +177,29 @@ function renderCards(list, target, type) {
   target.innerHTML = final;
 }
 
-
-// ====== 卡片动效 =============
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.fade-in').forEach(e => {
+// 初始化
+document.addEventListener("DOMContentLoaded", function() {
+  // 加载初始语言
+  applyLang();
+  // 加载专利数据
+  fetchPatents(renderPatentList);
+  // 加载奖项数据
+  fetchAwards(renderAwardList);
+  
+  // 绑定语言切换按钮
+  document.getElementById("lang-switch").addEventListener("click", toggleLang);
+  
+  // 添加卡片跳转事件
+  document.querySelectorAll('.direction-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const dir = this.getAttribute('data-direction') || this.getAttribute('href').replace('.html', '');
+      navigateDirection(dir);
+    });
+  });
+  
+  // 添加滚动效果动画
+  document.querySelectorAll('.card, .direction-card').forEach(e => {
     e.style.opacity = '0';
     e.style.transform = 'translateY(40px)';
     setTimeout(() => {
