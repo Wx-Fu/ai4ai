@@ -1,4 +1,9 @@
 let lang = localStorage.getItem("lang") || "en";
+// 添加分页相关变量
+let currentPaperPage = 1;
+let currentProjectPage = 1;
+const itemsPerPage = 4;
+
 function setLangSwitchBtn(lang) {
   document.getElementById('lang-switch').textContent = lang === "en" ? '中文' : 'English';
 }
@@ -103,3 +108,90 @@ function renderData() {
   document.getElementById("project-list").innerHTML = data.projects.map(projectTemplate).join("");
 }
 
+// 修改 renderData 函数
+function renderData(data) {
+  document.getElementById("papers-title").textContent = data.papers_title;
+  document.getElementById("projects-title").textContent = data.projects_title;
+
+  // 存储完整数据以便分页使用
+  window.allPapers = data.papers;
+  window.allProjects = data.projects;
+  
+  // 初始渲染第一页
+  renderPaperPage(currentPaperPage);
+  renderProjectPage(currentProjectPage);
+  
+  // 添加分页控制器
+  setupPaginationControls();
+}
+
+// 添加论文分页渲染函数
+function renderPaperPage(page) {
+  const papers = window.allPapers;
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const pageItems = papers.slice(startIndex, endIndex);
+  
+  document.getElementById("paper-list").innerHTML = pageItems.map(paperTemplate).join("");
+  
+  // 更新分页信息
+  document.getElementById("paper-pagination-info").textContent = 
+    `Page ${page} of ${Math.ceil(papers.length / itemsPerPage)}`;
+  
+  // 更新按钮状态
+  document.getElementById("prev-paper-page").disabled = page <= 1;
+  document.getElementById("next-paper-page").disabled = page >= Math.ceil(papers.length / itemsPerPage);
+}
+
+// 添加项目分页渲染函数
+function renderProjectPage(page) {
+  const projects = window.allProjects;
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const pageItems = projects.slice(startIndex, endIndex);
+  
+  document.getElementById("project-list").innerHTML = pageItems.map(projectTemplate).join("");
+  
+  // 更新分页信息
+  document.getElementById("project-pagination-info").textContent = 
+    `Page ${page} of ${Math.ceil(projects.length / itemsPerPage)}`;
+  
+  // 更新按钮状态
+  document.getElementById("prev-project-page").disabled = page <= 1;
+  document.getElementById("next-project-page").disabled = page >= Math.ceil(projects.length / itemsPerPage);
+}
+
+// 设置分页控制器
+function setupPaginationControls() {
+  // 为论文部分添加分页控制
+  document.getElementById("prev-paper-page").addEventListener("click", () => {
+    if (currentPaperPage > 1) {
+      currentPaperPage--;
+      renderPaperPage(currentPaperPage);
+    }
+  });
+  
+  document.getElementById("next-paper-page").addEventListener("click", () => {
+    const maxPage = Math.ceil(window.allPapers.length / itemsPerPage);
+    if (currentPaperPage < maxPage) {
+      currentPaperPage++;
+      renderPaperPage(currentPaperPage);
+    }
+  });
+  
+  // 为项目部分添加分页控制
+  document.getElementById("prev-project-page").addEventListener("click", () => {
+    if (currentProjectPage > 1) {
+      currentProjectPage--;
+      renderProjectPage(currentProjectPage);
+    }
+  });
+  
+  document.getElementById("next-project-page").addEventListener("click", () => {
+    const maxPage = Math.ceil(window.allProjects.length / itemsPerPage);
+    if (currentProjectPage < maxPage) {
+      currentProjectPage++;
+      renderProjectPage(currentProjectPage);
+    }
+  });
+}
