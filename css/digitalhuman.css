@@ -1,0 +1,301 @@
+main {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 11vw 54px 11vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+/* speech.css */
+.speech-direction-detail {
+  background: white;
+  border-radius: 22px;
+  padding: 2.5em 3.2em;
+  margin: 0 auto 2.8rem auto;
+  max-width: 1360px;   /* 与style.css中的card一致 */
+  width: 100%;
+  box-shadow: 0 6px 32px #b9cefa16;
+  box-sizing: border-box;
+  transition: box-shadow .18s, transform .14s;
+}
+
+.speech-direction-detail img {
+  width: 64px;
+  height: 64px;
+}
+
+.speech-direction-detail h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #2254b5;
+}
+
+.speech-direction-detail p {
+  margin: 0;
+  color: #5a6688;
+  line-height: 1.6;
+}
+
+.dbl-card {
+  background: white;
+  border-radius: 22px;
+  padding: 2.5em 3.2em;
+  margin: 0 auto 2.8rem auto;
+  max-width: 1360px;   /* 与style.css中的card一致 */
+  width: 100%;
+  box-shadow: 0 6px 32px #b9cefa16;
+  box-sizing: border-box;
+  transition: box-shadow .18s, transform .14s;
+}
+
+#paper-list, #project-list {
+  display: grid;
+  grid-template-columns: 1fr; /* 改为单列布局确保宽度一致 */
+  gap: 1.8rem;
+  width: 100%; /* 确保占满容器宽度 */
+}
+
+.paper-card, .project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  width: 100%; /* 确保卡片占满容器宽度 */
+  min-width: 600px; /* 设置最小宽度 */
+  max-width: 1360px; /* 设置最大宽度 */
+  margin: 0 auto; /* 居中显示 */
+}
+
+.paper-card:hover, .project-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+/* 会议标签样式 */
+.paper-conf {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* 各会议的颜色样式 */
+.conf-neurips { background-color: #4b67a1; }
+.conf-taslp { background-color: #2980b9; }
+.conf-icml { background-color: #8e44ad; }
+.conf-iclr { background-color: #9b59b6; }
+.conf-acl { background-color: #3498db; }
+.conf-tac { background-color: #1abc9c; }
+.conf-iccv { background-color: #16a085; }
+.conf-eccv { background-color: #27ae60; }
+.conf-emnlp { background-color: #2ecc71; }
+.conf-iscslp { background-color: #f1c40f; }
+.conf-aaai { background-color: #e67e22; }
+.conf-acmmm { background-color: #d35400; }
+.conf-interspeech { background-color: #e74c3c; }
+.conf-icassp { background-color: #c0392b; }
+.conf-iccip { background-color: #7f8c8d; }
+.conf-arxiv { background-color: #95a5a6; }
+.conf-other { background-color: #34495e; }
+
+/* 论文卡片样式 */
+.paper-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+/* 论文标题行样式 */
+.paper-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+/* 论文标题样式 */
+.paper-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  flex: 1;
+  padding-right: 16px;
+}
+
+/* 论文链接样式 */
+.paper-links {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* 链接图标样式 */
+.link-icon {
+  width: 24px;  /* 增加尺寸 */
+  height: 24px;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  /* 可选：为图标添加轻微的悬停效果 */
+  transition: transform 0.2s ease;
+}
+
+.paper-link:hover .link-icon {
+  transform: scale(1.1);
+}
+
+/* 可以单独为 arXiv 图标设置样式 */
+.arxiv-icon {
+  width: 32px;  /* arXiv 图标可能需要更大一些 */
+  height: 24px;
+}
+
+/* 作者样式 */
+.paper-authors {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+}
+
+/* 摘要样式 */
+.paper-abstract {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  margin: 8px 0 0 0;
+}
+
+/* 项目卡片样式 */
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.project-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.demo-btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.demo-btn:hover {
+  background-color: #2980b9;
+}
+
+/* 分页控制样式 */
+/* 分页控件样式 */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.pagination-controls button {
+  padding: 5px 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* 将 previous 和 next 按钮文字设置为橙色 */
+.pagination-controls button.prev-btn,
+.pagination-controls button.next-btn {
+  color: #ff7f00; /* 橙色文字 */
+  font-weight: 500;
+}
+
+/* 鼠标悬停时添加橙色背景动效 */
+.pagination-controls button.prev-btn:hover:not(:disabled),
+.pagination-controls button.next-btn:hover:not(:disabled) {
+  background-color: rgba(255, 127, 0, 0.1); /* 半透明橙色背景 */
+}
+
+/* 普通页码按钮样式 */
+.pagination-controls button:not(.prev-btn):not(.next-btn) {
+  color: #333;
+}
+
+.pagination-controls button:not(.prev-btn):not(.next-btn):hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.pagination-controls button.active {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#paper-pagination-info,
+#project-pagination-info {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* 响应式调整 */
+@media (max-width: 1300px) {
+  .dbl-card {
+    max-width: 97vw;
+  }
+}
+
+@media (max-width: 960px) {
+  .dbl-card {
+    padding: 1.3em 0.4em;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .speech-direction-detail {
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
+  }
+  
+  #paper-list, #project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .dbl-card {
+    padding: 0.62em 0.03em;
+  }
+}
