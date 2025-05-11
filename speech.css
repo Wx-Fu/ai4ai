@@ -212,25 +212,50 @@ main {
 }
 
 /* 分页控制样式 */
+/* 分页控件样式 */
 .pagination-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
-  gap: 15px;
+  margin-top: 15px;
+  gap: 10px;
 }
 
 .pagination-controls button {
-  padding: 8px 15px;
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 5px 10px;
+  border: none;
+  background: transparent;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-.pagination-controls button:hover:not(:disabled) {
+/* 将 previous 和 next 按钮文字设置为橙色 */
+.pagination-controls button.prev-btn,
+.pagination-controls button.next-btn {
+  color: #ff7f00; /* 橙色文字 */
+  font-weight: 500;
+}
+
+/* 鼠标悬停时添加橙色背景动效 */
+.pagination-controls button.prev-btn:hover:not(:disabled),
+.pagination-controls button.next-btn:hover:not(:disabled) {
+  background-color: rgba(255, 127, 0, 0.1); /* 半透明橙色背景 */
+}
+
+/* 普通页码按钮样式 */
+.pagination-controls button:not(.prev-btn):not(.next-btn) {
+  color: #333;
+}
+
+.pagination-controls button:not(.prev-btn):not(.next-btn):hover:not(:disabled) {
   background-color: #e0e0e0;
+}
+
+.pagination-controls button.active {
+  background-color: #f0f0f0;
+  font-weight: bold;
 }
 
 .pagination-controls button:disabled {
