@@ -91,25 +91,15 @@ function projectTemplate(p) {
   `;
 }
 
-// 渲染函数
-function renderData() {
+// 修改 renderData 函数
+function renderData(data) {
   if (!speechData) return;
   const data = speechData[lang];
-
   // 标题不动
   document.getElementById("direction-title").textContent = data.direction_title;
   // 描述这里用 innerHTML，id 也要和 HTML 对上
   document.getElementById("direction-desc").innerHTML = data.direction_desc;
-
-  document.getElementById("papers-title").textContent   = data.papers_title;
-  document.getElementById("projects-title").textContent = data.projects_title;
-
-  document.getElementById("paper-list").innerHTML   = data.papers.map(paperTemplate).join("");
-  document.getElementById("project-list").innerHTML = data.projects.map(projectTemplate).join("");
-}
-
-// 修改 renderData 函数
-function renderData(data) {
+  
   document.getElementById("papers-title").textContent = data.papers_title;
   document.getElementById("projects-title").textContent = data.projects_title;
 
