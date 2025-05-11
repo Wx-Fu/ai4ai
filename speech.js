@@ -3,6 +3,7 @@ let lang = localStorage.getItem("lang") || "en";
 let currentPaperPage = 1;
 let currentProjectPage = 1;
 const itemsPerPage = 4;
+let paginationInitialized = false; // 添加标志避免重复初始化
 
 function setLangSwitchBtn(lang) {
   document.getElementById('lang-switch').textContent = lang === "en" ? '中文' : 'English';
@@ -42,16 +43,16 @@ function getConferenceClass(conference) {
   if (confName.includes('icml')) return 'conf-icml';
   if (confName.includes('iclr')) return 'conf-iclr';
   if (confName.includes('acl')) return 'conf-acl';
-  if (confName.includes('cvpr')) return 'conf-cvpr';
+  if (confName.includes('tac')) return 'conf-tac';
   if (confName.includes('iccv')) return 'conf-iccv';
   if (confName.includes('eccv')) return 'conf-eccv';
   if (confName.includes('emnlp')) return 'conf-emnlp';
-  if (confName.includes('naacl')) return 'conf-naacl';
+  if (confName.includes('iscslp')) return 'conf-iscslp';
   if (confName.includes('aaai')) return 'conf-aaai';
-  if (confName.includes('ijcai')) return 'conf-ijcai';
+  if (confName.includes('acmmm')) return 'conf-acmmm';
   if (confName.includes('interspeech')) return 'conf-interspeech';
   if (confName.includes('icassp')) return 'conf-icassp';
-  if (confName.includes('ieee')) return 'conf-ieee';
+  if (confName.includes('iccip')) return 'conf-iccip';
   if (confName.includes('arxiv')) return 'conf-arxiv';
   
   return 'conf-other';
@@ -91,10 +92,11 @@ function projectTemplate(p) {
   `;
 }
 
-// 修改 renderData 函数
-function renderData(data) {
+// 修改 renderData 函数 - 删除了参数，避免变量名冲突
+function renderData() {
   if (!speechData) return;
   const data = speechData[lang];
+  
   // 标题不动
   document.getElementById("direction-title").textContent = data.direction_title;
   // 描述这里用 innerHTML，id 也要和 HTML 对上
@@ -107,17 +109,30 @@ function renderData(data) {
   window.allPapers = data.papers;
   window.allProjects = data.projects;
   
+  // 重置为第一页
+  currentPaperPage = 1;
+  currentProjectPage = 1;
+  
   // 初始渲染第一页
   renderPaperPage(currentPaperPage);
   renderProjectPage(currentProjectPage);
   
-  // 添加分页控制器
-  setupPaginationControls();
+  // 只在第一次渲染时初始化分页控制器
+  if (!paginationInitialized) {
+    setupPaginationControls();
+    paginationInitialized = true;
+  }
 }
 
 // 添加论文分页渲染函数
 function renderPaperPage(page) {
   const papers = window.allPapers;
+  if (!papers || !papers.length) return;
+  
+  const totalPages = Math.ceil(papers.length / itemsPerPage);
+  // 确保页码有效
+  page = Math.max(1, Math.min(page, totalPages));
+  
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const pageItems = papers.slice(startIndex, endIndex);
@@ -125,17 +140,29 @@ function renderPaperPage(page) {
   document.getElementById("paper-list").innerHTML = pageItems.map(paperTemplate).join("");
   
   // 更新分页信息
-  document.getElementById("paper-pagination-info").textContent = 
-    `Page ${page} of ${Math.ceil(papers.length / itemsPerPage)}`;
+  if (document.getElementById("paper-pagination-info")) {
+    document.getElementById("paper-pagination-info").textContent = 
+      `Page ${page} of ${totalPages}`;
+  }
   
   // 更新按钮状态
-  document.getElementById("prev-paper-page").disabled = page <= 1;
-  document.getElementById("next-paper-page").disabled = page >= Math.ceil(papers.length / itemsPerPage);
+  if (document.getElementById("prev-paper-page")) {
+    document.getElementById("prev-paper-page").disabled = page <= 1;
+  }
+  if (document.getElementById("next-paper-page")) {
+    document.getElementById("next-paper-page").disabled = page >= totalPages;
+  }
 }
 
 // 添加项目分页渲染函数
 function renderProjectPage(page) {
   const projects = window.allProjects;
+  if (!projects || !projects.length) return;
+  
+  const totalPages = Math.ceil(projects.length / itemsPerPage);
+  // 确保页码有效
+  page = Math.max(1, Math.min(page, totalPages));
+  
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const pageItems = projects.slice(startIndex, endIndex);
@@ -143,16 +170,45 @@ function renderProjectPage(page) {
   document.getElementById("project-list").innerHTML = pageItems.map(projectTemplate).join("");
   
   // 更新分页信息
-  document.getElementById("project-pagination-info").textContent = 
-    `Page ${page} of ${Math.ceil(projects.length / itemsPerPage)}`;
+  if (document.getElementById("project-pagination-info")) {
+    document.getElementById("project-pagination-info").textContent = 
+      `Page ${page} of ${totalPages}`;
+  }
   
   // 更新按钮状态
-  document.getElementById("prev-project-page").disabled = page <= 1;
-  document.getElementById("next-project-page").disabled = page >= Math.ceil(projects.length / itemsPerPage);
+  if (document.getElementById("prev-project-page")) {
+    document.getElementById("prev-project-page").disabled = page <= 1;
+  }
+  if (document.getElementById("next-project-page")) {
+    document.getElementById("next-project-page").disabled = page >= totalPages;
+  }
 }
 
-// 设置分页控制器
+// 设置分页控制器 - 只会被调用一次
 function setupPaginationControls() {
+  // 检查并创建分页控件，如果不存在
+  if (!document.querySelector('#papers-section .pagination-controls')) {
+    const paperPagination = document.createElement('div');
+    paperPagination.className = 'pagination-controls';
+    paperPagination.innerHTML = `
+      <button id="prev-paper-page">&lt; Previous</button>
+      <span id="paper-pagination-info">Page 1 of 1</span>
+      <button id="next-paper-page">Next &gt;</button>
+    `;
+    document.getElementById('papers-section').appendChild(paperPagination);
+  }
+  
+  if (!document.querySelector('#projects-section .pagination-controls')) {
+    const projectPagination = document.createElement('div');
+    projectPagination.className = 'pagination-controls';
+    projectPagination.innerHTML = `
+      <button id="prev-project-page">&lt; Previous</button>
+      <span id="project-pagination-info">Page 1 of 1</span>
+      <button id="next-project-page">Next &gt;</button>
+    `;
+    document.getElementById('projects-section').appendChild(projectPagination);
+  }
+  
   // 为论文部分添加分页控制
   document.getElementById("prev-paper-page").addEventListener("click", () => {
     if (currentPaperPage > 1) {
@@ -162,7 +218,7 @@ function setupPaginationControls() {
   });
   
   document.getElementById("next-paper-page").addEventListener("click", () => {
-    const maxPage = Math.ceil(window.allPapers.length / itemsPerPage);
+    const maxPage = Math.ceil((window.allPapers || []).length / itemsPerPage);
     if (currentPaperPage < maxPage) {
       currentPaperPage++;
       renderPaperPage(currentPaperPage);
@@ -178,7 +234,7 @@ function setupPaginationControls() {
   });
   
   document.getElementById("next-project-page").addEventListener("click", () => {
-    const maxPage = Math.ceil(window.allProjects.length / itemsPerPage);
+    const maxPage = Math.ceil((window.allProjects || []).length / itemsPerPage);
     if (currentProjectPage < maxPage) {
       currentProjectPage++;
       renderProjectPage(currentProjectPage);
