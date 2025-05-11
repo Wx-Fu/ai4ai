@@ -62,7 +62,7 @@ function getConferenceClass(conference) {
 function paperTemplate(paper) {
   // 使用conference而不是conf
   const confClass = getConferenceClass(paper.conference);
-  
+ 
   return `
     <div class="paper-card">
       <div class="paper-header">
