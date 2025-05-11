@@ -69,7 +69,7 @@ function toggleLang() {
   setLang(lang === "en" ? "zh" : "en");
 }
 
-unction applyLang() {
+function applyLang() {
   // 基本内容
   const d = langData[lang];
   document.getElementById('intro-title').innerHTML = d.introTitle;
