@@ -4,6 +4,7 @@ let currentPaperPage = 1;
 let currentProjectPage = 1;
 const itemsPerPage = 4;
 let paginationInitialized = false; // 添加标志避免重复初始化
+let speechData = null;
 
 function setLangSwitchBtn(lang) {
   document.getElementById('lang-switch').textContent = lang === "en" ? '中文' : 'English';
@@ -16,8 +17,6 @@ document.getElementById("lang-switch").onclick = function() {
   setLangSwitchBtn(lang);
   renderData();
 };
-
-let speechData = null;
 
 fetch("./data/speech.json")
   .then(r=>r.json())
