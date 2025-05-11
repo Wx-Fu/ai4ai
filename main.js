@@ -100,7 +100,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ========== 首页四方向栏跳转 ==========
 function navigateDirection(dir) {
-  window.location.href = dir + ".html";
+  // 检查是否在主页
+  if (window.location.pathname.includes('index.html') || window.location.pathname.endsWith('/')) {
+    window.location.href = `./html/${dir}.html`;
+  } else {
+    // 已在子页面，相对路径不同
+    window.location.href = `${dir}.html`;
+  }
 }
 
 // ========== 方向页数据填充 ==========
