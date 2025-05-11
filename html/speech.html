@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speech · AI4AI Lab</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="speech.css">
+</head>
+<body>
+  <header class="navi-header">
+    <div class="navi-left">
+      <img src="assets/logo.PNG" alt="Lab Logo" class="lab-logo" />
+      <div class="lab-title"><span>Artificial Intelligence for<br>Affective Interaction Lab</span></div>
+    </div>
+    <div class="navi-center"> 
+      <a href="index.html" class="navi-btn">HOME</a> 
+      <a href="speech.html" class="navi-btn active">SPEECH</a>
+      <a href="emotion.html" class="navi-btn">EMOTION</a>
+      <a href="dialogue.html" class="navi-btn">DIALOGUE</a>
+      <a href="digitalhuman.html" class="navi-btn">DIGITAL HUMAN</a>
+      <a href="index.html#patents" class="navi-btn">PATENTS</a>
+    </div>
+    <div class="navi-right">
+      <button id="lang-switch" class="navi-btn">中文</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 方向介绍卡片 -->
+    <section class="speech-direction-detail direction-detail">
+      <img src="assets/icon-speech.svg" alt="Speech"/>
+      <div>
+        <h2 id="direction-title">Speech</h2>
+        <p id="direction-desc">
+          Our research focuses on the research of speech recognition, speech synthesis and interdisciplinary fields related to speech,<br>
+          we continuously expand the downstream application of speech and improve its controllability.
+        </p>
+      </div>
+    </section>
+    
+    <!-- 论文section -->
+    <section class="dbl-card" id="papers-section">
+      <h3 id="papers-title">Papers</h3>
+      <div id="paper-list"></div>
+      <div class="pagination-controls">
+        <button id="prev-paper-page">&lt; Previous</button>
+        <span id="paper-pagination-info">Page 1 of 1</span>
+        <button id="next-paper-page">Next &gt;</button>
+      </div>
+    </section>
+        
+    <!-- 项目section -->
+    <section class="dbl-card" id="projects-section">
+      <h3 id="projects-title">Projects</h3>
+      <div id="project-list"></div>
+      <div class="pagination-controls">
+        <button id="prev-project-page">&lt; Previous</button>
+        <span id="project-pagination-info">Page 1 of 1</span>
+        <button id="next-project-page">Next &gt;</button>
+      </div>
+    </section>
+
+  </main>
+  <script src="speech.js"></script>
+</body>
+</html>
