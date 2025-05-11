@@ -54,6 +54,9 @@ function getConferenceClass(conference) {
   if (confName.includes('icassp')) return 'conf-icassp';
   if (confName.includes('iccip')) return 'conf-iccip';
   if (confName.includes('arxiv')) return 'conf-arxiv';
+  if (confName.includes('tcsvt')) return 'conf-tcsvt';
+  if (confName.includes('ncmmsc')) return 'conf-ncmmsc';
+  if (confName.includes('tommccap')) return 'conf-tommccap';
   
   return 'conf-other';
 }
