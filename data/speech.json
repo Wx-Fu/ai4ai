@@ -112,6 +112,15 @@
         "abstract": "In recent years, neural network based methods for multispeaker text-to-speech synthesis (TTS) have made significant progress. However, the current speaker encoder models used in these methods still cannot capture enough speaker information. In this paper, we focus on accurate speaker encoder modeling and propose an end-to-end method that can generate better similarity for both seen and unseen speakers. The proposed architecture consists of three separately trained components: a speaker encoder based on the state-of-the-art ECAPA-TDNN model which is derived from speaker verification task, a FastSpeech2 based synthesizer, and a HiFi-GAN vocoder. The comparison among different speaker encoder models shows our proposed method can achieve better speaker similarity. To efficiently evaluate our synthesized speech, we are the first to adopt and evaluate different deep learning based automatic MOS evaluation methods to assess our results, and these methods show great potential in automatic speech quality assessment.",
         "paper_link": "https://arxiv.org/pdf/2306.02593",
         "github_link": "https://github.com/happylittlecat2333/iscslp2022"
+      },
+      {
+        "conference": "Appl. Sci",
+        "abbr": "Appl. Sci",
+        "title": " End-to-End Mispronunciation Detection and  Diagnosis Using Transfer Learning",
+        "authors": "Linkai Peng, Yingming Gao, Rian Bao, Ya Li and Jinsong Zhang",
+        "abstract": "As an indispensable module of computer-aided pronunciation training (CAPT) systems, mispronunciation detection and diagnosis (MDD) techniques have attracted a lot of attention from academia and industry over the past decade. To train robust MDD models, this technique requires massive human-annotated speech recordings which are usually expensive and even hard to acquire. In this study, we propose to use transfer learning to tackle the problem of data scarcity from two aspects. First, from audio modality, we explore the use of the pretrained model wav2vec2.0 for MDD tasks by learning robust general acoustic representation. Second, from text modality, we explore transferring prior texts into MDD by learning associations between acoustic and textual modalities. We propose textual modulation gates that assign more importance to the relevant text information while suppressing irrelevant text information. Moreover, given the transcriptions, we propose an extra contrastive loss to reduce the difference of learning objectives between the phoneme recognition and MDD tasks. Conducting experiments on the L2-Arctic dataset showed that our wav2vec2.0 based models outperformed the conventional methods. The proposed textual modulation gate and contrastive loss further improved the F1-score by more than 2.88% and our best model achieved an F1-score of 61.75%.",
+        "paper_link": "https://www.mdpi.com/2076-3417/13/11/6793",
+        "github_link": ""
       }
     ],
     "projects": [
@@ -235,6 +244,15 @@
         "abstract": "近年来，基于神经网络的多说话人文本到语音合成（TTS）方法取得了重大进展。然而，目前在这些方法中使用的说话人编码器模型仍然不能捕获足够的说话人信息。在本文中，我们专注于精确的说话人编码器建模，并提出了一种端到端方法，可以为可见和不可见的说话人产生更好的相似性。提出的架构由三个单独训练的组件组成：基于最先进的ECAPA-TDNN模型的扬声器编码器（源自扬声器验证任务），基于FastSpeech2的合成器和HiFi-GAN声码器。不同的说话人编码器模型的比较表明，我们提出的方法可以获得更好的说话人相似度。为了有效地评估我们的合成语音，我们率先采用并评估了不同的基于深度学习的自动MOS评估方法来评估我们的结果，这些方法在自动语音质量评估中显示出巨大的潜力。",
         "paper_link": "https://arxiv.org/pdf/2306.02593",
         "github_link": "https://github.com/happylittlecat2333/iscslp2022"
+      },
+      {
+        "conference": "Appl. Sci",
+        "abbr": "Appl. Sci",
+        "title": " 基于迁移学习的端到端发音错误检测与诊断",
+        "authors": "Linkai Peng, Yingming Gao, Rian Bao, Ya Li and Jinsong Zhang",
+        "abstract": "作为计算机辅助发音训练（CAPT）系统中不可缺少的模块，错误发音检测与诊断（MDD）技术在过去的十年中受到了学术界和工业界的广泛关注。为了训练健壮的MDD模型，该技术需要大量人工注释的语音记录，这些记录通常是昂贵的，甚至很难获得。在本研究中，我们提出利用迁移学习从两个方面来解决数据稀缺问题。首先，从音频模态出发，我们通过学习鲁棒的通用声学表示，探索了在MDD任务中使用预训练模型wav2vec2.0。其次，从语篇模态方面，我们探讨了通过学习语音和语篇模态之间的关联，将先前的语篇转化为MDD。我们提出了文本调制门，在抑制不相关文本信息的同时，赋予相关文本信息更多的重要性。此外，鉴于转录，我们提出了一个额外的对比损失，以减少音素识别和MDD任务之间的学习目标差异。在L2-Arctic数据集上进行的实验表明，基于wav2vec2.0的模型优于传统方法。本文提出的文本调制门和对比损耗进一步将f1分数提高了2.88%以上，我们的最佳模型的f1分数达到了61.75%。",
+        "paper_link": "https://www.mdpi.com/2076-3417/13/11/6793",
+        "github_link": ""
       }
   ],
   "projects": [
