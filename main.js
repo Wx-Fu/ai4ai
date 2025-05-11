@@ -11,6 +11,7 @@ const langData = {
       { title: 'Digital Human', desc: 'Virtual human modeling and motion generation, human-computer interaction.' }
     ],
     patentTitle: 'Patents',
+    awardTitle: 'Awards',
     langBtn: '中文'
   },
   zh: {
@@ -23,12 +24,14 @@ const langData = {
       { title: '数字人', desc: '虚拟人体建模与运动生成，人机交互。' }
     ],
     patentTitle: '专利',
+    awardTitle: '获奖情况',
     langBtn: 'English'
   }
 };
 
-// ========== 专利数据按需动态加载 ==========
+// ========== 专利数据和获奖数据按需动态加载 ==========
 let patentsData = { en: [], zh: [] }; // 缓存，一次加载
+let awardsData = { en: [], zh: [] }; 
 
 function fetchPatents(callback) {
   fetch("data/patents.json").then(r => r.json()).then(data => {
@@ -37,10 +40,23 @@ function fetchPatents(callback) {
   });
 }
 
+function fetchAwards(callback) {
+  fetch("data/awards.json").then(r => r.json()).then(data => {
+    awardsData = data;
+    if(typeof callback === "function") callback();
+  });
+}
+
 function renderPatentList() {
   const ul = document.getElementById("patent-list");
   if (!ul) return;
   ul.innerHTML = (patentsData[lang] || []).map(txt => `<li>${txt}</li>`).join("");
+}
+
+function renderAwardList() {
+  const ul = document.getElementById("award-list");
+  if (!ul) return;
+  ul.innerHTML = (awardsData[lang] || []).map(txt => `<li>${txt}</li>`).join("");
 }
 
 function setLang(newLang) {
@@ -53,7 +69,7 @@ function toggleLang() {
   setLang(lang === "en" ? "zh" : "en");
 }
 
-function applyLang() {
+unction applyLang() {
   // 基本内容
   const d = langData[lang];
   document.getElementById('intro-title').innerHTML = d.introTitle;
@@ -63,15 +79,23 @@ function applyLang() {
     document.getElementById('dir-para-' + (i + 1)).textContent = d.directions[i].desc;
   }
   document.getElementById('patent-title').textContent = d.patentTitle;
+  // 添加奖项标题更新
+  if (document.getElementById('award-title')) {
+    document.getElementById('award-title').textContent = d.awardTitle;
+  }
   document.getElementById('lang-switch').textContent = d.langBtn;
   // 动态专利列表内容
   renderPatentList();
+  // 动态奖项列表内容
+  renderAwardList();
 }
 
 // 初始化
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById('lang-switch').onclick = toggleLang;
-  fetchPatents(applyLang);
+  fetchPatents(() => {
+    fetchAwards(applyLang); // 在获取专利数据后获取奖项数据
+  });
 });
 
 // ========== 首页四方向栏跳转 ==========
