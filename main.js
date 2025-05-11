@@ -34,14 +34,14 @@ let patentsData = { en: [], zh: [] }; // 缓存，一次加载
 let awardsData = { en: [], zh: [] }; 
 
 function fetchPatents(callback) {
-  fetch("data/patents.json").then(r => r.json()).then(data => {
+  fetch("./data/patents.json").then(r => r.json()).then(data => {
     patentsData = data;
     if(typeof callback === "function") callback();
   });
 }
 
 function fetchAwards(callback) {
-  fetch("data/awards.json").then(r => r.json()).then(data => {
+  fetch("./data/awards.json").then(r => r.json()).then(data => {
     awardsData = data;
     if(typeof callback === "function") callback();
   });
