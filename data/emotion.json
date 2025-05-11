@@ -47,7 +47,7 @@
         "title": " Multimodal Emotion Recognition Based on Dual Alignment and Contrastive Learning",
         "authors": "WEN Yuhua, LI Qifei, ZHOU Yingying, GAO Yingming, LI Ya",
         "abstract": "Emotion recognition plays a crucial role in modern human-computer interaction， affective computing， and immersive virtual reality by enabling computers to automatically identify and classify human emotional states. With advancements in multimodal learning， emotion recognition has progressed from traditional single-modal approaches to more complex multimodal approaches. Multimodal emotion recognition involves processing data from various sources， such as text， speech， and visual information. These different modalities capture distinct emotional features， allowing models to better understand human emotional states. However， significant challenges remain in multimodal emotion recognition， including temporal misalignment and modality heterogeneity. To address these challenges， this paper presents a multimodal emotion recognition model that utilizes dual alignment and contrastive learning. The proposed model integrates text， speech， and visual modalities， achieving comprehensive alignment through a dual alignment module. Specifically， feature-level alignment employs a cross-attention mechanism to create dynamic temporal alignment， while sample-level alignment uses contrastive learning to align the modalities in feature space. Additionally， the model introduces supervised contrastive learning to leverage label information， allowing for the extraction of fine-grained emotional cues and enhancing the model’s robustness. Self-attention mechanisms are also applied to learn interactions among multimodal features， effectively improving overall model performance. Experimental results show that the proposed model performs exceptionally well on three public datasets， outperforming existing models on most metrics. In conclusion， the dual alignment and contrastive learning-based multimodal emotion recognition model successfully addresses key challenges in the field and achieves significant performance improvements.",
-        "paper_link": https://signal.ejournal.org.cn/article/doi/10.12466/xhcl.2025.03.011",
+        "paper_link": "https://signal.ejournal.org.cn/article/doi/10.12466/xhcl.2025.03.011",
         "github_link": ""
       },
       {
@@ -179,7 +179,7 @@
         "title": " 基于双对齐和对比学习的多模态情感识别",
         "authors": "文宇华, 李启飞, 周莹莹, 高迎明, 李雅",
         "abstract": "情感识别在现代人机交互、情感感知和沉浸式虚拟现实等领域具有重要价值，因其能够通过计算机自动识别和分类人类情感状态。随着多模态学习的发展，情感识别逐渐从传统的单一模态情感识别转向多模态情感识别。多模态情感识别涉及处理来自不同模态的数据，例如文本、语音和视觉。这些模态数据可以通过捕捉不同的情感特征，帮助模型更准确地理解人的情感状态。然而，现有的多模态情感识别中存在时间错位和模态异质性等一系列挑战。为了应对这些挑战，本文设计并实现了一种基于双对齐和对比学习的多模态情感识别模型。该模型结合了文本、语音和视觉三种模态，通过双对齐模块实现不同模态之间的全面对齐。其中，特征级对齐利用交叉注意力机制实现时间维度上的动态对齐；样本级对齐利用对比学习在特征空间中对齐各个模态。模型引入监督对比学习进一步利用标签信息，挖掘细粒度的情感线索，增强模型的鲁棒性。此外，本文利用自注意力机制来学习多模态特征间的交互，有效提升了模型性能。实验结果表明，该模型在三个公开数据集上表现优异，在大多数指标上均优于现有模型。综上所述，本文提出的基于双对齐和对比学习的多模态情感识别模型，有效解决了多模态情感识别中的关键挑战，取得了显著的性能提升。",
-        "paper_link": https://signal.ejournal.org.cn/article/doi/10.12466/xhcl.2025.03.011",
+        "paper_link": "https://signal.ejournal.org.cn/article/doi/10.12466/xhcl.2025.03.011",
         "github_link": ""
       },
       {
