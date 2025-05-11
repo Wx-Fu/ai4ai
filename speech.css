@@ -91,16 +91,16 @@ main {
 .conf-icml { background-color: #8e44ad; }
 .conf-iclr { background-color: #9b59b6; }
 .conf-acl { background-color: #3498db; }
-.conf-cvpr { background-color: #1abc9c; }
+.conf-tac { background-color: #1abc9c; }
 .conf-iccv { background-color: #16a085; }
 .conf-eccv { background-color: #27ae60; }
 .conf-emnlp { background-color: #2ecc71; }
-.conf-naacl { background-color: #f1c40f; }
+.conf-iscslp { background-color: #f1c40f; }
 .conf-aaai { background-color: #e67e22; }
-.conf-ijcai { background-color: #d35400; }
+.conf-acmmm { background-color: #d35400; }
 .conf-interspeech { background-color: #e74c3c; }
 .conf-icassp { background-color: #c0392b; }
-.conf-ieee { background-color: #7f8c8d; }
+.conf-iccip { background-color: #7f8c8d; }
 .conf-arxiv { background-color: #95a5a6; }
 .conf-other { background-color: #34495e; }
 
