@@ -191,9 +191,9 @@ function setupPaginationControls() {
     const paperPagination = document.createElement('div');
     paperPagination.className = 'pagination-controls';
     paperPagination.innerHTML = `
-      <button id="prev-paper-page">&lt; Previous</button>
+      <button id="prev-paper-page" class="prev-btn">&lt; Previous</button>
       <span id="paper-pagination-info">Page 1 of 1</span>
-      <button id="next-paper-page">Next &gt;</button>
+      <button id="next-paper-page" class="next-btn">Next &gt;</button>
     `;
     document.getElementById('papers-section').appendChild(paperPagination);
   }
@@ -202,9 +202,9 @@ function setupPaginationControls() {
     const projectPagination = document.createElement('div');
     projectPagination.className = 'pagination-controls';
     projectPagination.innerHTML = `
-      <button id="prev-project-page">&lt; Previous</button>
+      <button id="prev-project-page" class="prev-btn">&lt; Previous</button>
       <span id="project-pagination-info">Page 1 of 1</span>
-      <button id="next-project-page">Next &gt;</button>
+      <button id="next-project-page" class="next-btn">Next &gt;</button>
     `;
     document.getElementById('projects-section').appendChild(projectPagination);
   }
