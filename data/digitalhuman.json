@@ -1,32 +1,122 @@
 {
-  "papers": [
+  "en": {
+    "direction_title": "Diagital Human",
+    "direction_desc": "Our research focuses on digital human generation, exploring the fields of action generation and speaker synthesis,<br>laying the groundwork for the application of embodied intelligence.",
+    "papers_title": "Papers",
+    "projects_title": "Projects",
+    "papers": [
+      {
+        "conference": "AAAI",
+        "abbr": "AAAI",
+        "title": "Controllable 3D Dance Generation Using Diffusion-Based Transformer U-Net",
+        "authors": "Puyuan Guo, Tuo Hao, Wenxin Fu, Yingming Gao, Ya Li",
+        "abstract": "Recently, dance generation has attracted increasing interest. In particular, the success of diffusion models in image generation has led to the emergence of dance generation systems based on the diffusion framework. However, these systems lack controllability, which limits their practical applications. In this paper, we propose a controllable dance generation method based on the diffusion model, which can generate 3D dance motions controlled by 2D keypoint sequences. Specifically, we design a transformer-based U-Net model to predict actual motions. Then, we fix the parameters of the U-Net model and train an additional control network, enabling the generated motions to be controlled by 2D keypoints. We conduct extensive experiments and compared our method with existing works on the widely used AIST++ dataset, demonstrating that our approach has certain advantages and controllability. Moreover, we also test our model on in-the-wild videos and find that it is capable of generating dance movements similar to the motions in the videos as well.",
+        "paper_link": "https://ojs.aaai.org/index.php/AAAI/article/view/32339",
+        "github_link": ""
+      },
+      {
+        "conference": "ICCIP",
+        "abbr": "ICCIP",
+        "title": " GaitParse: Gait Parsing Algorithm with Self-Supervised Fine-Tuning for Gait Recognition",
+        "authors": "Cong Wang, Yingming Gao, Ya Li, Man Zhang",
+        "abstract": "Gait recognition, which uses individuals’ walking patterns for identity recognition, is an emerging biometric technology. However, in real-world applications, occlusion factors can easily affect the performance of gait recognition. In recent literatures, it has been demonstrated that the employment of human body part features has been shown to be beneficial for gait recognition. In this paper, we propose a novel method GaitParse to mitigate the effect of occlusion factors on gait recognition performance, which uses our designed gait parsing algorithm to support gait recognition by parsing human gait images into distinct body parts. Our algorithm consists of two main stages: The first stage is to apply the self-correcting human parsing model SC-ACE2P as a module, pre-trained on the Pascal dataset, to obtain a gait parser capable of parsing human body parts in RGB images. The second stage is self-supervised fine-tuning of the parser to improve accuracy and robustness for binary images. To conclude, our method focuses more on local features and provides richer feature representations, which enhances gait recognition performance and reduces recognition errors caused by occlusion factors. Experiments on the widely used public dataset, CASIA-B, richly demonstrate the superiority of our method over other traditional methods.",
+        "paper_link": "https://dl.acm.org/doi/10.1145/3638884.3638897",
+        "github_link": ""
+      },
+      {
+        "conference": "NCMMSC",
+        "abbr": "NCMMSC",
+        "title": " A Fast Sampling Method in Diffusion-Based Dance Generation Models",
+        "authors": "Puyuan Guo, Yichen Han, Yingming Gao, Ya Li",
+        "abstract": "Recently, diffusion models have attracted much attention and have also been used in many fields, including dance movement generation. However, the slow generation speed of previous sampling methods makes the diffusion-based dance generation models limited in many application scenarios. In this paper, we use a more advanced algorithm to speed up the generation of a diffusion model based system to generate long dance movements. The algorithm does not require retraining the model. Instead, it only needs to map the noise schedule of the existing model to a new time step sequence and then construct a second-order solver for the data prediction diffusion ODEs based on the estimated higher-order differentials using multi-step methods. In order to apply this algorithm to generate long sequences, we employ a technique similar to inpainting, continuously updating the correlations between short sequences during the iteration process, and eventually concatenating multiple short sequences to form a longer one. Experimental results show that our improved sampling method not only makes the generation speed faster, but also maintains the quality of the dance movements.",
+        "paper_link": "https://link.springer.com/chapter/10.1007/978-981-97-0601-3_10",
+        "github_link": ""
+      },
+      {
+        "conference": "MMSP",
+        "abbr": "MMSP",
+        "title": " A keypoint based enhancement method for audio driven free view talking head synthesis",
+        "authors": "Yichen Han, Ya Li, Yingming Gao, Jinlong Xue, Songpo Wang, Lei Yang",
+        "abstract": "Audio driven talking head synthesis is a challenging task that attracts increasing attention in recent years. Although existing methods based on 2D landmarks or 3D face models can synthesize accurate lip synchronization and rhythmic head pose for arbitrary identity, they still have limitations, such as the cut feeling in the mouth mapping and the lack of skin highlights. The morphed region is blurry compared to the surrounding face. A Keypoint Based Enhancement (KPBE) method is proposed for audio driven free view talking head synthesis to improve the naturalness of the generated video. Firstly, existing methods were used as the backend to synthesize intermediate results. Then we used keypoint decomposition to extract video synthesis controlling parameters from the backend output and the source image. After that, the controlling parameters were composited to the source keypoints and the driving keypoints. A motion field based method was used to generate the final image from the keypoint representation. With keypoint representation, we overcame the cut feeling in the mouth mapping and the lack of skin highlights. Experiments show that our proposed enhancement method improved the quality of talking-head videos in terms of mean opinion score.",
+        "paper_link": "https://arxiv.org/pdf/2210.03335",
+        "github_link": ""
+      },
+      {
+        "conference": "TOMMCCAP",
+        "abbr": "TOMMCCAP",
+        "title": " Dual-Lens HDR using Guided 3D Exposure CNN and Guided Denoising Transformer",
+        "authors": "Weixin Li，Tiantian Cao，Chang Liu，Xue Tian，Ya Li，Xiaojie Wang，Xuan Dong",
+        "abstract": "We study the high dynamic range (HDR) imaging problem in dual-lens systems. Existing methods usually treat the HDR imaging problem as an image fusion problem and the HDR result is estimated by fusing the aligned short exposure image and long exposure image. However, the image fusion pipeline depends highly on the image alignment, which is difficult to be perfect. We propose to transfer the dual-lens HDR imaging problem into the disentangled enhancement of exposure correction and denoising for the short exposure image, guided by the long exposure image. In the guided exposure correction module, we make use of the guidance image and 3D color transformation to propose a guided 3D exposure CNN (GEC) to get the rough HDR result from the short exposure image. Then, in the guided denoising module, we make use of the cross-attention mechanism to propose a guided denoising transformer (GDT) to directly use the long exposure image as guidance to denoise the rough HDR result in a pyramid way. And in both modules, we bypass the difficult image alignment processing. Experimental results demonstrate the superiority of our method over the state-of-the-art ones.",
+        "paper_link": "https://dl.acm.org/doi/10.1145/3579167",
+        "github_link": ""
+      }
+    ],
+    "projects": [
+      {
+        "title": "Digital Human Demo",
+        "desc": "A demo project",
+        "demo_link": "https://demo.com"
+      }
+    ]
+  },
+  "zh": {
+    "direction_title": "数字人",
+    "direction_desc": "我们聚焦于数字人生成，在动作生成和说话人合成领域进行探索，逐渐向具身智能领域的研究过渡。",
+    "papers_title": "论文",
+    "projects_title": "项目",
+    "papers": [
     {
-      "abbr": "V2T",
-      "title": "Voice2Text: A New Open-Source End-to-End ASR",
-      "conf": "INTERSPEECH",
-      "paper": "https://xxx.com/v2t.pdf",
-      "demo": "https://xxx.com/v2t-demo",
-      "authors": "A. Smith, B. Lee, C. Wang"
-    },
-    {
-      "abbr": "SE-Trans",
-      "title": "Speech Enhancement Transformer for Robust ASR",
-      "conf": "ICASSP",
-      "paper": "https://xxx.com/setrans.pdf",
-      "authors": "Y. Ma, T. Xu, K. Chen"
-    }
+        "conference": "AAAI",
+        "abbr": "AAAI",
+        "title": "基于扩散的 Transformer U-Net的可控三维舞蹈生成",
+        "authors": "郭蒲源, 郝拓, 付温馨, 高迎明, 李雅",
+        "abstract": "最近，舞蹈生成引起人们的广泛的兴趣。扩散模型在图像生成中的成功应用也激发了基于扩散框架的舞蹈生成系统的出现。然而，这些系统缺乏可控性，限制了它们的实际应用。本文提出了一种基于扩散模型的可控舞蹈生成方法，该方法可以生成由二维关键点序列控制的三维舞蹈动作。具体来说，我们设计了一个基于transformer的U-Net模型来预测实际运动。然后，我们固定U-Net模型的参数并训练一个额外的控制网络，使生成的运动能够由二维关键点控制。我们在广泛使用的AIST++数据集上进行了大量的实验，并与已有的工作进行了比较，证明了我们的方法具有一定的优势和可控性。此外，我们还在野外视频中测试了我们的模型，发现它也能够产生与视频中相似的舞蹈动作。",
+        "paper_link": "https://ojs.aaai.org/index.php/AAAI/article/view/32339",
+        "github_link": ""
+      },
+      {
+        "conference": "ICCIP",
+        "abbr": "ICCIP",
+        "title": " GaitParse：用于步态识别的自监督微调步态解析算法",
+        "authors": "王聪, 高迎明, 李雅, 张曼",
+        "abstract": "步态识别是一种新兴的生物识别技术，利用个体的行走方式进行身份识别。然而，在实际应用中，遮挡因素很容易影响步态识别的性能。最近的研究已经证明了人体部位特征的使用已被证明有利于步态识别。在本文中，我们提出了一种新的方法GaitParse来减轻遮挡因素对步态识别性能的影响，该方法使用我们设计的步态解析算法，通过将人体步态图像解析为不同的身体部位来支持步态识别。我们的算法主要包括两个阶段：第一阶段是应用自校正人体解析模型SC-ACE2P作为模块，在Pascal数据集上进行预训练，获得能够解析RGB图像中人体部位的步态解析器。第二阶段是解析器的自监督微调，以提高二值图像的准确性和鲁棒性。综上所述，我们的方法更关注局部特征，提供了更丰富的特征表示，提高了步态识别性能，减少了遮挡因素导致的识别误差。在广泛使用的公共数据集CASIA-B上的实验充分证明了我们的方法优于其他传统方法。",
+        "paper_link": "https://dl.acm.org/doi/10.1145/3638884.3638897",
+        "github_link": ""
+      },
+      {
+        "conference": "NCMMSC",
+        "abbr": "NCMMSC",
+        "title": " 基于扩散的舞蹈生成模型中的快速采样方法",
+        "authors": "郭蒲源, 韩易辰, 高迎明, 李雅",
+        "abstract": "近年来，扩散模型受到了广泛的关注，并被应用于许多领域，包括舞蹈动作生成。然而，以往的采样方法生成速度较慢，使得基于扩散的舞蹈生成模型在许多应用场景中受到限制。在本文中，我们使用一种更先进的算法来加速生成基于扩散模型的系统来生成长舞蹈动作。该算法不需要对模型进行重新训练。只需将现有模型的噪声调度映射到新的时间步长序列上，然后利用多步方法基于估计的高阶微分构造数据预测扩散ode的二阶求解器。为了将该算法应用于长序列的生成，我们采用了类似于inpainting的技术，在迭代过程中不断更新短序列之间的相关性，最终将多个短序列串联起来形成一个较长的序列。实验结果表明，我们改进的采样方法不仅使生成速度更快，而且保持了舞蹈动作的质量。",
+        "paper_link": "https://link.springer.com/chapter/10.1007/978-981-97-0601-3_10",
+        "github_link": ""
+      },
+      {
+        "conference": "MMSP",
+        "abbr": "MMSP",
+        "title": " 一种基于关键点的音频驱动自由视点说话头合成增强方法",
+        "authors": "韩易辰, 李雅, 高迎明, 薛锦隆, Songpo Wang, Lei Yang",
+        "abstract": "音频驱动的说话头合成是近年来备受关注的一项具有挑战性的任务。虽然现有的基于二维地标或三维人脸模型的方法可以合成精确的唇同步和有节奏的头部姿势，以实现任意身份，但仍然存在局限性，如嘴巴映射中的切割感和缺乏皮肤高光。与周围的脸相比，变形的区域是模糊的。提出了一种基于关键点增强（KPBE）的音频驱动自由视点说话头合成方法，以提高生成视频的自然度。首先，利用已有方法作为后端，对中间结果进行综合；然后利用关键点分解从后端输出和源图像中提取视频合成控制参数。然后，将控制参数合成为源关键点和驱动关键点。采用基于运动场的方法从关键点表示生成最终图像。通过关键点表示，我们克服了嘴巴贴图的切割感和皮肤高光的缺乏。实验表明，我们提出的增强方法在平均意见得分方面提高了说话头视频的质量。",
+        "paper_link": "https://arxiv.org/pdf/2210.03335",
+        "github_link": ""
+      },
+      {
+        "conference": "TOMMCCAP",
+        "abbr": "TOMMCCAP",
+        "title": " 使用引导3D曝光CNN和引导去噪变压器的双镜头HDR",
+        "authors": "Weixin Li，Tiantian Cao，Chang Liu，Xue Tian，Ya Li，Xiaojie Wang，Xuan Dong",
+        "abstract": "本文研究了双镜头系统的高动态范围成像问题。现有方法通常将HDR成像问题视为图像融合问题，通过融合对齐后的短曝光图像和长曝光图像来估计HDR结果。然而，图像融合管道高度依赖于图像对齐，很难做到完美。我们提出将双镜头HDR成像问题转化为以长曝光图像为指导，对短曝光图像进行曝光校正和去噪的解纠缠增强。在引导曝光校正模块中，我们利用引导图像和三维色彩变换，提出了一种引导3D曝光CNN (GEC)，从短曝光图像中获得粗略的HDR结果。然后，在引导去噪模块中，我们利用交叉注意机制提出了一种引导去噪变压器（GDT），直接以长曝光图像为导向，以金字塔的方式对粗糙的HDR结果进行去噪。在这两个模块中，我们绕过了困难的图像对齐处理。实验结果表明，我们的方法优于最先进的方法。",
+        "paper_link": "https://dl.acm.org/doi/10.1145/3579167",
+        "github_link": ""
+      }
   ],
   "projects": [
     {
-      "name": "OpenASR",
-      "desc": "An open-source speech recognition toolkit.",
-      "demo": "https://xxx.com/openasr-demo",
-      "github": "https://github.com/xxxxx/openasr"
-    },
-    {
-      "name": "NoiseClean",
-      "desc": "Speech denoising system for real-time application.",
-      "demo": "https://xxx.com/noiseclean"
+      "title": "数字人演示项目",
+      "desc": "示例演示项目",
+      "demo_link": "https://demo.com"
     }
   ]
+  }
 }
