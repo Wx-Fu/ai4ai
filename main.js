@@ -56,7 +56,16 @@ function renderPatentList() {
 function renderAwardList() {
   const ul = document.getElementById("award-list");
   if (!ul) return;
-  ul.innerHTML = (awardsData[lang] || []).map(txt => `<li>${txt}</li>`).join("");
+  
+  // 先清空列表
+  ul.innerHTML = "";
+  
+  // 将每个奖项添加为列表项
+  (awardsData[lang] || []).forEach(award => {
+    const li = document.createElement("li");
+    li.textContent = award;
+    ul.appendChild(li);
+  });
 }
 
 function setLang(newLang) {
