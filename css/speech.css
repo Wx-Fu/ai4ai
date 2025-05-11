@@ -103,6 +103,8 @@ main {
 .conf-iccip { background-color: #7f8c8d; }
 .conf-arxiv { background-color: #95a5a6; }
 .conf-other { background-color: #34495e; }
+.conf-tcsvt { background-color: #6d9bad; }
+.conf-ncmmsc { background-color: #879db6; }
 
 /* 论文卡片样式 */
 .paper-card {
