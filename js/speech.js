@@ -1,4 +1,5 @@
 let lang = localStorage.getItem("lang") || "en";
+
 // 添加分页相关变量
 let currentPaperPage = 1;
 let currentProjectPage = 1;
