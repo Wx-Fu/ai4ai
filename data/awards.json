@@ -1,12 +1,26 @@
 {
   "en": [
-    "Best Paper Award at INTERSPEECH 2023",
-    "Outstanding Research Award 2022",
-    "Innovation Excellence Award 2021"
+    "MER2023 Noise Robust Sub-track of the Multimodal Emotion Recognition Challenge held by the ACM-MM International Multimedia Conference, Third place",
+    "ISCSLP Best Paper Award Finalist",
+    "Multimodal Dialogue Speech Emotion Recognition Challenge MERC2023 organized by the Chinese Information Processing Society, Second place",
+    "CCAC2024 Chinese Sentiment Classification Evaluation based on user Profile Information, sixth place",
+    "Best-Paper of National Conference on Man-Machine Speech Communication",
+    "The National Huawei Cup China Postgraduate Artificial Intelligence Innovation Competition, Third place",
+    "The Black Technology Track of the 2023 Challenge Cup Capital College Students' Extracurricular Academic and Technological Works, First Prize",
+    "The Beijing Semi-final of the 9th China International Internet Plus College Students Innovation and Entrepreneurship Competition in 2023, Third Prize",
+    "The Beijing Municipal Level in the Shuori Cup of the China Computer Design Competition, Third Prize",
+    "The Northern Regional Competition of the 15th China University Students' Service Outsourcing Innovation and Entrepreneurship Competition, Third Prize"
   ],
   "zh": [
-    "INTERSPEECH 2023 最佳论文奖",
-    "2022年度杰出研究奖",
-    "2021年创新卓越奖"
+    "ACM-MM国际多媒体会议举办的多模态情感识别挑战赛MER2023噪音鲁棒性子赛道，第三名",
+    "ISCSLP最佳论文奖入围奖",
+    "中文信息学会举办的多模态对话语音情感识别挑战赛MERC2023，第二名",
+    "CCAC2024结合用户画像信息中文情绪分类评测，第六名",
+    "全国人机语音通讯会议最佳论文",
+    "“华为杯”中国研究生人工智能创新大赛全国三等奖",
+    "2023年“挑战杯”首都大学生课外学术科技作品“黑科技”赛道一等奖",
+    "2023年第9届中国国际“互联网+”大学生创新创业大赛北京赛区复赛三等奖",
+    "2024年中国计算机设计大赛“朔日杯”北京市级三等奖",
+    "第十五届中国大学生服务外包创新创业大赛北部区域赛三等奖"
   ]
 }
