@@ -93,7 +93,7 @@ function applyLang() {
 // 初始化
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById('lang-switch').onclick = toggleLang;
-  fetchPatents(() => {
+  fetchPatents(function() {
     fetchAwards(applyLang); // 在获取专利数据后获取奖项数据
   });
 });
