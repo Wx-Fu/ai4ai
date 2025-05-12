@@ -10,6 +10,7 @@ let speechData = null;
 function setLangSwitchBtn(lang) {
   document.getElementById('lang-switch').textContent = lang === "en" ? '中文' : 'English';
 }
+
 setLangSwitchBtn(lang);
 
 document.getElementById("lang-switch").onclick = function() {
