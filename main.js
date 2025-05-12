@@ -5,7 +5,7 @@ const langData = {
     introTitle: 'About Our Lab',
     introPara: `Our laboratory focuses on cutting-edge and interdisciplinary research in speech, emotion, dialogue,<br>and digital humans, and strives to promote the innovative development of human-computer interaction technology.`,
     directions: [
-      { title: 'Speech', desc: 'Research in speech recognition, synthesis and cross-disciplinary fields.' },
+      { title: 'Speech', desc: 'Research in speech conversion, synthesis and cross-disciplinary fields.' },
       { title: 'Emotion', desc: 'Emotion detection, analysis, and affective computing applications.' },
       { title: 'Dialogue', desc: 'Dialogue system, natural language understanding and generation, empathetic response.' },
       { title: 'Digital Human', desc: 'Virtual human modeling and motion generation, human-computer interaction.' }
@@ -18,7 +18,7 @@ const langData = {
     introTitle: '实验室简介',
     introPara: `我们的实验室专注于语音、情感、对话、数字人类等领域的前沿和跨学科研究，<br>致力于推动人机交互技术的创新发展。`,
     directions: [
-      { title: '语音', desc: '聚焦于语音识别、合成和交叉领域的研究。' },
+      { title: '语音', desc: '聚焦于语音转换、合成和交叉领域的研究。' },
       { title: '情感', desc: '情感识别与分析，以及情感计算实际应用。' },
       { title: '对话', desc: '对话系统、自然语言理解与生成，共情回复。' },
       { title: '数字人', desc: '虚拟人体建模与运动生成，人机交互。' }
