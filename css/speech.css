@@ -85,6 +85,17 @@ main {
   margin-bottom: 8px;
 }
 
+.paper-year {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  /* 可选：添加垂直分隔线 */
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding-left: 5px;
+}
+
 /* 各会议的颜色样式 */
 .conf-neurips { background-color: #4b67a1; }
 .conf-taslp { background-color: #2980b9; }
