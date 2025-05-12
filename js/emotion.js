@@ -64,11 +64,14 @@ function getConferenceClass(conference) {
 function paperTemplate(paper) {
   // 使用conference而不是conf
   const confClass = getConferenceClass(paper.conference);
- 
+  
   return `
     <div class="paper-card">
       <div class="paper-header">
-        <span class="paper-conf ${confClass}">${paper.conference || 'Unknown'}</span>
+        <span class="paper-conf ${confClass}">
+          ${paper.conference || 'Unknown'}
+          ${paper.year ? `<span class="paper-year">${paper.year}</span>` : ''}
+        </span>
       </div>
       <div class="paper-title-container">
         <h3 class="paper-title">${paper.title || ''}</h3>
