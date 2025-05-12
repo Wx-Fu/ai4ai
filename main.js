@@ -3,7 +3,7 @@ let lang = localStorage.getItem("lang") || "en";
 const langData = {
   en: {
     introTitle: 'About Our Lab',
-    introPara: `Our laboratory focuses on cutting-edge and interdisciplinary research in speech, emotion, dialogue,<br>and digital humans, and strives to promote the innovative development of human-computer interaction technology.`,
+    introPara: `We are a team specializing in voice and emotional interaction from the School of Artificial Intelligence <br>at Beijing University of Posts and Telecommunications. We focus on cutting-edge and interdisciplinary research in the fields of voice, emotion, dialogue, and digital humans,<br> and are committed to promoting the innovative development of human-computer interaction technology.`,
     directions: [
       { title: 'Speech', desc: 'Research in speech conversion, synthesis and cross-disciplinary fields.' },
       { title: 'Emotion', desc: 'Emotion detection, analysis, and affective computing applications.' },
@@ -16,7 +16,7 @@ const langData = {
   },
   zh: {
     introTitle: '实验室简介',
-    introPara: `我们的实验室专注于语音、情感、对话、数字人类等领域的前沿和跨学科研究，<br>致力于推动人机交互技术的创新发展。`,
+    introPara: `我们是来自于北京邮电大学人工智能学院的语音与情感交互团队，专注于语音、情感、对话、数字人类等领域的前沿和跨学科研究，<br>致力于推动人机交互技术的创新发展。`,
     directions: [
       { title: '语音', desc: '聚焦于语音转换、合成和交叉领域的研究。' },
       { title: '情感', desc: '情感识别与分析，以及情感计算实际应用。' },
