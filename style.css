@@ -251,6 +251,23 @@ main {
   line-height: 1.68;
 }
 
+/* 添加到您的 CSS 文件中 */
+#intro-para {
+  max-width: 90%; /* 或其他适合的宽度 */
+  margin: 0 auto; /* 居中显示 */
+  text-align: center; /* 文本居中 */
+  white-space: normal; /* 确保正常换行 */
+  overflow-wrap: break-word; /* 处理长单词 */
+  word-wrap: break-word; /* 处理长单词的兼容性写法 */
+}
+
+/* 如果需要在特定宽度范围内的响应式调整 */
+@media (max-width: 768px) {
+  #intro-para {
+    max-width: 95%;
+  }
+}
+
 /* 响应式优化 */
 @media (max-width: 1300px) {
   main {padding-left:3.5vw;padding-right:3.5vw;}
