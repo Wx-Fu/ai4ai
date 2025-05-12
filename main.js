@@ -3,7 +3,7 @@ let lang = localStorage.getItem("lang") || "en";
 const langData = {
   en: {
     introTitle: 'About Our Lab',
-    introPara: `We are a team specializing in voice and emotional interaction from the School of Artificial Intelligence <br>at Beijing University of Posts and Telecommunications. We focus on cutting-edge and interdisciplinary research in the fields of voice, emotion,<br> dialogue, and digital humans, and are committed to promoting the innovative development of human-computer interaction technology.`,
+    introPara: `We are a team specializing in voice and emotional interaction from the School of Artificial Intelligence at Beijing University of Posts and Telecommunications. We focus on cutting-edge and interdisciplinary research in the fields of voice, emotion, dialogue, and digital humans, and are committed to promoting the innovative development of human-computer interaction technology.`,
     directions: [
       { title: 'Speech', desc: 'Research in speech conversion, synthesis and cross-disciplinary fields.' },
       { title: 'Emotion', desc: 'Emotion detection, analysis, and affective computing applications.' },
@@ -81,8 +81,8 @@ function toggleLang() {
 function applyLang() {
   // 基本内容
   const d = langData[lang];
-  document.getElementById('intro-title').innerHTML = d.introTitle;
-  document.getElementById('intro-para').innerHTML = d.introPara;
+  document.getElementById('intro-title').textContent = d.introTitle; // 使用textContent而不是innerHTML
+  document.getElementById('intro-para').textContent = d.introPara;   // 使用textContent而不是innerHTML
   for (let i = 0; i < 4; i++) {
     document.getElementById('dir-title-' + (i + 1)).textContent = d.directions[i].title;
     document.getElementById('dir-para-' + (i + 1)).textContent = d.directions[i].desc;
