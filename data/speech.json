@@ -8,6 +8,7 @@
       {
         "conference": "ICASSP",
         "abbr": "ICASSP",
+        "year": "2025",
         "title": "DetailTTS: Learning Residual Detail Information for Zero-shot Text-to-speech",
         "authors": "Cong Wang, Yichen Han, Yizhong Geng, Yingming Gao, Fengping Wang, Bingsong Bai, Qifei Li, Jinlong Xue, Yayue Deng, Zhengqi Wen, Ya Li",
         "abstract": "Traditional text-to-speech (TTS) systems often face challenges in aligning text and speech, leading to the omission of critical linguistic and acoustic details. This misalignment creates an information gap, which existing methods attempt to address by incorporating additional inputs, but these often introduce data inconsistencies and increase complexity. To address these issues, we propose DetailTTS, a zero-shot TTS system based on a conditional variational autoencoder. It incorporates two key components: the Prior Detail Module and the Duration Detail Module, which capture residual detail information missed during alignment. These modules effectively enhance the model’s ability to retain fine-grained details, significantly improving speech quality while simplifying the model by obviating the need for additional inputs. Experiments on the WenetSpeech4TTS dataset show that DetailTTS outperforms traditional TTS systems in both naturalness and speaker similarity, even in zero-shot scenarios. Our source code and demo page are available at https://detailtts.github.io/.",
@@ -17,6 +18,7 @@
       {
         "conference": "TASLP",
         "abbr": "TASLP",
+        "year": "2024",
         "title": " Articulatory Copy Synthesis Based on the Speech Synthesizer VocalTractLab and Convolutional Recurrent Neural Networks",
         "authors": "Yingming Gao, Peter Birkholz, Ya Li",
         "abstract": "Articulatory copy synthesis (ACS) refers to the synthetic reproduction of natural utterances. The existing methods of ACS have the limitations of poor generalizability for unknown speakers, high computing costs, the lack of systematic evaluation, etc. Here we propose an ACS method based on the articulatory speech synthesizer VocalTractLab (VTL) and convolutional recurrent neural networks. We first created paired articulatory-acoustic samples using VTL, and then trained neural-network-based ACS models with acoustic features and articulatory trajectories as inputs and outputs, respectively. The basic approach for training relied on fully synthetic training data (and was later supplemented with natural speech and corresponding synthetic articulatory data). In addition, to represent as much of the articulatory and acoustic space as possible, the training samples were augmented by varying the phonation type, speaking effort, and the vocal tract length of the synthetic utterances. Furthermore, two regularization methods were proposed: one based on the smoothness loss of articulatory trajectories and another based on the acoustic loss between original and estimated acoustic features. For given new utterances of arbitrary length, the trained ACS models could estimate articulatory trajectories that were then fed into VTL to synthesize new speech. Experiments showed that our proposed ACS method achieved an average correlation coefficient of 0.983 between the reference and estimated VTL articulatory parameters for speaker-dependent German utterances. When applied to speaker-independent German, English, and Mandarin Chinese utterances, the copy-synthesized speech achieved recognition rates of 73.88%, 52.92%, and 52.41%, respectively, using the automatic speech recognizer Google Speech-to-Text.",
@@ -26,6 +28,7 @@
       {
         "conference": "TASLP",
         "abbr": "TASLP",
+        "year": "2024",
         "title": " Auffusion: Leveraging the Power of Diffusion and Large Language Models for Text-to-Audio Generation",
         "authors": "Jinlong Xue, Yayue Deng, Yingming Gao, Ya Li",
         "abstract": "Recent advancements in diffusion models and large language models (LLMs) have significantly propelled the field of generation tasks. Text-to-Audio (TTA), a burgeoning generation application designed to generate audio from natural language prompts, is attracting increasing attention. However, existing TTA studies often struggle with generation quality and text-audio alignment, especially for complex textual inputs. Drawing inspiration from state-of-the-art Text-to-Image (T2I) diffusion models, we introduce Auffusion, a TTA system adapting T2I model frameworks to TTA task, by effectively leveraging their inherent generative strengths and precise cross-modal alignment. Our objective and subjective evaluations demonstrate that Auffusion surpasses previous TTA approaches using limited data and computational resources. Furthermore, the text encoder serves as a critical bridge between text and audio, since it acts as an instruction for the diffusion model to generate coherent content. Previous studies in T2I recognize the significant impact of encoder choice on cross-modal alignment, like fine-grained details and object bindings, while similar evaluation is lacking in prior TTA works. Through comprehensive ablation studies and innovative cross-attention map visualizations, we provide insightful assessments, being the first to reveal the internal mechanisms in the TTA field and intuitively explain how different text encoders influence the diffusion process. Our findings reveal Auffusion's superior capability in generating audios that accurately match textual descriptions, which is further demonstrated in several related tasks, such as audio style transfer, inpainting, and other manipulations.",
@@ -35,6 +38,7 @@
       {
         "conference": "ICASSP",
         "abbr": "ICASSP",
+        "year": "2024",
         "title": " CONCSS: Contrastive-based Context Comprehension for Dialogue-appropriate Prosody in Conversational Speech Synthesis",
         "authors": "Yayue Deng, Jinlong Xue, Yukang Jia, Qifei Li, Yichen Han, Fengping Wang, Yingming Gao, Dengfeng Ke, Ya Li",
         "abstract": "Conversational speech synthesis (CSS) incorporates historical dialogue as supplementary information with the aim of generating speech that has dialogue-appropriate prosody. While previous methods have already delved into enhancing context comprehension, context representation still lacks effective representation capabilities and context-sensitive discriminability. In this paper, we introduce a contrastive learning-based CSS framework, CONCSS. Within this framework, we define an innovative pretext task specific to CSS that enables the model to perform self-supervised learning on unlabeled conversational datasets to boost the model’s context understanding. Additionally, we introduce a sampling strategy for negative sample augmentation to enhance context vectors’ discriminability. This is the first attempt to integrate contrastive learning into CSS. We conduct ablation studies on different contrastive learning strategies and comprehensive experiments in comparison with prior CSS systems. Results demonstrate that the synthesized speech from our proposed method exhibits more contextually appropriate and sensitive prosody.",
@@ -44,6 +48,7 @@
       {
         "conference": "INTERSPEECH",
         "abbr": "INTERSPEECH",
+        "year": "2024",
         "title": " Retrieval Augmented Generation in Prompt-based Text-to-Speech Synthesis with Context-Aware Contrastive Language-Audio Pretraining",
         "authors": "Jinlong Xue, Yayue Deng, Yingming Gao, Ya Li",
         "abstract": "Recent prompt-based text-to-speech (TTS) models can clone an unseen speaker using only a short speech prompt. They leverage a strong in-context ability to mimic the speech prompts, including speaker style, prosody, and emotion. Therefore, the selection of a speech prompt greatly influences the generated speech, akin to the importance of a prompt in large language models (LLMs). However, current prompt-based TTS models choose the speech prompt manually or simply at random. Hence, in this paper, we adapt retrieval augmented generation (RAG) from LLMs to prompt-based TTS. Unlike traditional RAG methods, we additionally consider contextual information during the retrieval process and present a Context-Aware Contrastive Language-Audio Pre-training (CA-CLAP) model to extract context-aware, style-related features. The objective and subjective evaluations demonstrate that our proposed RAG method outperforms baselines, and our CA-CLAP achieves better results than text-only retrieval methods.",
@@ -53,6 +58,7 @@
       {
         "conference": "INTERSPEECH",
         "abbr": "INTERSPEECH",
+        "year": "2024",
         "title": " Improving Audio Codec-based Zero-Shot Text-to-Speech Synthesis with Multi-Modal Context and Large Language Model",
         "authors": "Jinlong Xue, Yayue Deng, Yichen Han, Yingming Gao, Ya Li",
         "abstract": "Recent advances in large language models (LLMs) and development of audio codecs greatly propel the zero-shot TTS. They can synthesize personalized speech with only a 3-second speech of an unseen speaker as acoustic prompt. However, they only support short speech prompts and cannot leverage longer context information, as required in audiobook and conversational TTS scenarios. In this paper, we introduce a novel audio codec-based TTS model to adapt context features with multiple enhancements. Inspired by the success of Qformer, we propose a multi-modal context-enhanced Qformer (MMCE-Qformer) to utilize additional multi-modal context information. Besides, we adapt a pretrained LLM to leverage its understanding ability to predict semantic tokens, and use a SoundStorm to generate acoustic tokens thereby enhancing audio quality and speaker similarity. The extensive objective and subjective evaluations show that our proposed method outperforms baselines across various context TTS scenarios.",
@@ -62,6 +68,7 @@
       {
         "conference": "INTERSPEECH",
         "abbr": "INTERSPEECH",
+        "year": "2024",
         "title": " SPA-SVC: Self-supervised Pitch Augmentation for Singing Voice Conversion",
         "authors": "Bingsong Bai, Fengping Wang, Yingming Gao, Ya Li",
         "abstract": "Diffusion-based singing voice conversion (SVC) models have shown better synthesis quality compared to traditional methods. However, in cross-domain SVC scenarios, where there is a significant disparity in pitch between the source and target voice domains, the models tend to generate audios with hoarseness, posing challenges in achieving high-quality vocal outputs. Therefore, in this paper, we propose a Self-supervised Pitch Augmentation method for Singing Voice Conversion (SPA-SVC), which can enhance the voice quality in SVC tasks without requiring additional data or increasing model parameters. We innovatively introduce a cycle pitch shifting training strategy and Structural Similarity Index (SSIM) loss into our SVC model, effectively enhancing its performance. Experimental results on the public singing datasets M4Singer indicate that our proposed method significantly improves model performance in both general SVC scenarios and particularly in cross-domain SVC scenarios.",
@@ -71,6 +78,7 @@
       {
         "conference": "ISCSLP",
         "abbr": "ISCSLP",
+        "year": "2024",
         "title": " ExpressiveSinger: Synthesizing Expressive Singing Voice as An Instrument",
         "authors": "Fengping Wang, Bingsong Bai, Yayue Deng,Jinlong Xue Yingming Gao, Ya Li",
         "abstract": "In this study, we introduce ExpressiveSinger, an end-to-end ex-pressive singing voices synthesis model, which accurately re-flect users' musical expression by analyzing real-played MIDI sequences and lyrics. We propose a novel method to auto-matically annotate velocity labels for MIDI sequences in SVS datasets, as these sequences do not inherently contain velocity information compared to real-played MIDI sequences. More-over, we separately model expressive features and modify the vocoder to enhance controllability and quality of the synthetic singing voices. Finally, we adopt a soft-vc like approach for end-to-end training to effectively preserve more linguistic content features. Our experiments on the professional Mandarin singing corpus validate our data annotation method and demonstrate the effectiveness of ExpressiveSinger in terms of naturalness and a strong correlation between the synthetic singing voice and the MIDI input.",
@@ -80,6 +88,7 @@
       {
         "conference": "ICASSP",
         "abbr": "ICASSP",
+        "year": "2023",
         "title": " M2-CTTS: End-to-End Multi-scale Multi-modal Conversational Text-to-Speech Synthesis",
         "authors": "Jinlong Xue, Yayue Deng, Fengping Wang, Ya Li, Yingming Gao, Jianhua Tao, Jianqing Sun, Jiaen Liang",
         "abstract": "Conversational text-to-speech (TTS) aims to synthesize speech with proper prosody of reply based on the historical conversation. However, it is still a challenge to comprehensively model the conversation, and a majority of conversational TTS systems only focus on extracting global information and omit local prosody features, which contain important fine-grained information like keywords and emphasis. Moreover, it is insufficient to only consider the textual features, and acoustic features also contain various prosody information. Hence, we propose M2-CTTS, an end-to-end multi-scale multi-modal conversational text-to-speech system, aiming to comprehensively utilize historical conversation and enhance prosodic expression. More specifically, we design a textual context module and an acoustic context module with both coarse-grained and fine-grained modeling. Experimental results demonstrate that our model mixed with fine-grained context information and additionally considering acoustic features achieves better prosody performance and naturalness in CMOS tests.",
@@ -89,6 +98,7 @@
       {
         "conference": "ACMMM",
         "abbr": "ACMMM",
+        "year": "2023",
         "title": " CMCU-CSS: Enhancing Naturalness via Commonsense-based Multi-modal Context Understanding in Conversational Speech Synthesis",
         "authors": "Yayue Deng, Jinlong Xue，Fengping Wang， Yingming Gao，Ya Li",
         "abstract": "Conversational Speech Synthesis (CSS) aims to produce speech appropriate for oral communication. However, the complexity of context dependency modeling poses significant challenges in the field of CSS, especially the mutual psychological influence between interlocutors. Previous studies have verified that prior commonsense knowledge helps machines understand subtle psychological information (e.g., feelings and intentions) in spontaneous oral dialogues. Therefore, to enhance context understanding and improve the naturalness of synthesized speech, we propose a novel conversational speech synthesis system (CMCU-CSS) that incorporates the Commonsense-based Multi-modal Context Understanding (CMCU) module to model the dynamic emotional interaction among interlocutors. Specifically, we first utilize three implicit states (intent state, internal state and external state) in CMCU to model the context dependency between inter/intra speakers with the help of commonsense knowledge. Furthermore, we infer emotion vectors from the fusion of these implicit states and multi-modal features to enhance the emotion discriminability of synthesized speech. This is the first attempt to combine commonsense knowledge with conversational speech synthesis, and its effect in terms of emotion discriminability of synthetic speech is evaluated by emotion recognition in conversation task. The results of subjective and objective evaluations demonstrate that the CMCU-CSS model achieves more natural speech with context-appropriate emotion and is equipped with the best emotion discriminability, surpassing that of other conversational speech synthesis models.",
@@ -98,6 +108,7 @@
       {
         "conference": "ISCSLP",
         "abbr": "ISCSLP",
+        "year": "2022",
         "title": " Rhythm-controllable Attention with High Robustness for Long Sentence Speech Synthesis",
         "authors": "Dengfeng Ke，Yayue Deng，Yukang Jia，Jinlong Xue， Qi Luo，Ya Li",
         "abstract": "Regressive Text-to-Speech (TTS) system utilizes attention mechanism to generate alignment between text and acoustic feature sequence. Alignment determines synthesis robustness (e.g, the occurence of skipping, repeating, and collapse) and rhythm via duration control. However, current attention algorithms used in speech synthesis cannot control rhythm using external duration information to generate natural speech while ensuring robustness. In this study, we propose Rhythm-controllable Attention (RC-Attention) based on Tracotron2, which improves robustness and naturalness simultaneously. Proposed attention adopts a trainable scalar learned from four kinds of information to achieve rhythm control, which makes rhythm control more robust and natural, even when synthesized sentences are extremely longer than training corpus. We use word errors counting and AB preference test to measure robustness of proposed method and naturalness of synthesized speech, respectively. Results shows that RC-Attention has the lowest word error rate of nearly 0.6%, compared with 11.8% for baseline system. Moreover, nearly 60% subjects prefer to the speech synthesized with RC-Attention to that with Forward Attention, because the former has more natural rhythm.",
@@ -107,6 +118,7 @@
       {
         "conference": "ISCSLP",
         "abbr": "ISCSLP",
+        "year": "2022",
         "title": " ECAPA-TDNN for Multi-speaker Text-to-speech Synthesis",
         "authors": "Jinlong Xue, Yayue Deng, Yichen Han, Ya Li*, Jianqing Sun, Jiaen Liang",
         "abstract": "In recent years, neural network based methods for multispeaker text-to-speech synthesis (TTS) have made significant progress. However, the current speaker encoder models used in these methods still cannot capture enough speaker information. In this paper, we focus on accurate speaker encoder modeling and propose an end-to-end method that can generate better similarity for both seen and unseen speakers. The proposed architecture consists of three separately trained components: a speaker encoder based on the state-of-the-art ECAPA-TDNN model which is derived from speaker verification task, a FastSpeech2 based synthesizer, and a HiFi-GAN vocoder. The comparison among different speaker encoder models shows our proposed method can achieve better speaker similarity. To efficiently evaluate our synthesized speech, we are the first to adopt and evaluate different deep learning based automatic MOS evaluation methods to assess our results, and these methods show great potential in automatic speech quality assessment.",
@@ -116,6 +128,7 @@
       {
         "conference": "Appl. Sci",
         "abbr": "Appl. Sci",
+        "year": "2022",
         "title": " End-to-End Mispronunciation Detection and  Diagnosis Using Transfer Learning",
         "authors": "Linkai Peng, Yingming Gao, Rian Bao, Ya Li and Jinsong Zhang",
         "abstract": "As an indispensable module of computer-aided pronunciation training (CAPT) systems, mispronunciation detection and diagnosis (MDD) techniques have attracted a lot of attention from academia and industry over the past decade. To train robust MDD models, this technique requires massive human-annotated speech recordings which are usually expensive and even hard to acquire. In this study, we propose to use transfer learning to tackle the problem of data scarcity from two aspects. First, from audio modality, we explore the use of the pretrained model wav2vec2.0 for MDD tasks by learning robust general acoustic representation. Second, from text modality, we explore transferring prior texts into MDD by learning associations between acoustic and textual modalities. We propose textual modulation gates that assign more importance to the relevant text information while suppressing irrelevant text information. Moreover, given the transcriptions, we propose an extra contrastive loss to reduce the difference of learning objectives between the phoneme recognition and MDD tasks. Conducting experiments on the L2-Arctic dataset showed that our wav2vec2.0 based models outperformed the conventional methods. The proposed textual modulation gate and contrastive loss further improved the F1-score by more than 2.88% and our best model achieved an F1-score of 61.75%.",
@@ -140,6 +153,7 @@
     {
         "conference": "ICASSP",
         "abbr": "ICASSP",
+        "year": "2025",
         "title": "DetailTTS：为Zero-shot TTS学习残差信息",
         "authors": "王聪, 韩易辰, 耿翊中, 高迎明, 王风平, 白炳松, 李启飞, 薛锦隆, 邓雅月, 温正祺, 李雅",
         "abstract": "传统的文本到语音（TTS）系统在文本和语音的对齐上经常面临挑战，导致关键的语言和声学细节的遗漏。这种不一致造成了信息差距，而现有的方法试图通过合并额外的输入来解决这个问题，但通常会引入数据不一致并增加复杂性。为了解决这些问题，我们提出了DetailTTS，一种基于VAE的Zero-shot TTS系统。它包含两个关键组件：先验细节模块和持续细节模块，捕获对齐过程中遗漏的剩余细节信息。这些模块有效地增强了模型保留细粒度细节的能力，显著提高了语音质量，同时通过避免额外输入来简化模型。在WenetSpeech4TTS数据集上的实验表明，DetailTTS在自然度和说话人相似度方面都优于传统的TTS系统，即使在Zero-shot场景下也是如此。我们的源代码和演示页面可在https://detailtts.github.io/上获得。",
@@ -149,6 +163,7 @@
       {
         "conference": "TASLP",
         "abbr": "TASLP",
+        "year": "2024",
         "title": " 基于语音合成器VocalTractLab和卷积递归神经网络的发音复制合成",
         "authors": "高迎明, Peter Birkholz, 李雅",
         "abstract": "发音复制合成（articatory copy synthesis， ACS）是指对自然话语的合成复制。现有的ACS方法存在对未知说话人泛化性差、计算成本高、缺乏系统评价等局限性。本文提出了一种基于发音语音合成器VocalTractLab （VTL）和卷积递归神经网络的ACS方法。我们首先使用VTL创建了配对的发音-声学样本，然后分别以声学特征和发音轨迹作为输入和输出来训练基于神经网络的ACS模型。训练的基本方法依赖于完全合成的训练数据（后来补充了自然语音和相应的合成发音数据）。此外，为了代表尽可能多的发音和声学空间，训练样本通过改变发声类型、说话力度和合成话语的声道长度来增强。在此基础上，提出了两种正则化方法：一种是基于发音轨迹平滑损失的正则化方法，另一种是基于原始声特征与估计声特征之间的声学损失的正则化方法。对于给定的任意长度的新语音，经过训练的ACS模型可以估计发音轨迹，然后将其输入VTL以合成新的语音。实验表明，我们提出的ACS方法在依赖说话人的德语话语中，参考参数与估计的VTL发音参数之间的平均相关系数为0.983。当应用于与说话人无关的德语、英语和普通话语音时，使用自动语音识别器谷歌speech -to- text，复制合成语音的识别率分别达到了73.88%、52.92%和52.41%。",
@@ -158,6 +173,7 @@
       {
         "conference": "TASLP",
         "abbr": "TASLP",
+        "year": "2024",
         "title": " Auffusion: 利用扩散和大型语言模型的力量进行文本到音频的生成",
         "authors": "薛锦隆, 邓雅月, 高迎明, 李雅",
         "abstract": "扩散模型和大型语言模型（llm）的最新进展极大地推动了生成任务领域的发展。文本到音频（TTA）是一种新兴的生成应用，旨在从自然语言提示生成音频。然而，现有的TTA研究经常在生成质量和文本-音频对齐方面遇到困难，特别是对于复杂的文本输入。从最先进的文本到图像（T2I）扩散模型中汲取灵感，我们引入了Auffusion，这是一个通过有效利用其固有的生成优势和精确的跨模态对齐，将T2I模型框架适应于TTA任务的TTA系统。我们的客观和主观评价表明，使用有限的数据和计算资源，Auffusion超越了以前的TTA方法。此外，文本编码器作为扩散模型生成连贯内容的指令，成为文本和音频之间的关键桥梁。先前的T2I研究认识到编码器选择对跨模态对齐的重要影响，如细粒度细节和对象绑定，而在之前的TTA工作中缺乏类似的评估。通过全面的消融研究和创新的交叉关注地图可视化，我们提供了深刻的评估，首次揭示了TTA领域的内部机制，并直观地解释了不同的文本编码器如何影响扩散过程。我们的研究结果揭示了Auffusion在生成准确匹配文本描述的音频方面的卓越能力，这在几个相关任务中得到了进一步的证明，比如音频风格转换、绘画和其他操作。",
@@ -167,6 +183,7 @@
       {
         "conference": "ICASSP",
         "abbr": "ICASSP",
+        "year": "2024",
         "title": " CONCSS: 基于对比的语境理解在对话语音合成中对白韵律的应用",
         "authors": "邓雅月, 薛锦隆, Yukang Jia, 李启飞, 韩易辰, 王风平, 高迎明, 柯登峰, 李雅",
         "abstract": "会话语音合成（CSS）将历史对话作为补充信息，目的是生成具有对话韵律的语音。虽然以前的方法已经对提高上下文理解能力进行了深入研究，但在上下文表示方面仍然缺乏有效的表示能力和上下文敏感的区分能力。本文介绍了一种基于对比学习的CSS框架——CONCSS。在这个框架内，我们定义了一个特定于CSS的创新任务，使模型能够在未标记的会话数据集上执行自监督学习，以提高模型的上下文理解。此外，我们还引入了一种负样本增强的采样策略，以增强上下文向量的可判别性。这是将对比学习整合到CSS中的第一次尝试。我们对不同的对比学习策略进行了消融性研究，并与已有的CSS系统进行了综合对比实验。结果表明，我们提出的方法合成的语音表现出更合适的上下文和敏感的韵律。",
@@ -176,6 +193,7 @@
       {
         "conference": "INTERSPEECH",
         "abbr": "INTERSPEECH",
+        "year": "2024",
         "title": " 基于上下文感知对比语言-音频预训练的基于提示的文本-语音合成中的检索增强生成",
         "authors": "薛锦隆, 邓雅月, 高迎明, 李雅",
         "abstract": "最近基于提示的文本到语音（TTS）模型可以只使用一个简短的语音提示克隆一个未见说话者。他们利用强大的情境能力来模仿演讲提示，包括演讲者的风格、韵律和情绪。因此，语音提示的选择极大地影响了生成的语音，类似于提示在大型语言模型（llm）中的重要性。然而，目前基于提示的TTS模型手动或随机选择语音提示。因此，在本文中，我们将llm的检索增强生成（RAG）应用于基于提示的TTS。与传统的RAG方法不同，我们在检索过程中还考虑了上下文信息，并提出了一个上下文感知对比语言音频预训练（CA-CLAP）模型来提取上下文感知的风格相关特征。客观和主观评价表明，我们提出的RAG方法优于基线，我们的CA-CLAP方法比纯文本检索方法取得了更好的结果。",
@@ -185,6 +203,7 @@
       {
         "conference": "INTERSPEECH",
         "abbr": "INTERSPEECH",
+        "year": "2024",
         "title": " 基于多模态上下文和大语言模型改进音频编解码器的Zero-shot的文本到语音合成",
         "authors": "薛锦隆, 邓雅月, 韩易辰, 高迎明, 李雅",
         "abstract": "大型语言模型（llm）的最新进展和音频编解码器的发展极大地推动了Zero-shot TTS的发展。他们可以合成个性化的语音，只需要一个未见说话者的3秒语音作为声音提示。然而，它们只支持简短的语音提示，而不能像在有声书和会话TTS场景中那样利用较长的上下文信息。在本文中，我们引入了一种新的基于音频编解码器的TTS模型，通过多种增强来适应上下文特征。受Qformer成功的启发，我们提出了一种多模态上下文增强Qformer （MMCE-Qformer）来利用额外的多模态上下文信息。此外，我们利用预训练的LLM来利用其理解能力来预测语义标记，并使用SoundStorm来生成声学标记，从而提高音频质量和说话者相似性。广泛的客观和主观评估表明，我们提出的方法在各种背景下的TTS情景中都优于基线。",
@@ -194,6 +213,7 @@
       {
         "conference": "INTERSPEECH",
         "abbr": "INTERSPEECH",
+        "year": "2024",
         "title": " SPA-SVC：歌声转换的自监督音高增强",
         "authors": "白炳松, 王风平, 高迎明, 李雅",
         "abstract": "与传统方法相比，基于扩散模型的歌声转换（SVC）模型显示出更好的合成质量。然而，在跨域SVC场景中，当源语音域和目标语音域之间存在显著的音高差异时，模型往往会生成嘶哑的音频，这对实现高质量的语音输出提出了挑战。因此，在本文中，我们提出了一种自监督音高增强方法用于歌唱语音转换（SPA-SVC），该方法可以在不需要额外数据或增加模型参数的情况下提高SVC任务中的语音质量。我们创新地在SVC模型中引入了周期节距偏移训练策略和结构相似指数（SSIM）损失，有效地提高了SVC模型的性能。在公共歌唱数据集M4Singer上的实验结果表明，我们提出的方法在一般SVC场景下，特别是在跨域SVC场景下，显著提高了模型的性能。",
@@ -203,6 +223,7 @@
       {
         "conference": "ISCSLP",
         "abbr": "ISCSLP",
+        "year": "2024",
         "title": " ExpressiveSinger: 将歌声合成看作乐器演奏，提高模型表现力",
         "authors": "王风平, 白炳松, 邓雅月, 薛锦隆, 高迎明, 李雅",
         "abstract": "在本研究中，我们引入了ExpressiveSinger，这是一个端到端的表达性歌唱声音合成模型，通过分析真实播放的MIDI序列和歌词，准确反映用户的音乐表达。由于与实际播放的MIDI序列相比，这些序列本身不包含速度信息，因此我们提出了一种新的方法来自动标注SVS数据集中MIDI序列的速度标签。此外，我们分别建立了表达特征模型，并对声码器进行了修改，以增强合成歌唱声音的可控性和质量。最后，我们采用类似软vc的方法进行端到端训练，以有效地保留更多的语言内容特征。我们在专业普通话歌唱语料库上的实验验证了我们的数据标注方法，并证明了ExpressiveSinger在自然度方面的有效性，以及合成歌唱声音与MIDI输入之间的强相关性。",
@@ -212,6 +233,7 @@
       {
         "conference": "ICASSP",
         "abbr": "ICASSP",
+        "year": "2023",
         "title": " M2-CTTS：端到端多尺度多模态会话文本到语音合成",
         "authors": "薛锦隆, 邓雅月, 王风平, 李雅, 高迎明, 陶建华, Jianqing Sun, Jiaen Liang",
         "abstract": "会话式文本到语音（conversation text-to-speech， TTS）的目的是在历史对话的基础上合成具有适当韵律的语音。然而，全面的会话建模仍然是一个挑战，大多数会话TTS系统只关注提取全局信息，而忽略了局部韵律特征，这些特征包含关键字和重点等重要的细粒度信息。此外，仅考虑文本特征是不够的，声学特征还包含各种韵律信息。为此，我们提出了端到端多尺度多模态会话式文本到语音系统M2-CTTS，旨在综合利用历史会话，增强韵律表达。更具体地说，我们设计了一个文本上下文模块和一个声学上下文模块，同时使用粗粒度和细粒度建模。实验结果表明，我们的模型混合了细粒度的上下文信息，并考虑了声学特征，在CMOS测试中获得了更好的韵律性能和自然度。",
@@ -221,6 +243,7 @@
       {
         "conference": "ACMMM",
         "abbr": "ACMMM",
+        "year": "2023",
         "title": " CMCU-CSS：在会话语音合成中通过基于常识的多模态上下文理解增强自然性",
         "authors": "邓雅月, 薛锦隆, 王风平, 高迎明, 李雅",
         "abstract": "会话语音合成（CSS）旨在产生适合口语交际的语音。然而，上下文依赖建模的复杂性给CSS领域带来了巨大的挑战，特别是对话者之间的相互心理影响。先前的研究已经证实，先前的常识知识可以帮助机器理解自发口头对话中微妙的心理信息（例如，感觉和意图）。因此，为了增强上下文理解，提高合成语音的自然度，我们提出了一种新的会话语音合成系统（CMCU-CSS），该系统结合了基于常识的多模态上下文理解（CMCU）模块，对对话者之间的动态情感互动进行建模。具体来说，我们首先利用CMCU中的三种隐式状态（意图状态、内部状态和外部状态）在常识知识的帮助下对说话者之间/说话者之间的上下文依赖进行建模。此外，我们从这些隐式状态和多模态特征的融合中推断出情感向量，以增强合成语音的情感可辨别性。本文首次尝试将常识性知识与会话语音合成相结合，并通过会话任务中的情感识别来评价其对合成语音的情绪辨别效果。主观和客观评价结果表明，CMCU-CSS模型实现了更自然的具有情境性情感的语音，具有最佳的情感判别能力，优于其他会话式语音合成模型。",
@@ -230,6 +253,7 @@
       {
         "conference": "ISCSLP",
         "abbr": "ISCSLP",
+        "year": "2022",
         "title": " 用于长句语音合成的高鲁棒性、节奏可控的注意力机制",
         "authors": "柯登峰,邓雅月, Yukang Jia, 薛锦隆, Qi Luo, 李雅",
         "abstract": "文本-语音回归（TTS）系统利用注意机制生成文本与声学特征序列之间的对齐关系。对齐决定了合成的稳健性（例如，跳跃、重复和崩溃的发生）和通过持续时间控制的节奏。然而，目前语音合成中使用的注意力算法无法在保证鲁棒性的前提下，利用外部持续时间信息控制节奏生成自然语音。在本研究中，我们提出了基于Tracotron2的节奏可控注意机制（RC-Attention），同时提高了鲁棒性和自然性。它采用从四种信息中学习到的可训练标量来实现节奏控制，使得节奏控制更加鲁棒和自然，即使在合成句子比训练语料库长得多的情况下也同样有效。我们分别使用单词错误计数和AB偏好测试来衡量所提出方法的鲁棒性和合成语音的自然度。结果表明，RC-Attention的单词错误率最低，接近0.6%，而基线系统错误率为11.8%。此外，近60%的被测者更喜欢RC-Attention合成的语音，而不是Forward -Attention合成的语音，因为前者的节奏更自然。",
@@ -239,6 +263,7 @@
       {
         "conference": "ISCSLP",
         "abbr": "ISCSLP",
+        "year": "2022",
         "title": " ECAPA-TDNN: 多说话人的文本到语音合成",
         "authors": "薛锦隆, 邓雅月, 韩易辰, 李雅*, Jianqing Sun, Jiaen Liang",
         "abstract": "近年来，基于神经网络的多说话人文本到语音合成（TTS）方法取得了重大进展。然而，目前在这些方法中使用的说话人编码器模型仍然不能捕获足够的说话人信息。在本文中，我们专注于精确的说话人编码器建模，并提出了一种端到端方法，可以为可见和不可见的说话人产生更好的相似性。提出的架构由三个单独训练的组件组成：基于最先进的ECAPA-TDNN模型的扬声器编码器（源自扬声器验证任务），基于FastSpeech2的合成器和HiFi-GAN声码器。不同的说话人编码器模型的比较表明，我们提出的方法可以获得更好的说话人相似度。为了有效地评估我们的合成语音，我们率先采用并评估了不同的基于深度学习的自动MOS评估方法来评估我们的结果，这些方法在自动语音质量评估中显示出巨大的潜力。",
@@ -248,6 +273,7 @@
       {
         "conference": "Appl. Sci",
         "abbr": "Appl. Sci",
+        "year": "2022",
         "title": " 基于迁移学习的端到端发音错误检测与诊断",
         "authors": "Linkai Peng, Yingming Gao, Rian Bao, Ya Li and Jinsong Zhang",
         "abstract": "作为计算机辅助发音训练（CAPT）系统中不可缺少的模块，错误发音检测与诊断（MDD）技术在过去的十年中受到了学术界和工业界的广泛关注。为了训练健壮的MDD模型，该技术需要大量人工注释的语音记录，这些记录通常是昂贵的，甚至很难获得。在本研究中，我们提出利用迁移学习从两个方面来解决数据稀缺问题。首先，从音频模态出发，我们通过学习鲁棒的通用声学表示，探索了在MDD任务中使用预训练模型wav2vec2.0。其次，从语篇模态方面，我们探讨了通过学习语音和语篇模态之间的关联，将先前的语篇转化为MDD。我们提出了文本调制门，在抑制不相关文本信息的同时，赋予相关文本信息更多的重要性。此外，鉴于转录，我们提出了一个额外的对比损失，以减少音素识别和MDD任务之间的学习目标差异。在L2-Arctic数据集上进行的实验表明，基于wav2vec2.0的模型优于传统方法。本文提出的文本调制门和对比损耗进一步将f1分数提高了2.88%以上，我们的最佳模型的f1分数达到了61.75%。",
