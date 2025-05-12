@@ -8,6 +8,7 @@
       {
         "conference": "TAC",
         "abbr": "TAC",
+        "year": "2024", 
         "title": "WavDepressionNet: Automatic Depression Level Prediction via Raw Speech Signals",
         "authors": "Mingyue Niu, Jianhua Tao, Yongwei Li, Yong Qin, Ya Li",
         "abstract": "Physiological reports have confirmed that there are differences in speech signals between depressed and healthy individuals. Therefore, as an application in the field of affective computing, automatic depression level prediction through speech signals has received the attention of researchers, which often estimate the depression severity of individuals by the Fourier or Mel spectrograms of speech signals. However, some studies on speech emotion recognition suggest that directly modeling the raw speech signal is more helpful for extracting emotion-related information. Inspired by this fact, we develop a WavDepressionNet to model raw speech signals for the improvement of prediction accuracy. In our method, a representation block is proposed to find a set of basis vectors to construct the optimal transformation space and generate the transformation result (named Depression Feature Map, DFM) of speech signal for facilitating the perception of depression cues. We further propose an assessment block, which cannot only use the designed spatiotemporal self-calibration mechanism to calibrate the DFM and highlight the useful elements, but also aggregates the calibrated DFM across various temporal ranges with the dilated convolution. Experimental results on the AVEC 2013 and AVEC 2014 depression databases demonstrate the effectiveness of our approach over previous works.",
@@ -17,6 +18,7 @@
       {
         "conference": "TCSVT",
         "abbr": "TCSVT",
+        "year": "2024", 
         "title": " DepressionMLP: A Multi-Layer Perceptron Architecture for Automatic Depression Level Prediction via Facial Keypoints and Action Units",
         "authors": "Mingyue Niu, Ya Li, Jianhua Tao, Xiuzhuang Zhou, Björn W",
         "abstract": "Physiological studies have confirmed that there are differences in facial activities between depressed and healthy individuals. Therefore, while protecting the privacy of subjects, substantial efforts are made to predict the depression severity of individuals by analyzing Facial Keypoints Representation Sequences (FKRS) and Action Units Representation Sequences (AURS). However, those works has struggled to examine the spatial distribution and temporal changes of Facial Keypoints (FKs) and Action Units (AUs) simultaneously, which is limited in extracting the facial dynamics characterizing depressive cues. Besides, those works don’t realize the complementarity of effective information extracted from FKRS and AURS, which reduces the prediction accuracy. To this end, we intend to use the recently proposed Multi-Layer Perceptrons with gating (gMLP) architecture to process FKRS and AURS for predicting depression levels. However, the channel projection in the gMLP disrupts the spatial distribution of FKs and AUs, leading to input and output sequences not having the same spatiotemporal attributes. This discrepancy hinders the additivity of residual connections in a physical sense. Therefore, we construct a novel MLP architecture named DepressionMLP. In this model, we propose the Dual Gating (DG) and Mutual Guidance (MG) modules. The DG module embeds cross-location and cross-frame gating results into the input sequence to maintain the physical properties of data to make up for the shortcomings of gMLP. The MG module takes the global information of FKRS (AURS) as a guidance mask to filter the AURS (FKRS) to achieve the interaction between FKRS and AURS. Experimental results on several benchmark datasets show the effectiveness of our method.",
@@ -26,6 +28,7 @@
       {
         "conference": "ICASSP",
         "abbr": "ICASSP",
+        "year": "2024", 
         "title": " Frame-level emotional state alignment method for speech emotion recognition",
         "authors": "Qifei Li, Yingming Gao, Cong Wang, Yayue Deng, Jingling Xue, Yichen Han, Ya Li",
         "abstract": "Speech emotion recognition (SER) systems aim to recognize human emotional state during human-computer interaction. Most existing SER systems are trained based on utterance-level labels. However, not all frames in an audio have affective states consistent with utterance-level label, which makes it difficult for the model to distinguish the true emotion of the audio and perform poorly. To address this problem, we propose a frame-level emotional state alignment method for SER. First, we fine-tune HuBERT model to obtain a SER system with task-adaptive pretraining (TAPT) method, and extract embeddings from its transformer layers to form frame-level pseudo-emotion labels with clustering. Then, the pseudo labels are used to pretrain HuBERT. Hence, the each frame output of HuBERT has corresponding emotional information. Finally, we fine-tune the above pretrained HuBERT for SER by adding an attention layer on the top of it, which can focus only on those frames that are emotionally more consistent with utterance-level label. The experimental results performed on IEMOCAP indicate that our proposed method performs better than state-of-the-art (SOTA) methods.",
@@ -35,6 +38,7 @@
       {
         "conference": "INTERSPEECH",
         "abbr": "INTERSPEECH",
+        "year": "2024", 
         "title": " Enhancing Modal Fusion by Alignment and Label Matching for Multimodal Emotion Recognition",
         "authors": "Qifei Li, Yingming Gao, Yuhua Wen, Cong Wang, Ya Li",
         "abstract": "To address the limitation in multimodal emotion recognition (MER) performance arising from inter-modal information fusion, we propose a novel MER framework based on multitask learning where fusion occurs after alignment, called Foal-Net. The framework is designed to enhance the effectiveness of modality fusion and includes two auxiliary tasks: audio-video emotion alignment (AVEL) and cross-modal emotion label matching (MEM). First, AVEL achieves alignment of emotional information in audio-video representations through contrastive learning. Then, a modal fusion network integrates the aligned features. Meanwhile, MEM assesses whether the emotions of the current sample pair are the same, providing assistance for modal information fusion and guiding the model to focus more on emotional information. The experimental results conducted on IEMOCAP corpus show that Foal-Net outperforms the state-of-the-art methods and emotion alignment is necessary before modal fusion.",
@@ -44,6 +48,7 @@
       {
         "conference": "NCMMSC",
         "abbr": "NCMMSC",
+        "year": "2024", 
         "title": " Multimodal Emotion Recognition Based on Dual Alignment and Contrastive Learning",
         "authors": "WEN Yuhua, LI Qifei, ZHOU Yingying, GAO Yingming, LI Ya",
         "abstract": "Emotion recognition plays a crucial role in modern human-computer interaction， affective computing， and immersive virtual reality by enabling computers to automatically identify and classify human emotional states. With advancements in multimodal learning， emotion recognition has progressed from traditional single-modal approaches to more complex multimodal approaches. Multimodal emotion recognition involves processing data from various sources， such as text， speech， and visual information. These different modalities capture distinct emotional features， allowing models to better understand human emotional states. However， significant challenges remain in multimodal emotion recognition， including temporal misalignment and modality heterogeneity. To address these challenges， this paper presents a multimodal emotion recognition model that utilizes dual alignment and contrastive learning. The proposed model integrates text， speech， and visual modalities， achieving comprehensive alignment through a dual alignment module. Specifically， feature-level alignment employs a cross-attention mechanism to create dynamic temporal alignment， while sample-level alignment uses contrastive learning to align the modalities in feature space. Additionally， the model introduces supervised contrastive learning to leverage label information， allowing for the extraction of fine-grained emotional cues and enhancing the model’s robustness. Self-attention mechanisms are also applied to learn interactions among multimodal features， effectively improving overall model performance. Experimental results show that the proposed model performs exceptionally well on three public datasets， outperforming existing models on most metrics. In conclusion， the dual alignment and contrastive learning-based multimodal emotion recognition model successfully addresses key challenges in the field and achieves significant performance improvements.",
@@ -53,6 +58,7 @@
       {
         "conference": "NCMMSC",
         "abbr": "NCMMSC",
+        "year": "2023", 
         "title": " Analysis of Speech Depression Detection Based on Emotional Stimuli",
         "authors": "LI Qifei, WANG Dong, GAO Yingming, LI Ya",
         "abstract": "Depression is a common mental disorder， and early detection and diagnosis is essential for depression prevention and treatment. Speech depression detection is an efficient and convenient tool in the current computer-aided detection methods. In order to explore whether different emotional stimuli have an impact on speech depression detection， this paper firstly constructed an acoustic feature set for depression analysis， followed by analyzing the significant differences in acoustic features between depression and non-depression under different emotional stimuli using a non-parametric test， and then used an experimental design with a combination of emotional stimuli （positive， negative， neutral） and task types （text reading， question-and-answer） to build speech depression detection models through machine learning and deep learning algorithms. The experimental results demonstrate that the use of emotional stimuli affects the depression detection task to some extent and that negative emotional stimuli are more likely to trigger depression-related emotions and to have an impact on the individual’s pronunciation characteristics， thus achieving better detection performance than positive stimuli and neutral speech.",
@@ -62,6 +68,7 @@
       {
         "conference": "INTERSPEECH",
         "abbr": "INTERSPEECH",
+        "year": "2023", 
         "title": " FTA-net: A Frequency and Time Attention Network for Speech Depression Detection",
         "authors": "Qifei Li, Dong Wang, Yiming Ren, Yingming Gao, and Ya Li",
         "abstract": "Depression is one of the most common mental diseases nowadays, which seriously affects the health of individuals. Some researchers have shown an association between the level of depression and speech features in individuals, so a lot of automatic speech-based depression detection systems have been proposed. A number of studies utilized convolutional neural network (CNN) to realize the speech depression detection. However, most of these studies did not take into account that different frequencies and time steps in the speech spectrum features contribute unequally to the detection of depression. In order to extract more significant and distinctive features, this paper proposes an effective frequency-time attention (FTA) module for CNN, which is based on squeeze and excitation operations and can emphasize the time steps and frequencies associated with depression. Experimental results based on the AVEC 2013 and AVEC 2014 benchmarks demonstrate the effectiveness of our proposed method.",
@@ -71,6 +78,7 @@
       {
         "conference": "ACMMM",
         "abbr": "ACMMM",
+        "year": "2023", 
         "title": " Mining High-quality Samples from Raw Data and Majority Voting Method for Multimodal Emotion Recognition",
         "authors": "Qifei Li, Yingming Gao, Ya Li",
         "abstract": "Automatic emotion recognition has a wide range of applications in human-computer interaction. In this paper, we present our work in the Multimodel Emotion Recognition (MER) 2023, which contains three sub-challenges: MER-MULTI, MER-NOISE, and MER-SEMI. We first use a vanilla semi-supervised method to mine high quality samples from the MER-SEMI unlabeled dataset to expand the training set. Specifically, we ensemble three models trained with the official training set by a majority voting method, which is used to select samples with high prediction consistency. The selected samples together with the original training set are further augmented by adding noise. Then, the features of different modalities of expanded dataset are extracted from several pre-trained or fine-tuned models, and they are subsequently used to create different feature combinations to capture more effective emotion representations. Besides, we employ early fusion of different modal features and late fusion of different recognition models to obtain the final prediction. Experimental results show that our proposed method improves the performance over the official baselines by 30.4%, 55.3% and 1.57% for the three sub-challenges and ranks 4, 3, and 5, respectively. The present work sheds light on high-quality data mining and model ensemble by majority voting for multimodal emotion recognition.",
@@ -80,6 +88,7 @@
       {
         "conference": "ICCIP",
         "abbr": "ICCIP",
+        "year": "2023", 
         "title": " Exploring the interpretability in speech-based adolescent depression detection by SHAP",
         "authors": "Dong Wang, Qifei Li, Yingming Gao, Yong Liu, Ya Li",
         "abstract": "Adolescent depression is more harmful because teens are in a critical period of mental development. The combination of speech analysis and machine learning techniques obtains promising results in detecting depression. However, the current research mainly focuses on enhancing the performance of models and lacks explanation of the model decision process. This paper aims to investigate which features are of importance in identifying adolescent depression and how these features affect the predictions of the model. We extracted 225 acoustic features form the recordings of teenagers reading three Mandarin paragraphs, and then built an ensenble machine learning model that achieved a mean F1 score of 0.853. Combined with the model interpretation framework SHAP, we found that the dispersion of the first formant contributed most to the predictions. Our work is transparent to the process of model decision making, which may promote the the application of machine learning in healthcare fields.",
@@ -89,6 +98,7 @@
       {
         "conference": "TAC",
         "abbr": "TAC",
+        "year": "2023", 
         "title": " Dual Attention and Element Recalibration Networks for Automatic Depression Level Prediction",
         "authors": "Mingyue Niu, Ziping Zhao, Jianhua Tao, Ya Li, Bjorn W Schuller",
         "abstract": "Physiological studies have identified that facial dynamics can be considered as biomarkers to analyze depression severity. This paper accordingly develops a Dual Attention and Element Recalibration (DAER) network to extract facial changes to predict the depression level. In this model, we propose two blocks: a Dual Attention (DA) block and Element Recalibration (ER) block. The DA block uses the self-attention to investigate the dynamic changes in the representation sequence of a facial video segment. It further examines the influence of feature components of the representation sequence on depression level prediction through bilinear-attention. Moreover, to improve the representation ability of network, the ER block is used to obtain the global information to recalibrate each element of the tensor. Adopting this approach, for the depression level prediction task, we first divide the long-term video into fixed-length segments and use the trained ResNet50 to encode each frame to generate the representation sequences of video segments. Second, the representation sequences are input into DAER network to obtain the depression level scores. Finally, the average of these scores yields the prediction result corresponding to the long-term video. Experiments on publicly available AVEC 2013 and AVEC 2014 depression databases illustrate the effectiveness of our method.",
@@ -98,6 +108,7 @@
       {
         "conference": "ICASSP",
         "abbr": "ICASSP",
+        "year": "2022", 
         "title": " Automatic Depression Level Assessment from Speech by Long-Term Global Information Embedding",
         "authors": "Ya Li, Mingyue Niu, Ziping Zhao, Jianhua Tao",
         "abstract": "Depression is a serious mood disorder which brings negative effects on people's social activities. Therefore, growing attention has been paid to automatic depression assessment, especially from speech. However, most of the previous work uses hand-crafted features or deep neural network-based feature extractors to obtain deep features and then feed them into a classifier or a regression, which ignores the temporal relation of these features. To address this issue, this paper proposes a global information embedding (GIE) to make use of the long-term global information of depression and re-weight the LSTM output sequence. The short-term features are then pooled into long-term features by LASSO optimization to further improve the accuracy of depression recognition. Experiments on AVEC 2013 and AVEC 2014 verified the proposed method, and the RMSEs are 9.63 and 9.40, respectively.",
@@ -107,6 +118,7 @@
       {
         "conference": "TCSVT",
         "abbr": "TCSVT",
+        "year": "2022", 
         "title": " Selective Element and Two Orders Vectorization Networks for Automatic Depression Severity Diagnosis via Facial Changes",
         "authors": "Mingyue Niu, Ziping Zhao, Jianhua Ta, Ya Li*, Björn W.Schuller",
         "abstract": "Physiological studies have shown that healthy and depressed individuals present different facial changes. Thus, many researchers have attempted to use Convolutional Neural Networks (CNNs) to extract high-level facial dynamic representations for predicting depression severity. However, the max-pooling (or average-pooling) layers in the CNN lead to the loss of subtle depression cues. Without pooling layers, the CNN cannot extract multi-scale information and has difficulties for tensor vectorization. To this end, we propose a Selective Element and Two Orders Vectorization (SE-TOV) network. For the SE-TOV network, an SE block is constructed to adaptively select the effective elements from the tensors obtained by receptive fields of different sizes. Moreover, we propose a TOV block for vectorizing a high-dimensional tensor. On the one hand, TOV block inputs a tensor into the Global Average Pooling layer to obtain the first-order vectorization result. On the other hand, it takes principal components of the correlation matrix of channels in a tensor as the second-order vectorization result. Experimental results on AVEC 2013 (RMSE =7.42, MAE =6.09) and AVEC 2014 (RMSE =7.39, MAE =5.87) depression databases illustrate the superiority of our approach over previous works.",
@@ -116,6 +128,7 @@
       {
         "conference": "ESWA",
         "abbr": "ESWA",
+        "year": "2022", 
         "title": " Depressioner: Facial dynamic representation for automatic depression level prediction.",
         "authors": "Mingyue Niu, Lang He, Ya Li, Bin Liu",
         "abstract": "Physiological studies have shown that facial changes can be seen as a biomarker to analyze the severity of depression. Therefore, this study proposes a Depressioner model to predict the depression level by examining facial changes. Our method is mainly to solve two problems in the previous works: (1) each channel in the tensor obtained by the convolution layer can be regarded as a pattern extraction result related to depression. However, previous works rarely explore the relationship among channels, which is limited in integrating the advantages of various channels; (2) the average (or max) pooling is often used to vectorize the tensor, which is not conduction to capturing the depression cues from tensors with temporal attribute. To this end, this study designs two novel blocks namely Graph Convolution Embedding (GCE) block and Multi-Scale Vectorization (MSV) block. The GCE block treats each channel as a node in the graph and constructs the corresponding adjacency matrix. Furthermore, the GCE block adopts the graph convolution operation to examine the relationship among channels to take advantage of each channel and highlight useful elements. The MSV block combines the dilated convolution and attention mechanism to process each channel to extract the multi-scale representation of depression cues along temporal dimension. Moreover, it aggregates these representations into the vectorization result of tensor along channel dimension. Experimental results on AVEC 2013 (RMSE = 7.49, MAE = 6.12) and AVEC 2014 (RMSE = 7.56, MAE = 6.01) depression databases illustrate the effectiveness of our method, which may promote the auxiliary diagnosis of depression screening in the future. Meanwhile, these results also show that the proposed Depressioner model can capture the differences of facial changes among individuals with different depression levels.",
@@ -140,6 +153,7 @@
     {
         "conference": "TAC",
         "abbr": "TAC",
+        "year": "2024", 
         "title": "WavDepressionNet：通过原始语音信号自动预测抑郁水平",
         "authors": "Mingyue Niu, Jianhua Tao, Yongwei Li, Yong Qin, Ya Li",
         "abstract": "生理学报告已经证实，抑郁症和健康个体之间的言语信号存在差异。因此，作为情感计算领域的应用，通过语音信号自动预测抑郁水平受到了研究人员的关注，他们经常通过语音信号的傅里叶谱图或梅尔谱图来估计个体的抑郁严重程度。然而，一些关于语音情感识别的研究表明，直接对原始语音信号进行建模更有利于提取情感相关信息。受这一事实的启发，我们开发了 WavDepressionNet 来对原始语音信号进行建模，以提高预测准确性。在我们的方法中，提出了一个表示块来找到一组基向量来构造最佳变换空间并生成语音信号的变换结果（称为抑郁特征图，DFM），以促进抑郁线索的感知。我们进一步提出了一个评估块，它不仅使用设计的时空自校准机制来校准 DFM 并突出有用的元素，而且还通过扩张卷积在不同时间范围内聚合校准的 DFM。 AVEC 2013 和 AVEC 2014 抑郁症数据库的实验结果证明了我们的方法相对于以前的工作的有效性。",
@@ -149,6 +163,7 @@
      {
         "conference": "TCSVT",
         "abbr": "TCSVT",
+        "year": "2024",
         "title": " DepressionMLP：通过面部关键点和动作单元自动预测抑郁程度的多层感知器架构",
         "authors": "Mingyue Niu, Ya Li, Jianhua Tao, Xiuzhuang Zhou, Björn W",
         "abstract": "生理学研究证实，抑郁症患者和健康人的面部活动存在差异。因此，在保护受试者隐私的同时，人们做出了大量努力，通过分析面部关键点表示序列（FKRS）和动作单元表示序列（AURS）来预测个体的抑郁严重程度。然而，这些工作很难同时检查面部关键点（FK）和动作单元（AU）的空间分布和时间变化，这在提取表征抑郁线索的面部动态方面受到限制。此外，这些工作没有实现FKRS和AURS提取的有效信息的互补性，从而降低了预测精度。为此，我们打算使用最近提出的带门控的多层感知器（gMLP）架构来处理 FKRS 和 AURS 以预测抑郁水平。然而，gMLP 中的通道投影破坏了 FK 和 AU 的空间分布，导致输入和输出序列不具有相同的时空属性。这种差异阻碍了物理意义上剩余连接的可加性。因此，我们构建了一种新颖的 MLP 架构，名为 DepressionMLP。在此模型中，我们提出了双门控（DG）和相互指导（MG）模块。 DG模块将跨位置和跨帧的门控结果嵌入到输入序列中，以保持数据的物理属性，从而弥补gMLP的缺点。 MG模块以FKRS（AURS）的全局信息作为引导掩模，对AURS（FKRS）进行过滤，实现FKRS与AURS的交互。几个基准数据集的实验结果表明了我们方法的有效性。",
@@ -158,6 +173,7 @@
       {
         "conference": "ICASSP",
         "abbr": "ICASSP",
+        "year": "2024",
         "title": " 语音情感识别的帧级情绪状态对齐方法",
         "authors": "李启飞, 高迎明, 王聪, 邓雅月, 薛锦隆, 韩易辰, 李雅",
         "abstract": "语音情感识别（SER）系统旨在识别人机交互过程中人的情感状态。大多数现有的SER系统都是基于话语级标签进行训练的。然而，并非音频中的所有帧都具有与话语级标签一致的情感状态，这使得模型难以区分音频的真实情感，从而表现不佳。为了解决这个问题，我们提出了一种帧级情绪状态对齐方法。首先，我们利用任务自适应预训练（TAPT）方法对HuBERT模型进行微调，得到SER系统，并从其变换层提取嵌入，通过聚类形成帧级伪情感标签。然后，使用伪标签对HuBERT进行预训练。因此，HuBERT的每一帧输出都有相应的情感信息。最后，我们通过在上面添加一个注意层来微调上面的预训练的HuBERT，它只能关注那些在情感上更符合话语水平标签的帧。在IEMOCAP上进行的实验结果表明，我们提出的方法比最先进的（SOTA）方法性能更好。",
@@ -167,6 +183,7 @@
       {
         "conference": "INTERSPEECH",
         "abbr": "INTERSPEECH",
+        "year": "2024",
         "title": " 基于对齐和标签匹配的多模态情感识别增强模态融合",
         "authors": "李启飞, 高迎明, 文宇华, 王聪, 李雅",
         "abstract": "为了解决多模态信息融合对多模态情感识别性能的限制，我们提出了一个基于多任务学习的多模态情感识别框架Foal-Net，其中融合在对齐后发生。该框架旨在提高模态融合的有效性，并包括两个辅助任务：音视频情感对齐（AVEL）和跨模态情感标签匹配（MEM）。首先，AVEL通过对比学习实现音视频表征中情绪信息的对齐。然后，将对齐后的特征进行模态融合。同时，MEM评估当前样本对的情绪是否相同，为模态信息融合提供帮助，引导模型更加关注情绪信息。在IEMOCAP语料库上进行的实验结果表明，Foal-Net优于最先进的方法，并且在模态融合之前需要进行情感对齐。",
@@ -176,6 +193,7 @@
       {
         "conference": "NCMMSC",
         "abbr": "NCMMSC",
+        "year": "2024",
         "title": " 基于双对齐和对比学习的多模态情感识别",
         "authors": "文宇华, 李启飞, 周莹莹, 高迎明, 李雅",
         "abstract": "情感识别在现代人机交互、情感感知和沉浸式虚拟现实等领域具有重要价值，因其能够通过计算机自动识别和分类人类情感状态。随着多模态学习的发展，情感识别逐渐从传统的单一模态情感识别转向多模态情感识别。多模态情感识别涉及处理来自不同模态的数据，例如文本、语音和视觉。这些模态数据可以通过捕捉不同的情感特征，帮助模型更准确地理解人的情感状态。然而，现有的多模态情感识别中存在时间错位和模态异质性等一系列挑战。为了应对这些挑战，本文设计并实现了一种基于双对齐和对比学习的多模态情感识别模型。该模型结合了文本、语音和视觉三种模态，通过双对齐模块实现不同模态之间的全面对齐。其中，特征级对齐利用交叉注意力机制实现时间维度上的动态对齐；样本级对齐利用对比学习在特征空间中对齐各个模态。模型引入监督对比学习进一步利用标签信息，挖掘细粒度的情感线索，增强模型的鲁棒性。此外，本文利用自注意力机制来学习多模态特征间的交互，有效提升了模型性能。实验结果表明，该模型在三个公开数据集上表现优异，在大多数指标上均优于现有模型。综上所述，本文提出的基于双对齐和对比学习的多模态情感识别模型，有效解决了多模态情感识别中的关键挑战，取得了显著的性能提升。",
@@ -185,6 +203,7 @@
       {
         "conference": "NCMMSC",
         "abbr": "NCMMSC",
+        "year": "2023", 
         "title": " 基于情感刺激的语音抑郁症检测分析",
         "authors": "李启飞, 王栋, 高迎明, 李雅",
         "abstract": "抑郁症是一种常见的精神障碍疾病，早期的检测和诊断对抑郁症预防和治疗至关重要。基于语音的抑郁症检测是当前计算机辅助检测方法中的一种高效、便捷的手段。为了探索不同的情感刺激是否对语音抑郁症检测存在影响，本文首先构建了抑郁症分析声学特征集，接着使用非参数检验的方法分析不同情感刺激性下抑郁与非抑郁个体之间声学特征的显著性差异，再采用情感刺激（积极、消极、中性）和任务类型（文本朗读、问答）组合的实验设计，通过机器学习和深度学习算法分别构建语音抑郁症检测模型。实验结果证明使用情感刺激会对抑郁症检测任务产生一定程度的影响，并且消极的情感刺激更容易诱发抑郁相关的情绪，对个体的发音特性产生影响，进而取得比积极刺激和中性语音更好的检测效果。",
@@ -194,6 +213,7 @@
       {
         "conference": "INTERSPEECH",
         "abbr": "INTERSPEECH",
+        "year": "2023", 
         "title": " FTA-net: 语音抑制检测的频率和时间注意网络",
         "authors": "李启飞, 王栋, 任一鸣, 高迎明, 李雅",
         "abstract": "抑郁症是当今社会最常见的精神疾病之一，严重影响着个体的健康。一些研究人员已经表明，个体的抑郁程度与语言特征之间存在关联，因此提出了许多基于语音的自动抑郁检测系统。许多研究利用卷积神经网络（CNN）来实现语音抑制检测。然而，这些研究大多没有考虑到语音频谱特征中不同频率和时间步长对抑郁症检测的贡献是不平等的。为了提取更显著、更有特色的特征，本文提出了一种有效的CNN频率-时间注意（FTA）模块，该模块基于挤压和激励运算，可以强调与抑制相关的时间步长和频率。基于AVEC 2013和AVEC 2014基准的实验结果证明了我们提出的方法的有效性。",
@@ -203,6 +223,7 @@
       {
         "conference": "ACMMM",
         "abbr": "ACMMM",
+        "year": "2023", 
         "title": " 基于原始数据的高质量样本挖掘与多模态情感识别的多数投票方法",
         "authors": "李启飞, 高迎明, 李雅",
         "abstract": "自动情感识别在人机交互中有着广泛的应用。在本文中，我们介绍了我们在多模型情感识别（MER） 2023中的工作，其中包含三个子挑战：MER- multi， MER- noise和MER- semi。我们首先使用香草半监督方法从MER-SEMI未标记数据集中挖掘高质量样本来扩展训练集。具体来说，我们使用多数投票法对官方训练集训练的三个模型进行集成，该方法用于选择具有高预测一致性的样本。选取的样本与原始训练集一起通过加入噪声进一步增强。然后，从几个预训练或微调的模型中提取扩展数据集的不同模态特征，然后使用它们创建不同的特征组合，以捕获更有效的情感表征。此外，我们采用不同模态特征的早期融合和不同识别模型的后期融合来获得最终的预测结果。实验结果表明，对于排名4、3和5的三个子挑战，我们的方法分别比官方基线的性能提高了30.4%、55.3%和1.57%。目前的工作通过多数投票为多模态情感识别提供了高质量的数据挖掘和模型集成。",
@@ -212,6 +233,7 @@
       {
         "conference": "ICCIP",
         "abbr": "ICCIP",
+        "year": "2023", 
         "title": " 基于言语的青少年抑郁症SHAP检测的可解释性探讨",
         "authors": "王栋, 李启飞, 高迎明, 刘勇, 李雅",
         "abstract": "青少年正处于智力发展的关键时期，抑郁症对他们的危害是巨大的。语音分析和机器学习技术的结合在检测抑郁症方面虽然取得了很好的结果，但目前的研究主要集中在提高模型的性能上，缺乏对模型决策过程的解释。本文旨在研究哪些特征在识别青少年抑郁症方面是重要的，以及这些特征如何影响模型的预测。我们从青少年阅读三段普通话的录音中提取了225个声学特征，然后建立了一个可感知的机器学习模型，该模型的平均F1得分为0.853。结合模型解释框架SHAP，我们发现第一形成体的离散度对预测贡献最大。我们的工作对模型决策过程是透明的，这可能会促进机器学习在医疗保健领域的应用。",
@@ -221,6 +243,7 @@
       {
         "conference": "TAC",
         "abbr": "TAC",
+        "year": "2023", 
         "title": " 抑郁水平自动预测的双重注意和元素再校准网络",
         "authors": "Mingyue Niu, Ziping Zhao, Jianhua Tao, Ya Li, Bjorn W Schuller",
         "abstract": "生理学研究已经确定，面部动态可以作为分析抑郁症严重程度的生物标志物。因此，本文开发了一种双重注意和元素重新校准（Dual Attention and Element Recalibration， DAER）网络来提取面部变化以预测抑郁程度。在这个模型中，我们提出了两个块：双重注意（DA）块和元素重新校准（ER）块。数据数据块利用自注意来研究人脸视频片段表示序列的动态变化。通过双线性注意进一步研究表征序列的特征分量对抑郁水平预测的影响。此外，为了提高网络的表示能力，利用ER块获取全局信息，对张量的各个元素进行重新标定。采用该方法，对于抑郁水平预测任务，我们首先将长期视频划分为固定长度的片段，并使用训练好的ResNet50对每一帧进行编码，生成视频片段的表示序列。其次，将表征序列输入DAER网络，得到抑郁水平分数。最后，这些分数的平均值就得到了与长期视频相对应的预测结果。在公开的AVEC 2013和AVEC 2014抑郁症数据库上的实验证明了我们方法的有效性。",
@@ -230,6 +253,7 @@
       {
         "conference": "ICASSP",
         "abbr": "ICASSP",
+        "year": "2022", 
         "title": " 基于长期全局信息嵌入的语音抑郁程度自动评估",
         "authors": "Ya Li, Mingyue Niu, Ziping Zhao, Jianhua Tao",
         "abstract": "抑郁症是一种严重的情绪障碍，给人们的社会活动带来负面影响。因此，抑郁症的自动评估，尤其是语音自动评估越来越受到人们的关注。然而，之前的大多数工作都是使用手工制作的特征或基于深度神经网络的特征提取器来获取深度特征，然后将其输入分类器或回归，这忽略了这些特征的时间关系。为了解决这一问题，本文提出了一种全局信息嵌入（global information embedding， GIE）方法，利用LSTM的长期全局信息，对LSTM的输出序列进行重新加权。然后通过LASSO优化将短期特征集合为长期特征，进一步提高抑郁症识别的准确率。AVEC 2013和AVEC 2014的实验验证了该方法的有效性，均方根误差分别为9.63和9.40。",
@@ -239,6 +263,7 @@
       {
         "conference": "TCSVT",
         "abbr": "TCSVT",
+        "year": "2022", 
         "title": " 基于面部变化的抑郁严重程度自动诊断的选择元素和二阶矢量化网络",
         "authors": "Mingyue Niu, Ziping Zhao, Jianhua Ta, Ya Li*, Björn W.Schuller",
         "abstract": "生理学研究表明，健康的人和抑郁的人会出现不同的面部变化。因此，许多研究人员尝试使用卷积神经网络（cnn）来提取高水平的面部动态表征，以预测抑郁症的严重程度。然而，CNN中的最大池化（或平均池化）层导致了微妙的抑郁线索的丢失。没有池化层，CNN无法提取多尺度信息，张量矢量化困难。为此，我们提出了一种选择性元素和二阶矢量化（SE-TOV）网络。对于SE- tov网络，构建SE块，从不同大小的接受域得到的张量中自适应选择有效元素。此外，我们提出了一个TOV块用于向量化高维张量。一方面，TOV块向全局平均池化层输入一个张量，得到一阶矢量化结果；另一方面，它取张量中信道相关矩阵的主成分作为二阶矢量化结果。在AVEC 2013 （RMSE =7.42, MAE =6.09）和AVEC 2014 （RMSE =7.39, MAE =5.87）抑郁数据库上的实验结果表明，我们的方法优于以往的研究。",
@@ -248,6 +273,7 @@
       {
         "conference": "ESWA",
         "abbr": "ESWA",
+        "year": "2022", 
         "title": " 抑郁者：自动抑郁水平预测的面部动态表征",
         "authors": "Mingyue Niu, Lang He, Ya Li, Bin Liu",
         "abstract": "生理学研究表明，面部变化可以被视为分析抑郁症严重程度的生物标志物。因此，本研究提出了一个抑郁者模型，通过观察面部变化来预测抑郁程度。我们的方法主要解决了之前工作中的两个问题：(1)卷积层得到的张量中的每个通道都可以看作是与凹陷相关的模式提取结果。然而，以往的研究很少探讨渠道之间的关系，局限于整合各种渠道的优势；(2)通常使用平均池化（或最大池化）对张量进行矢量化，这不利于从具有时间属性的张量中捕获抑制线索。为此，本研究设计了两个新的块，即图卷积嵌入（GCE）块和多尺度矢量化（MSV）块。GCE块将每个通道视为图中的一个节点，并构造相应的邻接矩阵。此外，GCE块采用图卷积运算来检查通道之间的关系，以利用每个通道并突出有用的元素。MSV块结合扩展卷积和注意机制对每个通道进行处理，提取抑郁线索沿时间维度的多尺度表征。并将这些表示聚合成张量沿通道维数的矢量化结果。在AVEC 2013 （RMSE = 7.49, MAE = 6.12）和AVEC 2014 （RMSE = 7.56, MAE = 6.01）抑郁症数据库上的实验结果验证了该方法的有效性，为今后抑郁症筛查的辅助诊断提供参考。同时，这些结果也表明，所提出的抑郁者模型可以捕捉到不同抑郁程度个体面部变化的差异。",
