@@ -35,7 +35,7 @@ fetch("../data/dialogue.json")
 function getConferenceClass(conference) {
   // 添加空值检查
   if (!conference) return 'conf-other';
-  
+
   // 从会议名称中提取缩写
   const confName = conference.toLowerCase();
   
