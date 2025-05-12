@@ -3,7 +3,7 @@ let lang = localStorage.getItem("lang") || "en";
 const langData = {
   en: {
     introTitle: 'About Our Lab',
-    introPara: `We are a team specializing in voice and emotional interaction from the School of Artificial Intelligence <br>at Beijing University of Posts and Telecommunications. We focus on cutting-edge and interdisciplinary research in the fields of voice, emotion, dialogue, and digital humans,<br> and are committed to promoting the innovative development of human-computer interaction technology.`,
+    introPara: `We are a team specializing in voice and emotional interaction from the School of Artificial Intelligence <br>at Beijing University of Posts and Telecommunications. We focus on cutting-edge and interdisciplinary research in the fields of voice, emotion,<br> dialogue, and digital humans, and are committed to promoting the innovative development of human-computer interaction technology.`,
     directions: [
       { title: 'Speech', desc: 'Research in speech conversion, synthesis and cross-disciplinary fields.' },
       { title: 'Emotion', desc: 'Emotion detection, analysis, and affective computing applications.' },
