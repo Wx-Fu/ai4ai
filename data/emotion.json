@@ -126,8 +126,8 @@
     "projects": [
       {
         "title": "Emotion Demo",
-        "desc": "A demo project",
-        "demo_link": "https://demo.com"
+        "desc": "A demo project(don't click,comming soon)",
+        "demo_link": "https://wx-fu.github.io/ai4ai/"
       }
     ]
   },
@@ -258,8 +258,8 @@
   "projects": [
     {
       "title": "情感计算演示项目",
-      "desc": "示例演示项目",
-      "demo_link": "https://demo.com"
+      "desc": "示例演示项目(请勿点击，尚未完善)",
+      "demo_link": "https://wx-fu.github.io/ai4ai/"
     }
   ]
   }
