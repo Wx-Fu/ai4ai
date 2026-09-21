@@ -36,6 +36,26 @@
         "github_link": "https://github.com/piedpiperG/instruct-tts-stabilizer"
       },
       {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "Multi-Loss Learning for Speech Emotion Recognition with Energy-Adaptive Mixup and Frame-Level Attention",
+        "authors": "Cong Wang, Yizhong Geng, Yuhua Wen, Qifei Li, Yingming Gao, Ruimin Wang, Chunfeng Wang, Hao Li, Ya Li, Wei Chen",
+        "abstract": "Speech emotion recognition (SER) is an important technology in human-computer interaction, but high performance is challenging because of emotional complexity and scarce annotated data. We propose a multi-loss learning (MLL) framework that integrates energy-adaptive mixup (EAM) and a frame-level attention module (FLAM). EAM uses SNR-based augmentation to generate diverse speech samples that capture subtle emotional variations, while FLAM enhances frame-level feature extraction for multi-frame emotional cues. The MLL strategy combines Kullback-Leibler divergence, focal, center, and supervised contrastive losses to address class imbalance and improve feature separability. Experiments on four SER datasets demonstrate state-of-the-art performance and strong robustness.",
+        "paper_link": "https://arxiv.org/abs/2512.04551",
+        "github_link": ""
+      },
+      {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "Breaking Neutral Bias: Zero-Human-Annotation Fine-Grained Emotion Enrichment via Semantic Drift and Discriminative Re-ranking",
+        "authors": "Qihang Lu, Wenbing Yang, Bingsong Bai, Zihan Sun, Yueran Hou, Peilei Jia, Ya Li, Jun Gao, Yingming Gao",
+        "abstract": "Large Audio Language Models (LALMs) suffer from Neutral Bias and fail to capture subtle emotional nuances. Existing attempts to address this through text augmentation can introduce acoustic hallucinations. To address these issues without costly human annotation, we propose a data-centric paradigm based on Semantic Drift and Discriminative Re-ranking. An LLM performs multi-dimensional semantic drift to explore diverse emotional hypotheses beyond neutral baselines, and a discriminative judge model filters the drifted hypotheses via hard-negative contrastive learning, grounding them in raw acoustic signals. Experiments confirm that this hypothesize-and-verify mechanism transforms coarse, neutral-biased labels into precise, acoustically grounded descriptions, enriching fine-grained emotional detail and downstream expressiveness.",
+        "paper_link": "",
+        "github_link": ""
+      },
+      {
         "conference": "ICASSP",
         "abbr": "ICASSP",
         "year": "2026",
@@ -219,6 +239,26 @@
         "abstract": "Instruct-TTS 通常通过大语言模型改写，将结构化风格标签扩展为自然语言指令，但不受约束的改写可能产生语义漂移，污染监督信号并削弱泛化能力。该工作将这一问题形式化为指令监督不稳定，并提出一种数据中心的稳定化方案：利用可控指令多样化扩大覆盖范围，利用大语言模型进行漂移过滤以控制质量，并通过音高、语速和音量扰动实现属性对齐监督，将韵律控制落到声学层面。在 InstructTTSEval 中文划分上，该方案提升了指令跟随准确率，并显著降低了语义漂移。",
         "paper_link": "https://piedpiperg.github.io/instruct-tts-stabilizer/instruct-tts-stabilizer.pdf",
         "github_link": "https://github.com/piedpiperG/instruct-tts-stabilizer"
+      },
+      {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "基于能量自适应 Mixup 和帧级注意力的语音情感识别多损失学习",
+        "authors": "Cong Wang, Yizhong Geng, Yuhua Wen, Qifei Li, Yingming Gao, Ruimin Wang, Chunfeng Wang, Hao Li, Ya Li, Wei Chen",
+        "abstract": "语音情感识别（SER）是人机交互中的重要技术，但情感的复杂性和标注数据的稀缺性使高性能识别具有挑战性。我们提出了多损失学习（MLL）框架，将能量自适应 Mixup（EAM）与帧级注意力模块（FLAM）结合起来。EAM 利用基于信噪比的增强生成能够捕捉细微情感变化的多样化语音样本，FLAM 则增强对多帧情感线索的帧级特征提取。MLL 策略结合 KL 散度、焦点损失、中心损失和监督对比损失，以缓解类别不平衡并提升特征可分性。在四个 SER 数据集上的实验表明，该方法取得了先进的性能并具有较强的鲁棒性。",
+        "paper_link": "https://arxiv.org/abs/2512.04551",
+        "github_link": ""
+      },
+      {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "打破中性偏置：基于语义漂移与判别式重排序的零人工标注细粒度情感增强",
+        "authors": "Qihang Lu, Wenbing Yang, Bingsong Bai, Zihan Sun, Yueran Hou, Peilei Jia, Ya Li, Jun Gao, Yingming Gao",
+        "abstract": "大音频语言模型（LALM）存在中性偏置，难以捕捉细微的情感差异。现有通过文本增强解决这一问题的方法可能引入声学幻觉。为避免昂贵的人工标注，我们提出了基于语义漂移与判别式重排序的数据中心范式：首先利用大语言模型进行多维语义漂移，在中性基线之外探索多样化的情感假设；随后，判别式评判模型通过困难负样本对比学习过滤漂移后的假设，使其以原始声学信号为依据。实验表明，该“假设—验证”机制能够将粗粒度且受中性偏置影响的标签转化为精确、具有声学依据的描述，从而丰富细粒度情感信息并提升下游表达能力。",
+        "paper_link": "",
+        "github_link": ""
       },
       {
         "conference": "ICASSP",
