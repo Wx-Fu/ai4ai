@@ -6,6 +6,46 @@
     "projects_title": "Projects",
     "papers": [
       {
+        "conference": "ICME",
+        "abbr": "ICME",
+        "year": "2026",
+        "title": "MeloCodec: Harnessing Melodic Priors for High-Fidelity Singing Voice Representation",
+        "authors": "Yizhong Geng, Wenxin Fu, Kecan Mao, Qifei Li, Yingming Gao, Ruimin Wang, Chunfeng Wang, Hao Li, Ya Li, Wei Chen",
+        "abstract": "Neural audio codecs are becoming fundamental tokenizers for LLM-based audio generation. MeloCodec targets singing voice representation, where pitch and frequency structure are especially important, by injecting explicit melodic priors into the codec. It follows a Tokenize-then-Fuse paradigm: melodic information is first discretized into stable tokens and then fused with acoustic representations, while a two-stage training strategy improves convergence and mitigates codebook collapse. Experiments show better pitch consistency, stronger low-bitrate reconstruction, and controllable pitch manipulation with limited timbre degradation.",
+        "paper_link": "https://piedpiperg.github.io/MeloCodec/paper/melocodec_camera_v0.pdf",
+        "github_link": "https://github.com/piedpiperG/MeloCodec"
+      },
+      {
+        "conference": "ICML",
+        "abbr": "ICML",
+        "year": "2026",
+        "title": "Bridging the Stability-Expressivity Gap: Synthetic Data Scaling and Preference Alignment for Low-Resource Spoken Language Models",
+        "authors": "Yizhong Geng, Yanliang Li, Jinghan Yang, Tianhan Jiang, Boxun An, Ya Li, Xiaoyu Shen",
+        "abstract": "Spoken Language Models (SLMs) have emerged as a promising paradigm for speech synthesis by bypassing explicit grapheme-to-phoneme pipelines. However, their effectiveness in low-resource languages remains limited by the scarcity of transcribed speech. This work identifies a Stability-Expressivity Gap: synthetic data improves phonetic accuracy but progressively suppresses prosodic variability and expressivity. We propose Disentanglement-Guided Self-Alignment (DGSA) and Temperature-Driven Self-Critique (TDSC) to recover expressivity and stabilize generation under different data regimes. Our approach outperforms strong commercial systems and enables zero-shot voice cloning for Lao.",
+        "paper_link": "https://arxiv.org/abs/2605.27383",
+        "github_link": "https://github.com/piedpiperG/SE-Bridge-TTS"
+      },
+      {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "Stabilizing Instruction Supervision for Instruct-TTS via Controllable Diversification and Drift Filtering",
+        "authors": "Yizhong Geng, Kecan Mao, Qifei Li, Cong Wang, Yingming Gao, Ruimin Wang, Chunfeng Wang, Hao Li, Ya Li",
+        "abstract": "Instruct-TTS systems often expand structured style labels into natural-language instructions through LLM rewriting, but unconstrained rewrites can introduce semantic drift that corrupts supervision and weakens generalization. This work formalizes the issue as instruction supervision instability and proposes a data-centric stabilization recipe: controllable instruction diversification for broader coverage, LLM-based drift filtering for quality control, and attribute-aligned supervision that grounds prosody control in pitch, speed, and volume perturbations. On the Chinese split of InstructTTSEval, the recipe improves instruction-following accuracy while substantially reducing semantic drift.",
+        "paper_link": "https://piedpiperg.github.io/instruct-tts-stabilizer/instruct-tts-stabilizer.pdf",
+        "github_link": "https://github.com/piedpiperG/instruct-tts-stabilizer"
+      },
+      {
+        "conference": "ICASSP",
+        "abbr": "ICASSP",
+        "year": "2026",
+        "title": "RRPO: Robust Reward Policy Optimization for LLM-based Emotional TTS",
+        "authors": "Cong Wang, Changfeng Gao, Yang Xiang, Zhihao Du, Keyu An, Han Zhao, Qian Chen, Xiangang Li, Yingming Gao, Ya Li",
+        "abstract": "We propose a reinforcement learning method for emotional text-to-speech models based on large language models. Robust Reward Policy Optimization (RRPO) improves the naturalness, intelligibility, and emotional expressiveness of LLM-based emotional TTS through robust reward optimization.",
+        "paper_link": "https://ieeexplore.ieee.org/abstract/document/11462249/",
+        "github_link": "https://lrwinr.github.io/RRPO-CosyVoice/"
+      },
+      {
         "conference": "ICASSP",
         "abbr": "ICASSP",
         "year": "2025",
@@ -150,7 +190,47 @@
     "papers_title": "论文",
     "projects_title": "项目",
     "papers": [
-    {
+      {
+        "conference": "ICME",
+        "abbr": "ICME",
+        "year": "2026",
+        "title": "MeloCodec：利用旋律先验实现高保真歌声表示",
+        "authors": "Yizhong Geng, Wenxin Fu, Kecan Mao, Qifei Li, Yingming Gao, Ruimin Wang, Chunfeng Wang, Hao Li, Ya Li, Wei Chen",
+        "abstract": "神经音频编解码器正在成为基于大语言模型的音频生成系统中的基础分词器。MeloCodec 面向对音高和频率结构高度敏感的歌声表示任务，通过向编解码器注入显式旋律先验来提升表示质量。该方法采用“先分词、后融合”的范式：先将旋律信息离散化为稳定的令牌，再与声学表示融合，并通过两阶段训练改善收敛性、缓解码本坍塌。实验表明，MeloCodec 能够提升歌声重建中的音高一致性和低码率保真度，支持可控的音高变化，同时尽量减少音色退化。",
+        "paper_link": "https://piedpiperg.github.io/MeloCodec/paper/melocodec_camera_v0.pdf",
+        "github_link": "https://github.com/piedpiperG/MeloCodec"
+      },
+      {
+        "conference": "ICML",
+        "abbr": "ICML",
+        "year": "2026",
+        "title": "弥合稳定性与表现力鸿沟：面向低资源口语语言模型的合成数据扩展与偏好对齐",
+        "authors": "Yizhong Geng, Yanliang Li, Jinghan Yang, Tianhan Jiang, Boxun An, Ya Li, Xiaoyu Shen",
+        "abstract": "口语语言模型通过绕开显式的字素到音素流程，为语音合成提供了新的建模范式，但其在低资源语言中的有效性仍受到转写语音稀缺的限制。该工作提出“稳定性—表现力鸿沟”概念：合成数据能够提升语音准确性，却会逐渐抑制韵律变化并削弱表现力。我们提出解耦引导的自对齐（DGSA）和温度驱动的自批评（TDSC）两个框架，在不同数据条件下恢复表现力并稳定生成。该方法优于多个强大的商业系统，并实现了老挝语零样本语音克隆。",
+        "paper_link": "https://arxiv.org/abs/2605.27383",
+        "github_link": "https://github.com/piedpiperG/SE-Bridge-TTS"
+      },
+      {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "通过可控多样化与漂移过滤稳定 Instruct-TTS 的指令监督",
+        "authors": "Yizhong Geng, Kecan Mao, Qifei Li, Cong Wang, Yingming Gao, Ruimin Wang, Chunfeng Wang, Hao Li, Ya Li",
+        "abstract": "Instruct-TTS 通常通过大语言模型改写，将结构化风格标签扩展为自然语言指令，但不受约束的改写可能产生语义漂移，污染监督信号并削弱泛化能力。该工作将这一问题形式化为指令监督不稳定，并提出一种数据中心的稳定化方案：利用可控指令多样化扩大覆盖范围，利用大语言模型进行漂移过滤以控制质量，并通过音高、语速和音量扰动实现属性对齐监督，将韵律控制落到声学层面。在 InstructTTSEval 中文划分上，该方案提升了指令跟随准确率，并显著降低了语义漂移。",
+        "paper_link": "https://piedpiperg.github.io/instruct-tts-stabilizer/instruct-tts-stabilizer.pdf",
+        "github_link": "https://github.com/piedpiperG/instruct-tts-stabilizer"
+      },
+      {
+        "conference": "ICASSP",
+        "abbr": "ICASSP",
+        "year": "2026",
+        "title": "RRPO：面向大语言模型情感 TTS 的鲁棒奖励策略优化",
+        "authors": "Cong Wang, Changfeng Gao, Yang Xiang, Zhihao Du, Keyu An, Han Zhao, Qian Chen, Xiangang Li, Yingming Gao, Ya Li",
+        "abstract": "我们提出了一种用于基于大语言模型的情感文本到语音模型的强化学习方法。鲁棒奖励策略优化（RRPO）通过鲁棒奖励优化，提升了大语言模型情感 TTS 的自然度、可懂度和情感表现力。",
+        "paper_link": "https://ieeexplore.ieee.org/abstract/document/11462249/",
+        "github_link": "https://lrwinr.github.io/RRPO-CosyVoice/"
+      },
+      {
         "conference": "ICASSP",
         "abbr": "ICASSP",
         "year": "2025",

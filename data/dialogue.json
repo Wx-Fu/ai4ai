@@ -6,6 +6,18 @@
     "projects_title": "Projects",
     "papers": [
       {
+        "conference": "ICASSP",
+        "abbr": "ICASSP",
+        "year": "2026",
+        "title": "Mask-Guided Backtrack Decoding: Enabling Self-Correction in LLM Reasoning",
+        "authors": "Huijun Lian, Keqi Chen, Zekai Sun, Tianyi Tian, Ziteng He, Yingming Gao, Ya Li",
+        "abstract": "Large language models generate text autoregressively, yet error accumulation caused by sampling randomness and distribution shift can impair reasoning performance. Existing backtracking methods introduce extra overhead and often require model retraining. We propose Mask-Guided Backtrack Decoding (M-Backtrack), which combines a lightweight Mask Predictor with Layer-aware State Fusion (LaSF) to detect and correct erroneous tokens within a single generation path. We construct the CoT Correction and CoT Rethinking paired datasets for evaluation. Experiments show that M-Backtrack outperforms strong baselines on ROUGE-L and Exact Match while keeping computational overhead manageable.",
+        "paper_link": "https://ieeexplore.ieee.org/iel8/11460365/11460314/11463831.pdf",
+        "github_link": "",
+        "resource_link": "https://huggingface.co/datasets/HuijunLian/cot-correction",
+        "resource_label": "Dataset"
+      },
+      {
         "conference": "ISCSLP",
         "abbr": "ISCSLP",
         "year": "2024", 
@@ -50,7 +62,19 @@
     "papers_title": "论文",
     "projects_title": "项目",
     "papers": [
-    {
+      {
+        "conference": "ICASSP",
+        "abbr": "ICASSP",
+        "year": "2026",
+        "title": "掩码引导回溯解码：实现大语言模型推理自纠错",
+        "authors": "练慧俊, 陈可淇, 孙泽凯, 田天翊, 和子腾, 高迎明, 李雅",
+        "abstract": "大语言模型以自回归方式生成文本，但采样随机性和分布偏移造成的错误累积会削弱推理性能。现有回溯方法通常带来额外开销，并且往往需要重新训练模型。我们提出掩码引导回溯解码（M-Backtrack），结合轻量级掩码预测器和层级感知状态融合（LaSF），在单一生成路径中动态识别并修正错误词元。我们构建了 CoT Correction 和 CoT Rethinking 两组配对数据集用于评测。实验表明，M-Backtrack 在 ROUGE-L 和精确匹配指标上优于强基线，同时保持了可控的计算开销。",
+        "paper_link": "https://ieeexplore.ieee.org/iel8/11460365/11460314/11463831.pdf",
+        "github_link": "",
+        "resource_link": "https://huggingface.co/datasets/HuijunLian/cot-correction",
+        "resource_label": "数据集"
+      },
+      {
         "conference": "ISCSLP",
         "abbr": "ISCSLP",
         "year": "2024", 

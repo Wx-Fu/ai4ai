@@ -6,6 +6,56 @@
     "projects_title": "Projects",
     "papers": [
       {
+        "conference": "JSTSP",
+        "abbr": "JSTSP",
+        "year": "2026",
+        "title": "Exploring the Use of Large Language Models and Interpretable Features for Explainable Speech Emotion Recognition",
+        "authors": "Qifei Li, Yingming Gao, Yuhua Wen, Yingying Zhou, Zheng Lian, Bin Liu, Zhengqi Wen, Jianhua Tao, Ya Li",
+        "abstract": "Speech emotion recognition (SER) has made significant advancements recently due to its critical role in human-computer interaction. However, current studies predominantly rely on discriminative recognition methods, which can classify emotions but fail to provide insights into the reasoning behind the classification. To address this issue, we propose an automated method for annotating explainable speech emotion datasets using interpretable speech features instead of manually annotated subjective information. We further propose SEmoLLM, a generative explainable SER method based on a large language model, which uses WavLM to encode raw speech signals as input to the LLM and avoids emotion-related information loss. Experiments on four emotion datasets show that SEmoLLM achieves performance comparable to discriminative emotion recognition while also providing basic speech emotion explanations. Generating descriptions of gender, pitch, or volume can further improve emotion recognition performance.",
+        "paper_link": "https://doi.org/10.1109/JSTSP.2026.3652299",
+        "github_link": ""
+      },
+      {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "Multi-Loss Learning for Speech Emotion Recognition with Energy-Adaptive Mixup and Frame-Level Attention",
+        "authors": "Cong Wang, Yizhong Geng, Yuhua Wen, Qifei Li, Yingming Gao, Ruimin Wang, Chunfeng Wang, Hao Li, Ya Li, Wei Chen",
+        "abstract": "Speech emotion recognition (SER) is an important technology in human-computer interaction, but high performance is challenging because of emotional complexity and scarce annotated data. We propose a multi-loss learning (MLL) framework that integrates energy-adaptive mixup (EAM) and a frame-level attention module (FLAM). EAM uses SNR-based augmentation to generate diverse speech samples that capture subtle emotional variations, while FLAM enhances frame-level feature extraction for multi-frame emotional cues. The MLL strategy combines Kullback-Leibler divergence, focal, center, and supervised contrastive losses to address class imbalance and improve feature separability. Experiments on four SER datasets demonstrate state-of-the-art performance and strong robustness.",
+        "paper_link": "https://arxiv.org/abs/2512.04551",
+        "github_link": ""
+      },
+      {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "Breaking Neutral Bias: Zero-Human-Annotation Fine-Grained Emotion Enrichment via Semantic Drift and Discriminative Re-ranking",
+        "authors": "Qihang Lu, Wenbing Yang, Bingsong Bai, Zihan Sun, Yueran Hou, Peilei Jia, Ya Li, Jun Gao, Yingming Gao",
+        "abstract": "Large Audio Language Models (LALMs) suffer from Neutral Bias and fail to capture subtle emotional nuances. Existing attempts to address this through text augmentation can introduce acoustic hallucinations. To address these issues without costly human annotation, we propose a data-centric paradigm based on Semantic Drift and Discriminative Re-ranking. An LLM performs multi-dimensional semantic drift to explore diverse emotional hypotheses beyond neutral baselines, and a discriminative judge model filters the drifted hypotheses via hard-negative contrastive learning, grounding them in raw acoustic signals. Experiments confirm that this hypothesize-and-verify mechanism transforms coarse, neutral-biased labels into precise, acoustically grounded descriptions, enriching fine-grained emotional detail and downstream expressiveness.",
+        "paper_link": "",
+        "github_link": ""
+      },
+      {
+        "conference": "TNNLS",
+        "abbr": "TNNLS",
+        "year": "2025",
+        "title": "DashFusion: Dual-stream Alignment with Hierarchical Bottleneck Fusion for Multimodal Sentiment Analysis",
+        "authors": "Yuhua Wen, Qifei Li, Yingying Zhou, Yingming Gao, Zhengqi Wen, Jianhua Tao, Ya Li",
+        "abstract": "Multimodal sentiment analysis integrates text, image, and audio to provide a more comprehensive understanding of sentiment, but it remains challenged by alignment and fusion. We propose DashFusion, a framework that combines dual-stream temporal and semantic alignment with hierarchical bottleneck fusion. Cross-modal attention establishes frame-level correspondences, contrastive learning promotes semantic consistency, and supervised contrastive learning refines modality features with label information. Hierarchical bottleneck fusion then progressively integrates multimodal information through compressed bottleneck tokens, balancing performance and computational efficiency. Experiments on CMU-MOSI, CMU-MOSEI, and CH-SIMS demonstrate state-of-the-art performance, while ablation studies verify the effectiveness of the alignment and fusion techniques.",
+        "paper_link": "https://arxiv.org/abs/2512.05515",
+        "github_link": "https://github.com/ultramarineX/DashFusion"
+      },
+      {
+        "conference": "TAFFC",
+        "abbr": "TAFFC",
+        "year": "2025",
+        "title": "SeeNet: A Soft Emotion Expert and Data Augmentation Method to Enhance Speech Emotion Recognition",
+        "authors": "Qifei Li, Yingming Gao, Yuhua Wen, Ziping Zhao, Ya Li, Björn W. Schuller",
+        "abstract": "Speech emotion recognition systems still face performance and robustness challenges because labeled data are limited. We propose SeeNet, a multitask learning framework that learns distinctive and robust emotional representations through a Soft Emotion Expert Network. SeeNet consists of a pretrained model, an auxiliary soft emotion expert module, and an energy-based mixup data augmentation module. The auxiliary task enhances the distinction between samples with high cross-category similarity, while the pretrained model and augmentation module mitigate the limitations of scarce labels. Comprehensive experiments across multiple datasets and settings demonstrate that SeeNet surpasses state-of-the-art methods in both performance and robustness.",
+        "paper_link": "https://doi.org/10.1109/TAFFC.2025.3555406",
+        "github_link": "https://github.com/ASolitaryMan/SeeNet"
+      },
+      {
         "conference": "TAC",
         "abbr": "TAC",
         "year": "2024", 
@@ -150,7 +200,57 @@
     "papers_title": "论文",
     "projects_title": "项目",
     "papers": [
-    {
+      {
+        "conference": "JSTSP",
+        "abbr": "JSTSP",
+        "year": "2026",
+        "title": "探索利用大语言模型和可解释特征的可解释语音情感识别方法",
+        "authors": "李启飞, 高迎明, 文宇华, 周莹莹, 连政, 刘斌, 温正棋, 陶建华, 李雅",
+        "abstract": "近年来，语音情感识别（SER）因其在人机交互中的关键作用而取得了显著进展。然而，现有研究主要依赖判别式识别方法，这类方法虽然能够对情感进行分类，但无法解释分类背后的推理过程。为此，我们提出了一种面向可解释语音情感数据集的自动标注方法，利用可解释的语音特征代替人工标注的主观信息。进一步地，我们提出了基于大语言模型的生成式可解释 SER 方法 SEmoLLM，使用 WavLM 对原始语音信号进行编码并将其作为大语言模型的输入，从而避免情感相关信息丢失。在四个情感数据集上的实验表明，SEmoLLM 的性能与判别式情感识别方法相当，同时能够提供基础的语音情感解释；生成性别、音高或音量描述还能够进一步提升情感识别性能。",
+        "paper_link": "https://doi.org/10.1109/JSTSP.2026.3652299",
+        "github_link": ""
+      },
+      {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "基于能量自适应 Mixup 和帧级注意力的语音情感识别多损失学习",
+        "authors": "Cong Wang, Yizhong Geng, Yuhua Wen, Qifei Li, Yingming Gao, Ruimin Wang, Chunfeng Wang, Hao Li, Ya Li, Wei Chen",
+        "abstract": "语音情感识别（SER）是人机交互中的重要技术，但情感的复杂性和标注数据的稀缺性使高性能识别具有挑战性。我们提出了多损失学习（MLL）框架，将能量自适应 Mixup（EAM）与帧级注意力模块（FLAM）结合起来。EAM 利用基于信噪比的增强生成能够捕捉细微情感变化的多样化语音样本，FLAM 则增强对多帧情感线索的帧级特征提取。MLL 策略结合 KL 散度、焦点损失、中心损失和监督对比损失，以缓解类别不平衡并提升特征可分性。在四个 SER 数据集上的实验表明，该方法取得了先进的性能并具有较强的鲁棒性。",
+        "paper_link": "https://arxiv.org/abs/2512.04551",
+        "github_link": ""
+      },
+      {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "打破中性偏置：基于语义漂移与判别式重排序的零人工标注细粒度情感增强",
+        "authors": "Qihang Lu, Wenbing Yang, Bingsong Bai, Zihan Sun, Yueran Hou, Peilei Jia, Ya Li, Jun Gao, Yingming Gao",
+        "abstract": "大音频语言模型（LALM）存在中性偏置，难以捕捉细微的情感差异。现有通过文本增强解决这一问题的方法可能引入声学幻觉。为避免昂贵的人工标注，我们提出了基于语义漂移与判别式重排序的数据中心范式：首先利用大语言模型进行多维语义漂移，在中性基线之外探索多样化的情感假设；随后，判别式评判模型通过困难负样本对比学习过滤漂移后的假设，使其以原始声学信号为依据。实验表明，该“假设—验证”机制能够将粗粒度且受中性偏置影响的标签转化为精确、具有声学依据的描述，从而丰富细粒度情感信息并提升下游表达能力。",
+        "paper_link": "",
+        "github_link": ""
+      },
+      {
+        "conference": "TNNLS",
+        "abbr": "TNNLS",
+        "year": "2025",
+        "title": "DashFusion：基于层次化瓶颈融合的双流对齐多模态情感分析",
+        "authors": "文宇华, 李启飞, 周莹莹, 高迎明, 温正棋, 陶建华, 李雅",
+        "abstract": "多模态情感分析通过整合文本、图像和音频等信息来更全面地理解情感，但仍面临对齐和融合的挑战。我们提出 DashFusion 框架，将双流时间与语义对齐和层次化瓶颈融合结合起来。跨模态注意力用于建立帧级对应关系，对比学习促进语义一致性，监督对比学习利用标签信息精炼模态特征；随后，层次化瓶颈融合通过压缩的瓶颈令牌逐步整合多模态信息，在性能和计算效率之间取得平衡。在 CMU-MOSI、CMU-MOSEI 和 CH-SIMS 三个数据集上的实验取得了先进性能，消融实验也验证了对齐与融合技术的有效性。",
+        "paper_link": "https://arxiv.org/abs/2512.05515",
+        "github_link": "https://github.com/ultramarineX/DashFusion"
+      },
+      {
+        "conference": "TAFFC",
+        "abbr": "TAFFC",
+        "year": "2025",
+        "title": "SeeNet：基于软情感专家和数据增强的语音情感识别方法",
+        "authors": "李启飞, 高迎明, 文宇华, 赵子平, 李雅, Björn W. Schuller",
+        "abstract": "由于标注数据有限，语音情感识别系统在性能和鲁棒性方面仍面临挑战。我们提出了 SeeNet，一种通过软情感专家网络学习具有区分性和鲁棒性的情感表征的多任务学习框架。SeeNet 由预训练模型、辅助软情感专家模块和基于能量的 Mixup 数据增强模块组成。辅助任务增强了高跨类别相似性样本之间的区分能力，预训练模型和数据增强模块则缓解了标注数据稀缺带来的限制。在多个数据集和设置上的全面实验表明，SeeNet 在性能和鲁棒性方面均优于现有先进方法。",
+        "paper_link": "https://doi.org/10.1109/TAFFC.2025.3555406",
+        "github_link": "https://github.com/ASolitaryMan/SeeNet"
+      },
+      {
         "conference": "TAC",
         "abbr": "TAC",
         "year": "2024", 

@@ -57,6 +57,9 @@ function getConferenceClass(conference) {
   if (confName.includes('tcsvt')) return 'conf-tcsvt';
   if (confName.includes('ncmmsc')) return 'conf-ncmmsc';
   if (confName.includes('tommccap')) return 'conf-tommccap'; 
+  if (confName.includes('jstsp')) return 'conf-jstsp';
+  if (confName.includes('taffc')) return 'conf-taffc';
+  if (confName.includes('tnnls')) return 'conf-tnnls';
   return 'conf-other';
 }
 

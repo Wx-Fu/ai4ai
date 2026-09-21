@@ -50,6 +50,7 @@ function getConferenceClass(conference) {
   if (confName.includes('iscslp')) return 'conf-iscslp';
   if (confName.includes('aaai')) return 'conf-aaai';
   if (confName.includes('acmmm')) return 'conf-acmmm';
+  if (confName.includes('icme')) return 'conf-icme';
   if (confName.includes('interspeech')) return 'conf-interspeech';
   if (confName.includes('icassp')) return 'conf-icassp';
   if (confName.includes('iccip')) return 'conf-iccip';

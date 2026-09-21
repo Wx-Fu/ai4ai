@@ -109,6 +109,7 @@ main {
 .conf-iscslp { background-color: #f1c40f; }
 .conf-aaai { background-color: #e67e22; }
 .conf-acmmm { background-color: #d35400; }
+.conf-icme { background-color: #516b8b; }
 .conf-interspeech { background-color: #e74c3c; }
 .conf-icassp { background-color: #c0392b; }
 .conf-iccip { background-color: #7f8c8d; }
@@ -117,6 +118,9 @@ main {
 .conf-tcsvt { background-color: #6d9bad; }
 .conf-ncmmsc { background-color: #879db6; }
 .conf-tommccap { background-color: #6c80a9; }
+.conf-jstsp { background-color: #5b4b8a; }
+.conf-taffc { background-color: #2f7d7a; }
+.conf-tnnls { background-color: #7a5c2e; }
 
 /* 论文卡片样式 */
 .paper-card {
@@ -165,6 +169,17 @@ main {
 
 .paper-link:hover .link-icon {
   transform: scale(1.1);
+}
+
+.resource-link {
+  color: #2254b5;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 24px;
+}
+
+.resource-link:hover {
+  text-decoration: underline;
 }
 
 /* 可以单独为 arXiv 图标设置样式 */
