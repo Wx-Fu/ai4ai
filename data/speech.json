@@ -6,6 +6,16 @@
     "projects_title": "Projects",
     "papers": [
       {
+        "conference": "NCMMSC",
+        "abbr": "NCMMSC",
+        "year": "2026",
+        "title": "EmpathyBC: Enhancing Empathetic Spoken Dialogue with Semantic- and Emotion-Aware Backchannel Realization",
+        "authors": "Zhaoyang Meng, Kecan Mao, Zhengyao Ma, Yingming Gao, Ya Li",
+        "abstract": "Backchannels (BCs), such as “mm-hm” and “yeah”, are crucial in natural dialogue for signaling understanding and conveying empathy, yet remain largely absent in existing empathetic dialogue systems. Prior work on backchannels typically adopts a coarse-grained classification paradigm that predicts only the timing and category of a backchannel, limiting the generation of concrete, context-appropriate expressions. We propose EmpathyBC, a semantic- and emotion-aware framework that formulates open-ended backchannel realization as an explicit modeling objective and unifies it with empathetic response generation. By injecting representations from a pretrained self-supervised speech model into a large language model (LLM) via dual-path projectors and an adaptive mixture-of-experts fusion module, EmpathyBC jointly models linguistic content and paralinguistic emotional cues. A three-stage progressive training strategy sequentially equips the model with semantic understanding, emotion perception, and backchannel prediction capabilities. Guided by chain-of-thought reasoning, the model generates natural, open-ended BCs seamlessly integrated into coherent empathetic responses. Experiments demonstrate state-of-the-art backchannel prediction on Switchboard, and both LLM-based and human evaluations confirm significant improvements in the perceived empathy and naturalness of the interactions.",
+        "paper_link": "",
+        "github_link": ""
+      },
+      {
         "conference": "ICME",
         "abbr": "ICME",
         "year": "2026",
@@ -210,6 +220,16 @@
     "papers_title": "论文",
     "projects_title": "项目",
     "papers": [
+      {
+        "conference": "NCMMSC",
+        "abbr": "NCMMSC",
+        "year": "2026",
+        "title": "EmpathyBC：基于语义与情感感知的共情口语对话附和语生成",
+        "authors": "Zhaoyang Meng, Kecan Mao, Zhengyao Ma, Yingming Gao, Ya Li",
+        "abstract": "附和语（BC）如“mm-hm”和“yeah”在自然对话中至关重要，能够表达理解并传递共情，但现有共情对话系统很少对其进行建模。以往的附和语研究通常采用粗粒度分类范式，仅预测附和语的时机和类别，因而难以生成具体且符合语境的表达。我们提出 EmpathyBC，一种语义与情感感知框架，将开放式附和语生成作为显式建模目标，并将其与共情回复生成统一起来。该方法通过双路径投影器和自适应混合专家融合模块，将预训练自监督语音模型的表征注入大语言模型（LLM），联合建模语言内容与副语言情感线索。三阶段渐进式训练策略依次赋予模型语义理解、情感感知和附和语预测能力。在思维链推理的引导下，模型能够生成自然、开放式的附和语，并将其无缝融入连贯的共情回复。Switchboard 数据集上的实验表明，该方法在附和语预测方面达到先进水平；基于大语言模型的评测和人工评测均证实，其交互的感知共情性和自然度得到显著提升。",
+        "paper_link": "",
+        "github_link": ""
+      },
       {
         "conference": "ICME",
         "abbr": "ICME",
