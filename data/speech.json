@@ -6,6 +6,16 @@
     "projects_title": "Projects",
     "papers": [
       {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "CraftTTS: Fine-Grained Prosody Control for Text-to-Speech",
+        "authors": "Wenbing Yang, Qihang Lu, Bingsong Bai, Zihan Sun, Yueran Hou, Peilei Jia, Yingming Gao, Ya Li, Jun Gao",
+        "abstract": "While zero-shot text-to-speech models perform well in global voice cloning, they struggle with fine-grained prosodic control, as strict word-level intensity and tempo manipulation can disrupt acoustic priors and introduce artifacts. We propose CraftTTS, a three-stage framework enabling stable word-level control without sacrificing fluency. First, a compute-driven zero-shot pipeline automatically constructs large-scale preference pairs without manual annotation. Second, joint supervised fine-tuning and direct preference optimization improve sensitivity to local prosodic tags. Third, group relative policy optimization with a multi-dimensional prosodic reward balances local controllability and global naturalness by regulating intelligibility, intensity contrast, and rhythm. Experiments demonstrate that CraftTTS achieves state-of-the-art fine-grained expressiveness while preserving zero-shot generation capability.",
+        "paper_link": "https://doi.org/10.21437/Interspeech.2026-2018",
+        "github_link": ""
+      },
+      {
         "conference": "NCMMSC",
         "abbr": "NCMMSC",
         "year": "2026",
@@ -220,6 +230,16 @@
     "papers_title": "论文",
     "projects_title": "项目",
     "papers": [
+      {
+        "conference": "INTERSPEECH",
+        "abbr": "INTERSPEECH",
+        "year": "2026",
+        "title": "CraftTTS：面向文本到语音的细粒度韵律控制",
+        "authors": "杨文冰, 鲁启航, 白炳松, 孙子涵, 侯跃然, 贾培磊, 高迎明, 李雅, 高君",
+        "abstract": "尽管零样本文本转语音（TTS）模型在全局音色克隆方面表现出色，但在细粒度韵律控制方面仍存在不足，因为严格的词级强度和语速调节可能破坏声学先验并引入伪影。本文提出 CraftTTS，一种由三个阶段组成的框架，能够在保持语音流畅性的同时实现稳定的词级控制。首先，通过计算驱动的零样本流程自动构建大规模偏好数据对，无需人工标注。其次，结合监督微调与直接偏好优化，提升模型对局部韵律标签的敏感性。最后，通过引入多维韵律奖励的组相对策略优化，在可懂度、强度对比和节奏等维度进行调节，从而平衡局部可控性与整体自然度。实验结果表明，CraftTTS 在保留零样本生成能力的同时，实现了先进的细粒度韵律表现。",
+        "paper_link": "https://doi.org/10.21437/Interspeech.2026-2018",
+        "github_link": ""
+      },
       {
         "conference": "NCMMSC",
         "abbr": "NCMMSC",
